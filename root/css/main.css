@@ -26,6 +26,13 @@ body {
   margin: 1.5rem 0;
 }
 
+.sub-heading {
+  text-align: center;
+  color: #212529;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
 .navbar {
   background-color: #636b6f;
   padding: 4px 1rem;
@@ -46,9 +53,12 @@ body {
 }
 
 .logo {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
@@ -219,6 +229,116 @@ body {
   color: #212529;
 }
 
+section.home {
+  background: url("/root/images/main-mob.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  color: #fff;
+  margin-top: 60px;
+  padding: 0 1rem;
+  height: calc(100vh - 60px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+section.home .sub-heading {
+  text-align: left;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+section.home .heading {
+  color: #fff;
+  text-align: left;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+section.home .action-btn {
+  margin-top: 0.5rem;
+  display: block;
+  text-align: center;
+  width: 8rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #542585;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+section.home .action-btn:hover {
+  background-color: #46206e;
+}
+
+.values .sub-heading {
+  margin-top: 0;
+}
+
+.values .cards {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.values .cards .icon-part {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.values .cards p {
+  font-size: 1.1rem;
+}
+
+.values .cards .text-part {
+  padding-left: 1rem;
+}
+
+.values .cards .card-icon {
+  width: 4rem;
+}
+
+.about .about-paragraph {
+  margin-bottom: 1rem;
+}
+
+.about .container {
+  margin: 0;
+  padding: 0 1rem;
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  .about .container {
+    padding: 0 1.5rem;
+  }
+}
+
 @media (min-width: 992px) {
   .navbar {
     padding: 4px 1.5rem;
@@ -276,63 +396,56 @@ body {
   }
 }
 
-.home .heading {
-  color: #fff;
-  text-align: left;
-  font-weight: 500;
-  margin: 0.5rem 0;
-}
-
-@media (min-width: 768px) {
-  .home .home-heading-container {
-    max-width: 270px;
+@media (min-width: 1281px) {
+  .navbar {
+    padding: 4px 3rem;
   }
 }
 
-.values {
-  margin-top: 1rem;
+@media (min-width: 992px) {
+  section.home {
+    padding: 0 1.5rem;
+  }
 }
 
-.values .sub-heading {
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 1rem;
+@media (min-width: 1024px) {
+  section.home {
+    background: url("/root/images/main-desk.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+  }
 }
 
-.values .cards {
-  background: #fff;
-  border-radius: 1rem;
-  padding: 1rem;
-  margin-top: 1rem;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
-  -ms-grid-row-align: stretch;
-      align-self: stretch;
+@media (min-width: 1281px) {
+  section.home {
+    padding: 0 3rem;
+  }
 }
 
-.values .cards .icon-part {
-  -ms-grid-column-align: center;
-      justify-self: center;
+@media (min-width: 992px) {
+  .about .container {
+    padding: 0 1.5rem;
+  }
 }
 
-.values .cards p {
-  font-size: 1.1rem;
+@media (min-width: 1281px) {
+  .about .container {
+    padding: 0 3rem;
+  }
 }
 
-.values .cards .text-part {
-  padding-left: 1rem;
-}
-
-.values .cards .card-icon {
-  width: 4rem;
+@media (min-width: 1200px) {
+  .about .row > * {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
+  .values .sub-heading {
+    margin: 0;
+  }
   .values .card-container {
     display: -ms-grid;
     display: grid;
@@ -364,5 +477,18 @@ body {
   }
   .values .last-value {
     min-width: 35rem;
+  }
+}
+
+@media (min-width: 1281px) {
+  .values .cards {
+    margin-top: 2rem;
+  }
+  .values .card-container {
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+  .values .card-container .cards:nth-child(1), .values .card-container .cards:nth-child(2) {
+    margin-top: 1rem;
   }
 }
