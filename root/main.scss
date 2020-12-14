@@ -12,71 +12,7 @@ $black-text: #212529;
 	margin: 0;
 	padding: 0;
 }
-p {
-	margin: 0;
-}
 body {
 	font-family: "Roboto", sans-serif;
 	background-color: $background;
-}
-
-@mixin setSection($back-color, $text-color) {
-	background: $back-color;
-	color: $text-color;
-}
-@mixin setFlex($direction) {
-	display: flex;
-	flex-direction: $direction;
-	justify-content: center;
-	align-items: center;
-}
-@mixin setGrid($col1, $col2) {
-	display: grid;
-	align-items: center;
-	grid-template-columns: $col1 $col2;
-}
-
-// Values part
-.values {
-	margin-top: 1rem;
-	.sub-heading {
-		text-align: center;
-		font-weight: 600;
-		margin-bottom: 1rem;
-	}
-	.cards {
-		background: #fff;
-		border-radius: 1rem;
-		padding: 1rem;
-		margin-top: 1rem;
-		@include setGrid(1fr, 3fr);
-		align-self: stretch;
-		.icon-part{
-			justify-self: center;
-		}
-		p {
-			font-size: 1.1rem;
-		}
-		.text-part {
-			padding-left: 1rem;
-		}
-		.card-icon {
-			width: 4rem;
-		}
-	}
-	// Values part for bigger screens
-	@media (min-width: 768px) {
-		.card-container {
-			@include setGrid(1fr, 1fr);
-			column-gap: 1rem;
-		}
-	}
-	@media (min-width: 992px) {
-		.last-card {
-			@include setFlex(row);
-		}
-		.last-value{
-			min-width: 35rem;
-		}
-	}
 }
