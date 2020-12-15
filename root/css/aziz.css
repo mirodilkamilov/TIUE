@@ -67,7 +67,7 @@ ol {
 }
 /* student life section */
 .student-life {
-	background-image: url("/root/images/student life/student-life.png");
+	background-image: url("https://raw.githubusercontent.com/mirodil1999/TIUE/github-pages/root/images/student%20life/student-life.png");
 	object-fit: cover;
 	min-height: 100%;
 }
