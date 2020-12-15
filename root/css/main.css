@@ -526,12 +526,12 @@ section.home .action-btn:hover {
 }
 
 .collaboration {
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 .collaboration .container {
   padding: 0;
-  margin: 0;
+  margin: auto;
 }
 
 .collaboration .carousel .card {
@@ -858,12 +858,12 @@ section.home .action-btn:hover {
 
 @media (min-width: 992px) {
   .collaboration {
-    padding: 0 1.5rem;
+    padding: 0.5rem 1.5rem;
   }
 }
 
 @media (min-width: 1281px) {
   .collaboration {
-    padding: 0 4rem;
+    padding: 0.5rem 4rem;
   }
 }
