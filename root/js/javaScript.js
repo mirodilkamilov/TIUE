@@ -34,7 +34,6 @@ $(document).ready(function () {
 	});
 });
 
-
 // Take Home button
 $(document).ready(function () {
 	$(window).scroll(function () {
@@ -63,4 +62,25 @@ $(document).ready(function () {
 		// applying again smooth scroll on menu items click
 		$("html").css("scrollBehavior", "smooth");
 	});
+});
+$("#year").text(new Date().getFullYear());
+$(".carousel").owlCarousel({
+	margin: 20,
+	loop: true,
+	autoplayTimeOut: 2000,
+	autoplayHoverPause: true,
+	responsive: {
+		0: {
+			items: 1,
+			nav: false,
+		},
+		600: {
+			items: 2,
+			nav: false,
+		},
+		1000: {
+			items: 3,
+			nav: false,
+		},
+	},
 });
