@@ -596,6 +596,9 @@ section.home {
 	}
 	@media (min-width: 1281px) {
 		padding: 0 4rem;
+		img{
+			max-width: 490px;
+		}
 	}
 	@media (min-width: 1400px) {
 		padding: 0 5rem;

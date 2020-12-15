@@ -750,6 +750,9 @@ section.home .action-btn:hover {
   .team {
     padding: 0 4rem;
   }
+  .team img {
+    max-width: 490px;
+  }
 }
 
 @media (min-width: 1400px) {
