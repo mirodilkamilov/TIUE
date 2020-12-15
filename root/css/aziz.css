@@ -67,7 +67,7 @@ ol {
 }
 /* student life section */
 .student-life {
-	background-image: url("/root/images/student life/student-life.png");
+	background-image: url("images/student life/student-life.png");
 	object-fit: cover;
 	min-height: 100%;
 }
