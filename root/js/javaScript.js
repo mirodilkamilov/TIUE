@@ -34,6 +34,7 @@ $(document).ready(function () {
 	});
 });
 
+
 // Take Home button
 $(document).ready(function () {
 	$(window).scroll(function () {

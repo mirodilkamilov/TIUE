@@ -3,6 +3,7 @@ $grey: #636b6f;
 $logo: #542585;
 $logo-hover: #46206e;
 $black-text: #212529;
+$white-text: #fff;
 
 *,
 *:before,
@@ -21,9 +22,8 @@ body {
 	background-color: $background;
 }
 
-@mixin setSection($back-color, $text-color) {
+@mixin setSectionBack($back-color) {
 	background: $back-color;
-	color: $text-color;
 }
 @mixin setFlex($direction) {
 	display: flex;
@@ -41,13 +41,49 @@ body {
 	color: $logo;
 	text-align: center;
 	font-weight: 600;
-	margin: 1.5rem 0;
+	padding: 1.5rem 0;
+	margin-bottom: 0;
 }
 .sub-heading {
 	text-align: center;
-	color: $black-text;
-	margin: 1rem 0;
+	padding: 1rem 0;
+	margin-bottom: 0;
 	font-weight: 600;
+}
+.small-heading {
+	text-align: center;
+	color: $black-text;
+	font-weight: 600;
+}
+.section-paragraph {
+	text-align: center;
+	color: $black-text;
+	font-size: 1.1rem;
+}
+
+//* Scroll up button
+.scroll-up-btn {
+	position: fixed;
+	height: 45px;
+	width: 42px;
+	background: #542585;
+	right: 30px;
+	bottom: 10px;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+	z-index: 9999;
+	font-size: 30px;
+	border-radius: 6px;
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+	opacity: 1;
+	pointer-events: auto;
+	bottom: 30px;
 }
 
 //* Navbar
@@ -284,11 +320,129 @@ section.home {
 		margin: 0;
 		padding: 0 1rem;
 		max-width: 100%;
-		@media (min-width: 992px) {
-			padding: 0 1.5rem;
-		}
 	}
 }
+
+.team {
+	@include setSectionBack($grey);
+	.sub-heading,
+	.small-heading,
+	.section-paragraph {
+		color: $white-text;
+	}
+	.small-heading {
+		margin-top: 1rem;
+	}
+	text-align: center;
+	img {
+		width: calc(100vw - 2rem);
+		max-width: 360px;
+		&:nth-child(2) {
+			display: none;
+		}
+	}
+	img.rector-image {
+		display: block;
+		margin: auto auto;
+	}
+	margin: 2rem 0;
+	padding: 0 1rem 1rem 1rem;
+	.rector-container {
+		color: $white-text;
+		margin-bottom: 1rem;
+		.sub-heading {
+			padding-top: 0;
+		}
+	}
+	.quote {
+		margin-top: 1rem;
+		.section-paragraph {
+			text-align: left;
+		}
+		.small-paragraph {
+			margin-top: 1rem;
+			text-align: right;
+		}
+	}
+	blockquote {
+		font-size: 1.1rem;
+		letter-spacing: -0.02rem;
+		margin: 2rem 0;
+		padding: 0 2rem;
+		position: relative;
+		font-style: italic;
+	}
+	blockquote > :first-child:before {
+		content: "“";
+		opacity: 0.15;
+		font-size: 5rem;
+		line-height: 0.9;
+		position: absolute;
+		top: -0.7rem;
+		left: -0.5rem;
+	}
+	blockquote > :first-child:after {
+		content: "”";
+		opacity: 0.15;
+		font-size: 5rem;
+		line-height: 0.9;
+		position: absolute;
+		top: 90%;
+		right: 1rem;
+	}
+	.message-btn {
+		display: block;
+		padding: 1rem;
+		margin: auto auto;
+		background-color: transparent;
+		outline: 0;
+	}
+	.down-svg {
+		transform: translateY(0);
+		animation: down 3s ease infinite;
+	}
+
+	@keyframes down {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(2rem);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+	.collapse {
+		.card {
+			padding-top: 1rem;
+		}
+	}
+
+	.card-body {
+		.section-paragraph {
+			text-align: left;
+		}
+	}
+
+	.content-separator {
+		display: block;
+		margin: 2rem 0;
+		color: #fff;
+		height: 0.1rem;
+		opacity: 1;
+	}
+	.directors-heading {
+		padding-bottom: 2rem;
+	}
+	.first-director,
+	.second-director {
+		margin-bottom: 1rem;
+	}
+}
+
+//? ==============================
+//! Media queries
 
 //* Navbar responsiveness in bigger screens
 .navbar {
@@ -334,7 +488,10 @@ section.home {
 		}
 	}
 	@media (min-width: 1281px) {
-		padding: 4px 3rem;
+		padding: 4px 4rem;
+	}
+	@media (min-width: 1400px){
+		padding: 4px 5rem;
 	}
 }
 
@@ -350,7 +507,10 @@ section.home {
 		background-position: right;
 	}
 	@media (min-width: 1281px) {
-		padding: 0 3rem;
+		padding: 0 4rem;
+	}
+	@media (min-width: 1400px){
+		padding: 0 5rem;
 	}
 }
 
@@ -361,13 +521,20 @@ section.home {
 			padding: 0 1.5rem;
 		}
 		@media (min-width: 1281px) {
-			padding: 0 3rem;
+			padding: 0 4rem;
+		}
+		@media (min-width: 1400) {
+			padding: 0 5rem;
 		}
 	}
 	.row > * {
 		@media (min-width: 1200px) {
 			padding-right: 1rem;
 			padding-left: 1rem;
+		}
+		@media (min-width: 1400px){
+			padding-right: 2rem;
+			padding-left: 2rem;
 		}
 	}
 }
@@ -404,6 +571,34 @@ section.home {
 				}
 			}
 		}
+	}
+	@media (min-width: 1281px) {
+		padding: 0 4rem;
+	}
+	@media (min-width: 1400) {
+		padding: 0 5rem;
+	}
+}
+
+//* Team part
+.team {
+	@media (min-width: 768px) {
+		.directors-container {
+			@include setFlex(row);
+			justify-content: space-evenly;
+		}
+		blockquote > :first-child:after {
+			top: 70%;
+		}
+	}
+	@media (min-width: 992px) {
+		padding: 0 1.5rem;
+	}
+	@media (min-width: 1281px) {
+		padding: 0 4rem;
+	}
+	@media (min-width: 1400px) {
+		padding: 0 5rem;
 	}
 }
 
