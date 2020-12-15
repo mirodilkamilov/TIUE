@@ -90,6 +90,13 @@ ol {
 	height: 300px;
 }
 /* contact section */
+.contact .sub-heading{
+	padding-top: 0;
+	color: #542585;
+}
+.contact *{
+	padding: 0.3rem;
+}
 .contact .col-md-5 {
 	display: flex;
 	align-self: center;
