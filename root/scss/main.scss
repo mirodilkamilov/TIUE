@@ -337,9 +337,6 @@ section.home {
 	img {
 		width: calc(100vw - 2rem);
 		max-width: 360px;
-		&:nth-child(2) {
-			display: none;
-		}
 	}
 	img.rector-image {
 		display: block;

@@ -270,7 +270,7 @@ body {
 }
 
 section.home {
-  background: url("https://raw.githubusercontent.com/mirodil1999/TIUE/github-pages/root/images/main-mob.png");
+  background: url("/root/images/main-mob.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
@@ -393,10 +393,6 @@ section.home .action-btn:hover {
 .team img {
   width: calc(100vw - 2rem);
   max-width: 360px;
-}
-
-.team img:nth-child(2) {
-  display: none;
 }
 
 .team img.rector-image {
@@ -691,7 +687,7 @@ section.home .action-btn:hover {
 
 @media (min-width: 1024px) {
   section.home {
-    background: url("https://raw.githubusercontent.com/mirodil1999/TIUE/github-pages/root/images/main-desk.png");
+    background: url("/root/images/main-desk.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
