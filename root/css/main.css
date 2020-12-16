@@ -386,6 +386,12 @@ section.home .action-btn:hover {
   color: #fff;
 }
 
+.team .rector-container .sub-heading,
+.team .rector-container .small-heading,
+.team .rector-container .section-paragraph {
+  color: #212529;
+}
+
 .team .small-heading {
   margin-top: 1rem;
 }
@@ -425,7 +431,7 @@ section.home .action-btn:hover {
 .team blockquote {
   font-size: 1.1rem;
   letter-spacing: -0.02rem;
-  margin: 2rem 0;
+  margin: 2rem 10rem;
   padding: 0 2rem;
   position: relative;
   font-style: italic;
@@ -472,8 +478,8 @@ section.home .action-btn:hover {
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(2rem);
-            transform: translateY(2rem);
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -487,8 +493,8 @@ section.home .action-btn:hover {
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(2rem);
-            transform: translateY(2rem);
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -827,14 +833,20 @@ section.home .action-btn:hover {
 
 @media (min-width: 992px) {
   .team {
-    padding: 0 1.5rem;
+    padding: 0;
+  }
+  .team .rector-container {
+    padding: 1rem;
+    margin: 0;
+    background-color: #eeeeee;
+    color: #212529;
+  }
+  .team img.rector-image {
+    max-width: calc(60vw);
   }
 }
 
 @media (min-width: 1281px) {
-  .team {
-    padding: 0 4rem;
-  }
   .team img {
     max-width: 490px;
   }

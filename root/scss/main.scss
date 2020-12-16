@@ -326,9 +326,16 @@ section.home {
 .team {
 	@include setSectionBack($grey);
 	.sub-heading,
-	.small-heading,
-	.section-paragraph {
-		color: $white-text;
+		.small-heading,
+		.section-paragraph {
+			color: $white-text;
+		}
+	.rector-container {
+		.sub-heading,
+		.small-heading,
+		.section-paragraph {
+			color: $black-text;
+		}
 	}
 	.small-heading {
 		margin-top: 1rem;
@@ -364,7 +371,7 @@ section.home {
 	blockquote {
 		font-size: 1.1rem;
 		letter-spacing: -0.02rem;
-		margin: 2rem 0;
+		margin: 2rem 10rem;
 		padding: 0 2rem;
 		position: relative;
 		font-style: italic;
@@ -404,7 +411,7 @@ section.home {
 			transform: translateY(0);
 		}
 		50% {
-			transform: translateY(2rem);
+			transform: translateY(1.5rem);
 		}
 		100% {
 			transform: translateY(0);
@@ -439,12 +446,12 @@ section.home {
 }
 
 //* collaboration carousel
-.collaboration{
-   padding: 1rem;
+.collaboration {
+	padding: 1rem;
 }
-.collaboration .container{
-   padding: 0;
-   margin: auto;
+.collaboration .container {
+	padding: 0;
+	margin: auto;
 }
 .collaboration .carousel .card {
 	border-radius: 6px;
@@ -474,8 +481,8 @@ section.home {
 .collaboration .carousel .card img {
 	height: 270px;
 	width: auto;
-   object-fit: cover;
-   margin-bottom: 1rem;
+	object-fit: cover;
+	margin-bottom: 1rem;
 	transition: all 0.3s ease;
 }
 .collaboration .carousel .card:hover img {
@@ -552,7 +559,7 @@ section.home {
 	@media (min-width: 1281px) {
 		padding: 4px 4rem;
 	}
-	@media (min-width: 1400px){
+	@media (min-width: 1400px) {
 		padding: 4px 5rem;
 	}
 }
@@ -571,7 +578,7 @@ section.home {
 	@media (min-width: 1281px) {
 		padding: 0 4rem;
 	}
-	@media (min-width: 1400px){
+	@media (min-width: 1400px) {
 		padding: 0 5rem;
 	}
 }
@@ -594,7 +601,7 @@ section.home {
 			padding-right: 1rem;
 			padding-left: 1rem;
 		}
-		@media (min-width: 1400px){
+		@media (min-width: 1400px) {
 			padding-right: 2rem;
 			padding-left: 2rem;
 		}
@@ -654,11 +661,19 @@ section.home {
 		}
 	}
 	@media (min-width: 992px) {
-		padding: 0 1.5rem;
+		padding: 0;
+		.rector-container {
+			padding: 1rem;
+			margin: 0;
+			background-color: $background;
+			color: $black-text;
+		}
+		img.rector-image {
+			max-width: calc(60vw);
+		}
 	}
 	@media (min-width: 1281px) {
-		padding: 0 4rem;
-		img{
+		img {
 			max-width: 490px;
 		}
 	}
@@ -668,21 +683,21 @@ section.home {
 }
 
 //* Collaboration part
-@media (min-width: 375px){
-   .collaboration .carousel .card img{
-      height: 300px;
-   }
+@media (min-width: 375px) {
+	.collaboration .carousel .card img {
+		height: 300px;
+	}
 }
 
-@media (min-width: 992px){
-   .collaboration{
-      padding: 0.5rem 1.5rem;
-   }
+@media (min-width: 992px) {
+	.collaboration {
+		padding: 0.5rem 1.5rem;
+	}
 }
-@media (min-width: 1281px){
-   .collaboration{
-      padding: 0.5rem 4rem;
-   }
+@media (min-width: 1281px) {
+	.collaboration {
+		padding: 0.5rem 4rem;
+	}
 }
 
 //? Media queries Stack Overflow
