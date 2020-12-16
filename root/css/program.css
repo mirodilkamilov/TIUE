@@ -39,8 +39,8 @@ section{
     width: 100%;
     margin-top: 2px;
 }
-.home .home-content{
-    display: flex;
+.home-content{
+    padding-top: 10px;
 }
 .home .home-content img{
     width: 17%;
@@ -74,7 +74,7 @@ section{
 .program img{
     width: 250px;
     height: 250px;
-    margin-top: 50px;
+    margin: 10px 0;
 }
 .program .team-title{
     text-align: center;
@@ -136,15 +136,9 @@ section{
         width: 40vh;
         margin: auto;
     }
-    .about img{
-       visibility: hidden;
-    }
     .team img{
         width: 250px;
         height: 150px;
-    }
-    .program img{
-       visibility: hidden;
     }
 }
 @media(max-width:340px){
@@ -155,27 +149,47 @@ section{
         width: 300px;
         margin: auto;
     }
-    .about img{
-       visibility: hidden;
-    }
-    .team img{
-        width: 250px;
-        height: 150px;
-    }
-    .program img{
-       visibility: hidden;
-    }
-    .home .home-content img{
-        width: 17%;
-        height: 17%;
-        margin: 0;
-    }
     .navbar li{
         font-size: 15px;
         padding:0;
     }
-    .about img{
-      visibility: hidden;
+}
+@media(max-width:306px){
+    .home .background img{
+        width: 240px;
+    } 
+    .max-width{
+        width: 240px;
+        margin: auto;
+    }
+    .team img{
+        width: 230px;
+        height: 160px;
     }
 }
+@media(max-width:260px){
+    .home .background img{
+        width: 200px;
+    } 
+    .max-width{
+        width: 200px;
+        margin: auto;
+    }
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
 
