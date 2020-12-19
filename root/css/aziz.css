@@ -1,0 +1,386 @@
+/* 
+$background: #eeeeee;
+$grey: #636b6f;
+$logo: #542585;
+$black-text: #212529; 
+*/
+
+/*! wrong colors
+#552588		logo
+#636b6e		grey
+
+*/
+
+/* programs section */
+
+.program .program-content-title {
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 25px;
+}
+.program p,
+ul,
+ol {
+	font-size: 15.5px;
+}
+.program a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 500;
+	background: #552588;
+	border: 3px solid #552588;
+	border-radius: 30px;
+	padding: 4px 70px;
+	transition: all 0.3s ease;
+}
+.program a:hover {
+	color: #552588;
+	background: none;
+}
+.program .line {
+	border-bottom: 5px solid #552588;
+	width: 100%;
+}
+/* student life section */
+.student-life {
+	background-image: url("https://raw.githubusercontent.com/mirodil1999/TIUE/github-pages/root/images/student%20life/student-life.png");
+	object-fit: cover;
+	min-height: 100%;
+}
+.student-life .text {
+	width: 100%;
+	height: 95vh;
+	padding-top: 350px;
+	color: #fff;
+	font-size: 100px;
+	font-weight: 600;
+}
+
+/* news and events */
+.news .col-md-8 .title {
+	font-size: 20px;
+	border-bottom: none;
+	color: #111;
+}
+.news img {
+	height: 300px;
+}
+/* contact section */
+.contact .sub-heading{
+	padding-top: 0;
+	color: #542585;
+}
+.contact1 *{
+	padding: 0.3rem;
+}
+.contact .col-md-5 {
+	display: flex;
+	align-self: center;
+	text-align: center;
+}
+.contact img {
+	width: 130px;
+	height: 125px;
+}
+.contact .col-md-5 p {
+	padding-left: 25px;
+	font-size: 22px;
+	font-weight: 600;
+}
+.contact .col-md-1 {
+	border-right: 3px solid #552588;
+}
+.contact .title {
+	font-size: 20px;
+	border-bottom: none;
+}
+.contact .contact1 {
+	display: flex;
+	padding-left: 20px;
+}
+.contact .contact1 .fas {
+	font-size: 20px;
+	color: #552588;
+}
+.background {
+	background: #636b6e;
+}
+.background-footer {
+	background: #485155;
+}
+.footer .fab {
+	padding: 0 15px;
+	font-size: 20px;
+}
+.footer a {
+	color: #fff;
+	transition: all 0.3s ease;
+}
+.footer a:hover {
+	color: #552588;
+}
+@media (max-width: 1200px) {
+	.student-life .text {
+		font-size: 70px;
+	}
+}
+@media (max-width: 770px) {
+	.student-life .text {
+		font-size: 40px;
+	}
+	.contact .col-md-5 p {
+		font-size: 22px;
+		font-weight: 570;
+	}
+}
+@media (max-width: 415px) {
+	.student-life .text {
+		padding-top: 270px;
+	}
+	.student-life {
+		background-image: url("https://raw.githubusercontent.com/mirodil1999/TIUE/github-pages/root/images/student%20life/student-life-mobile.jpg");
+	}
+	.contact .col-md-5 p {
+		font-size: 20px;
+		font-weight: 570;
+	}
+	.home .home-content .text-2 {
+		padding: 0;
+		font-size: 25px;
+		width: 80%;
+		font-weight: 470;
+	}
+}
+
+@media (max-width: 345) {
+	.student-life .text {
+		width: 60%;
+		height: 95vh;
+		padding-top: 340px;
+		color: #fff;
+		font-size: 30px;
+		font-weight: 600;
+	}
+}
+@media (max-width: 330px) {
+	.contact .col-md-5 p {
+		font-size: 17px;
+		font-weight: 500;
+	}
+	.contact img {
+		width: 120px;
+		height: 100px;
+	}
+	.navbar .menu li a {
+		font-size: 15px;
+		font-weight: 450;
+	}
+	.navbar .menu {
+		padding-top: 10px;
+	}
+	.home .home-content .text-2 {
+		padding: 0;
+		font-size: 25px;
+		width: 80%;
+		font-weight: 470;
+	}
+}
+@media (max-width: 320px) {
+	.contact .col-md-5 p {
+		font-size: 15px;
+		font-weight: 450;
+	}
+	.contact img {
+		width: 100px;
+		height: 90px;
+	}
+	.home .home-content .text-2 {
+		padding: 0;
+		font-size: 25px;
+		width: 80%;
+		font-weight: 470;
+	}
+	.title {
+		font-size: 30px;
+	}
+}
+@media (max-width: 285px) {
+	.program a {
+		font-size: 18px;
+		padding: 4px 60px;
+	}
+}
+
+
+  /* Slider */
+  
+  .slick-slide {
+	margin: 0px 20px;
+}
+
+.slick-slide img {
+	width: 100%;
+}
+
+.slick-slider
+{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+			user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-ms-touch-action: pan-y;
+		touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.slick-list:focus
+{
+	outline: none;
+}
+.slick-list.dragging
+{
+	cursor: pointer;
+	cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+	-webkit-transform: translate3d(0, 0, 0);
+	   -moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		 -o-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+	display: table;
+	content: '';
+}
+.slick-track:after
+{
+	clear: both;
+}
+.slick-loading .slick-track
+{
+	visibility: hidden;
+}
+
+.slick-slide
+{
+	display: none;
+	float: left;
+	height: 100%;
+	min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+	float: right;
+}
+.slick-slide img
+{
+	display: block;
+}
+.slick-slide.slick-loading img
+{
+	display: none;
+}
+.slick-slide.dragging img
+{
+	pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+	display: block;
+}
+.slick-loading .slick-slide
+{
+	visibility:hidden;
+}
+.slick-vertical .slick-slide
+{
+	display: block;
+	height: auto;
+	border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+	display: none;
+}
+.slick-prev:focus,
+.slick-next:focus{
+	outline: 0!important;
+}
+.slick-prev,
+.slick-next{
+	background: none;
+	border: none; 
+	position: absolute;
+}
+.slick-prev{
+	position: absolute;
+	z-index: 999;
+}
+.slick-next,
+.slick-prev{
+	visibility: hidden;
+}
+.slick-next{
+	margin-left: 96.5%;
+	margin-top: -225px;
+}
+.slick-next:after{
+	visibility: visible;
+	content:'>';
+	color: #552588;
+	font-size:70px;
+	font-weight: 750;
+	border-radius: 50%;
+	padding-left: 10px;
+}
+.slick-prev{
+	margin-top: 50px;
+	margin-left: -103px;
+}
+.slick-prev:after{
+	visibility: visible;
+	content:'<';
+	color: #552588;
+	font-size:70px;
+	font-weight: 750;
+	border-radius: 50%;
+	padding-left: 10px;
+}
+
+.collaboration .box{
+	text-align: center;
+	transition: all 0.3s ease;
+}
+.collaboration .box:hover{
+	transform: scale(1.05);
+}
+.collaboration .box:hover p{
+	color: #552588;
+}

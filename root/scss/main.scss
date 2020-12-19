@@ -1,0 +1,724 @@
+$background: #eeeeee;
+$grey: #636b6f;
+$logo: #542585;
+$logo-hover: #46206e;
+$black-text: #212529;
+$white-text: #fff;
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+p {
+	margin: 0;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	background-color: $background;
+}
+
+@mixin setSectionBack($back-color) {
+	background: $back-color;
+}
+@mixin setFlex($direction) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: center;
+	align-items: center;
+}
+@mixin setGrid($col1, $col2) {
+	display: grid;
+	align-items: center;
+	grid-template-columns: $col1 $col2;
+}
+
+.heading {
+	color: $logo;
+	text-align: center;
+	font-weight: 600;
+	padding: 1.5rem 0;
+	margin-bottom: 0;
+}
+.sub-heading {
+	text-align: center;
+	padding: 1rem 0;
+	margin-bottom: 0;
+	font-weight: 600;
+}
+.small-heading {
+	text-align: center;
+	color: $black-text;
+	font-weight: 600;
+}
+.section-paragraph {
+	text-align: center;
+	color: $black-text;
+	font-size: 1.1rem;
+}
+
+//* Scroll up button
+.scroll-up-btn {
+	position: fixed;
+	height: 45px;
+	width: 42px;
+	background: #542585;
+	right: 30px;
+	bottom: 10px;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+	z-index: 9999;
+	font-size: 30px;
+	border-radius: 6px;
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+	opacity: 1;
+	pointer-events: auto;
+	bottom: 30px;
+}
+
+//* Navbar
+.navbar {
+	background-color: $grey;
+	padding: 4px 1rem;
+	.container-fluid {
+		padding: 0;
+	}
+	.menu-button {
+		display: block;
+		position: relative;
+		outline: none;
+	}
+	.dropdown-toggle::after {
+		display: none;
+	}
+}
+//* Logo in navbar
+.logo {
+	display: flex;
+	align-items: center;
+	width: min-content;
+	color: #fff;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	&:hover {
+		color: #fff;
+	}
+}
+.logo p {
+	padding-left: 1rem;
+	font-size: 0.55rem;
+	margin: 0;
+}
+.logo img {
+	width: 64px;
+	height: 48px;
+}
+
+//! hamburger-menu animation
+.navbar-toggler {
+	display: block;
+	padding: 1.5rem 1.5rem !important;
+	border: none !important;
+	&:focus,
+	&:hover {
+		outline: none;
+		box-shadow: none;
+	}
+}
+.menu-button span {
+	position: absolute;
+	display: block;
+	background: #fff;
+	width: 30px;
+	height: 3px;
+	border-radius: 50px;
+	left: -7px;
+	transition: all 0.3s;
+}
+.menu-button span:nth-child(1) {
+	top: -13px;
+}
+.menu-button span:nth-child(2) {
+	top: -1.5px;
+}
+.menu-button span:nth-child(3) {
+	top: 10px;
+}
+.first-line {
+	transform: translateX(0) translateY(13px) rotate(45deg);
+}
+.second-line {
+	opacity: 0;
+	transform: translateX(30px);
+}
+.third-line {
+	transform: translateX(0) translateY(-10px) rotate(135deg);
+}
+
+//* Navbar items
+.navbar-nav {
+	.nav-item {
+		.nav-link {
+			text-align: center;
+			font-weight: 500;
+			color: #fff;
+			&:hover {
+				font-weight: 600;
+				color: $logo;
+			}
+		}
+		.home {
+			font-weight: 600;
+			color: $logo;
+		}
+		.fa-chevron-down {
+			display: none;
+		}
+	}
+}
+.dropdown .fa-plus {
+	position: absolute;
+	right: 0.7rem;
+	transition: transform 0.3s;
+}
+.dropdown > .show .fa-plus {
+	transition: all 0.3s;
+	transform: rotate(45deg);
+}
+
+//* Dropdown menu
+.dropdown > .dropdown-menu {
+	opacity: 0;
+	display: block;
+	max-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	transition: all 0.5s;
+
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: $background;
+	text-align: center;
+	padding: 0 1rem;
+}
+.dropdown .dropdown-menu.show {
+	opacity: 1;
+	max-height: 500px;
+	visibility: visible;
+	transition: all 0.7s;
+}
+
+.dropdown-list {
+	background-color: #fff;
+	padding: 0.5rem;
+	margin: 1rem 0;
+	border-radius: 1rem;
+
+	@include setGrid(1fr, 3fr 1fr);
+	img {
+		justify-self: center;
+		width: 4rem;
+		border-radius: 0.75rem;
+	}
+
+	&:hover {
+		background-color: $grey;
+		.dropdown-item {
+			color: #fff;
+		}
+	}
+	.dropdown-item {
+		background-color: transparent;
+		color: $black-text;
+	}
+}
+
+//* Main University banner
+section.home {
+	background: url("https://raw.githubusercontent.com/mirodil1999/TIUE/github-pages/root/images/main-mob.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+	color: #fff;
+	margin-top: 60px;
+	padding: 0 1rem;
+	height: calc(100vh - 60px);
+	@include setFlex(column);
+	align-items: flex-start;
+	.sub-heading {
+		text-align: left;
+		color: #fff;
+		font-weight: 500;
+		margin-bottom: 0.5rem;
+	}
+	.heading {
+		color: #fff;
+		text-align: left;
+		font-weight: 500;
+		margin: 0.5rem 0;
+	}
+	.action-btn {
+		margin-top: 0.5rem;
+		display: block;
+		text-align: center;
+		width: 8rem;
+		text-decoration: none;
+		color: #fff;
+		background-color: $logo;
+		padding: 1rem;
+		border-radius: 2rem;
+		&:hover {
+			background-color: $logo-hover;
+		}
+	}
+}
+//* Values part
+.values {
+	.sub-heading {
+		margin-top: 0;
+	}
+	.cards {
+		background: #fff;
+		border-radius: 1rem;
+		padding: 1rem;
+		margin-top: 1rem;
+		@include setGrid(1fr, 3fr);
+		align-self: stretch;
+		.icon-part {
+			justify-self: center;
+		}
+		p {
+			font-size: 1.1rem;
+		}
+		.text-part {
+			padding-left: 1rem;
+		}
+		.card-icon {
+			width: 4rem;
+		}
+	}
+}
+
+//* About
+.about {
+	.about-paragraph {
+		margin-bottom: 1rem;
+	}
+	.container {
+		margin: 0;
+		padding: 0 1rem;
+		max-width: 100%;
+	}
+}
+
+.team {
+	@include setSectionBack($grey);
+	.sub-heading,
+		.small-heading,
+		.section-paragraph {
+			color: $white-text;
+		}
+	.rector-container {
+		.sub-heading,
+		.small-heading,
+		.section-paragraph {
+			color: $black-text;
+		}
+	}
+	.small-heading {
+		margin-top: 1rem;
+	}
+	text-align: center;
+	img {
+		width: calc(100vw - 2rem);
+		max-width: 360px;
+	}
+	img.rector-image {
+		display: block;
+		margin: auto auto;
+	}
+	margin-top: 2rem;
+	padding: 0 1rem 1rem 1rem;
+	.rector-container {
+		color: $white-text;
+		margin-bottom: 1rem;
+		.sub-heading {
+			padding-top: 0;
+		}
+	}
+	.quote {
+		margin-top: 1rem;
+		.section-paragraph {
+			text-align: left;
+		}
+		.small-paragraph {
+			margin-top: 1rem;
+			text-align: right;
+		}
+	}
+	blockquote {
+		font-size: 1.1rem;
+		letter-spacing: -0.02rem;
+		padding: 0 2rem;
+		position: relative;
+		font-style: italic;
+	}
+	blockquote > :first-child:before {
+		content: "“";
+		opacity: 0.15;
+		font-size: 5rem;
+		line-height: 0.9;
+		position: absolute;
+		top: -0.7rem;
+		left: -0.5rem;
+	}
+	blockquote > :first-child:after {
+		content: "”";
+		opacity: 0.15;
+		font-size: 5rem;
+		line-height: 0.9;
+		position: absolute;
+		top: 90%;
+		right: 1rem;
+	}
+	.message-btn {
+		display: block;
+		padding: 1rem;
+		margin: auto auto;
+		background-color: transparent;
+		outline: 0;
+	}
+	.down-svg {
+		transform: translateY(0);
+		animation: down 3s ease infinite;
+	}
+
+	@keyframes down {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(1.5rem);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+	.collapse {
+		.card {
+			padding-top: 1rem;
+		}
+	}
+
+	.card-body {
+		.section-paragraph {
+			text-align: left;
+		}
+	}
+
+	.content-separator {
+		display: block;
+		margin: 2rem 0;
+		color: #fff;
+		height: 0.1rem;
+		opacity: 1;
+	}
+	.directors-heading {
+		padding-bottom: 2rem;
+	}
+	.first-director,
+	.second-director {
+		margin-bottom: 1rem;
+	}
+}
+
+//* collaboration carousel
+.collaboration {
+	padding: 1rem;
+}
+.collaboration .container {
+	padding: 0;
+	margin: auto;
+}
+.collaboration .carousel .card {
+	border-radius: 6px;
+	text-align: center;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.collaboration .carousel .card .box {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+.card .box p {
+	font-weight: bolder;
+}
+.card:hover .box p {
+	color: #542585;
+}
+.collaboration .carousel .card:hover .box {
+	transform: scale(1.05);
+}
+
+.collaboration .carousel .card img {
+	height: 270px;
+	width: auto;
+	object-fit: cover;
+	margin-bottom: 1rem;
+	transition: all 0.3s ease;
+}
+.collaboration .carousel .card:hover img {
+	border-color: #fff;
+}
+.owl-dots {
+	text-align: center;
+	margin-top: 20px;
+}
+.owl-dot {
+	height: 13px;
+	width: 13px;
+	margin: 0 5px;
+	outline: none !important;
+	border-radius: 50%;
+	border: 2px solid #542585 !important;
+	transition: all 0.3s ease;
+}
+.owl-dot.active {
+	width: 35px;
+	border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+	background: #542585 !important;
+}
+
+//? ==============================
+//! Media queries
+
+//* Navbar responsiveness in bigger screens
+.navbar {
+	@media (min-width: 992px) {
+		padding: 4px 1.5rem;
+		.navbar-toggler {
+			display: none;
+		}
+		.navbar-nav {
+			padding: 0 1rem;
+		}
+		.fa-plus {
+			display: none;
+		}
+
+		//* Dropdown menu
+		.dropdown {
+			.fa-chevron-down {
+				display: block;
+				position: absolute;
+				right: 50%;
+				transform: rotate(0deg);
+				transition: transform 0.2s;
+			}
+			.nav-link:hover .fa-chevron-down {
+				transform: rotate(180deg);
+				transition: transform 0.2s;
+			}
+			.dropdown-menu {
+				position: absolute;
+				top: 50px;
+				box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.3);
+				background-clip: border-box;
+				transition: all 0.3s;
+			}
+			.dropdown-list {
+				@include setGrid(1fr, 3fr);
+				img {
+					justify-self: center;
+					width: 5rem;
+				}
+			}
+		}
+	}
+	@media (min-width: 1281px) {
+		padding: 4px 4rem;
+	}
+	@media (min-width: 1400px) {
+		padding: 4px 5rem;
+	}
+}
+
+//* Main University banner
+section.home {
+	@media (min-width: 992px) {
+		padding: 0 1.5rem;
+	}
+	@media (min-width: 1024px) {
+		background: url("https://raw.githubusercontent.com/mirodil1999/TIUE/github-pages/root/images/main-desk.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: right;
+	}
+	@media (min-width: 1281px) {
+		padding: 0 4rem;
+	}
+	@media (min-width: 1400px) {
+		padding: 0 5rem;
+	}
+}
+
+//* About part
+.about {
+	.container {
+		@media (min-width: 992px) {
+			padding: 0 1.5rem;
+		}
+		@media (min-width: 1281px) {
+			padding: 0 4rem;
+		}
+		@media (min-width: 1400) {
+			padding: 0 5rem;
+		}
+	}
+	.row > * {
+		@media (min-width: 1200px) {
+			padding-right: 1rem;
+			padding-left: 1rem;
+		}
+		@media (min-width: 1400px) {
+			padding-right: 2rem;
+			padding-left: 2rem;
+		}
+	}
+}
+
+//* Values part
+.values {
+	@media (min-width: 768px) {
+		.sub-heading {
+			margin: 0;
+		}
+		.card-container {
+			@include setGrid(1fr, 1fr);
+			column-gap: 1rem;
+		}
+	}
+	@media (min-width: 992px) {
+		.last-card {
+			@include setFlex(row);
+		}
+		.last-value {
+			min-width: 35rem;
+		}
+	}
+	@media (min-width: 1281px) {
+		.cards {
+			margin-top: 2rem;
+		}
+		.card-container {
+			column-gap: 2rem;
+			.cards {
+				&:nth-child(1),
+				&:nth-child(2) {
+					margin-top: 1rem;
+				}
+			}
+		}
+	}
+	@media (min-width: 1281px) {
+		padding: 0 4rem;
+	}
+	@media (min-width: 1400) {
+		padding: 0 5rem;
+	}
+}
+
+//* Team part
+.team {
+	@media (min-width: 768px) {
+		.directors-container {
+			@include setFlex(row);
+			justify-content: space-evenly;
+		}
+		.quote p{
+			margin-right: 2rem;
+		}
+		blockquote{
+			margin: 2rem 10rem;
+		}
+		blockquote > :first-child:after {
+			top: 70%;
+		}
+	}
+	@media (min-width: 992px) {
+		padding: 0;
+		.rector-container {
+			padding: 1rem;
+			margin: 0;
+			background-color: $background;
+			color: $black-text;
+		}
+		img.rector-image {
+			max-width: calc(60vw);
+		}
+		.quote p{
+			margin-right: 4rem;
+		}
+	}
+	@media (min-width: 1281px) {
+		img {
+			max-width: 490px;
+		}
+	}
+	@media (min-width: 1400px) {
+		padding: 0 5rem;
+	}
+}
+
+//* Collaboration part
+@media (min-width: 375px) {
+	.collaboration .carousel .card img {
+		height: 300px;
+	}
+}
+
+@media (min-width: 992px) {
+	.collaboration {
+		padding: 0.5rem 1.5rem;
+	}
+}
+@media (min-width: 1281px) {
+	.collaboration {
+		padding: 0.5rem 4rem;
+	}
+}
+
+//? Media queries Stack Overflow
+// @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+// @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+// @media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+// @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+// @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+//! @media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+//? Media queries Bootstrap
+// @media (min-width: 1400px)
+// @media (min-width: 1200px)
+//! @media (min-width: 992px)
+// @media (min-width: 768px)
+// @media (min-width: 576px)
