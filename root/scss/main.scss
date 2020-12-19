@@ -371,7 +371,6 @@ section.home {
 	blockquote {
 		font-size: 1.1rem;
 		letter-spacing: -0.02rem;
-		margin: 2rem 10rem;
 		padding: 0 2rem;
 		position: relative;
 		font-style: italic;
@@ -656,6 +655,12 @@ section.home {
 			@include setFlex(row);
 			justify-content: space-evenly;
 		}
+		.quote p{
+			margin-right: 2rem;
+		}
+		blockquote{
+			margin: 2rem 10rem;
+		}
 		blockquote > :first-child:after {
 			top: 70%;
 		}
@@ -670,6 +675,9 @@ section.home {
 		}
 		img.rector-image {
 			max-width: calc(60vw);
+		}
+		.quote p{
+			margin-right: 4rem;
 		}
 	}
 	@media (min-width: 1281px) {

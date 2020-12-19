@@ -431,7 +431,6 @@ section.home .action-btn:hover {
 .team blockquote {
   font-size: 1.1rem;
   letter-spacing: -0.02rem;
-  margin: 2rem 10rem;
   padding: 0 2rem;
   position: relative;
   font-style: italic;
@@ -826,6 +825,12 @@ section.home .action-btn:hover {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .team .quote p {
+    margin-right: 2rem;
+  }
+  .team blockquote {
+    margin: 2rem 10rem;
+  }
   .team blockquote > :first-child:after {
     top: 70%;
   }
@@ -843,6 +848,9 @@ section.home .action-btn:hover {
   }
   .team img.rector-image {
     max-width: calc(60vw);
+  }
+  .team .quote p {
+    margin-right: 4rem;
   }
 }
 
