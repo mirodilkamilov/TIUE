@@ -10,13 +10,16 @@ $white-text: #fff;
 *:after {
 	box-sizing: border-box;
 }
+
 * {
 	margin: 0;
 	padding: 0;
 }
+
 p {
 	margin: 0;
 }
+
 body {
 	font-family: "Roboto", sans-serif;
 	background-color: $background;
@@ -25,12 +28,14 @@ body {
 @mixin setSectionBack($back-color) {
 	background: $back-color;
 }
+
 @mixin setFlex($direction) {
 	display: flex;
 	flex-direction: $direction;
 	justify-content: center;
 	align-items: center;
 }
+
 @mixin setGrid($col1, $col2) {
 	display: grid;
 	align-items: center;
@@ -41,20 +46,23 @@ body {
 	color: $logo;
 	text-align: center;
 	font-weight: 600;
-	padding: 1.5rem 0;
+	// padding: 1.5rem 0;
 	margin-bottom: 0;
 }
+
 .sub-heading {
 	text-align: center;
-	padding: 1rem 0;
+	// padding: 1rem 0;
 	margin-bottom: 0;
 	font-weight: 600;
 }
+
 .small-heading {
 	text-align: center;
 	color: $black-text;
 	font-weight: 600;
 }
+
 .section-paragraph {
 	text-align: center;
 	color: $black-text;
@@ -80,6 +88,7 @@ body {
 	pointer-events: none;
 	transition: all 0.3s ease;
 }
+
 .scroll-up-btn.show {
 	opacity: 1;
 	pointer-events: auto;
@@ -88,20 +97,25 @@ body {
 
 //* Navbar
 .navbar {
-	background-color: $grey;
+	background-color: rgba(99, 107, 111, 0.3);
+	backdrop-filter: blur(15px);
 	padding: 4px 1rem;
+
 	.container-fluid {
 		padding: 0;
 	}
+
 	.menu-button {
 		display: block;
 		position: relative;
 		outline: none;
 	}
+
 	.dropdown-toggle::after {
 		display: none;
 	}
 }
+
 //* Logo in navbar
 .logo {
 	display: flex;
@@ -111,15 +125,18 @@ body {
 	text-decoration: none;
 	padding: 0;
 	margin: 0;
+
 	&:hover {
 		color: #fff;
 	}
 }
+
 .logo p {
 	padding-left: 1rem;
 	font-size: 0.55rem;
 	margin: 0;
 }
+
 .logo img {
 	width: 64px;
 	height: 48px;
@@ -130,12 +147,14 @@ body {
 	display: block;
 	padding: 1.5rem 1.5rem !important;
 	border: none !important;
+
 	&:focus,
 	&:hover {
 		outline: none;
 		box-shadow: none;
 	}
 }
+
 .menu-button span {
 	position: absolute;
 	display: block;
@@ -146,22 +165,28 @@ body {
 	left: -7px;
 	transition: all 0.3s;
 }
+
 .menu-button span:nth-child(1) {
 	top: -13px;
 }
+
 .menu-button span:nth-child(2) {
 	top: -1.5px;
 }
+
 .menu-button span:nth-child(3) {
 	top: 10px;
 }
+
 .first-line {
 	transform: translateX(0) translateY(13px) rotate(45deg);
 }
+
 .second-line {
 	opacity: 0;
 	transform: translateX(30px);
 }
+
 .third-line {
 	transform: translateX(0) translateY(-10px) rotate(135deg);
 }
@@ -172,26 +197,30 @@ body {
 		.nav-link {
 			text-align: center;
 			font-weight: 500;
-			color: #fff;
+			color: $white-text;
 			&:hover {
 				font-weight: 600;
 				color: $logo;
 			}
 		}
+
 		.home {
 			font-weight: 600;
 			color: $logo;
 		}
+
 		.fa-chevron-down {
 			display: none;
 		}
 	}
 }
+
 .dropdown .fa-plus {
 	position: absolute;
 	right: 0.7rem;
 	transition: transform 0.3s;
 }
+
 .dropdown > .show .fa-plus {
 	transition: all 0.3s;
 	transform: rotate(45deg);
@@ -213,6 +242,7 @@ body {
 	text-align: center;
 	padding: 0 1rem;
 }
+
 .dropdown .dropdown-menu.show {
 	opacity: 1;
 	max-height: 500px;
@@ -227,6 +257,7 @@ body {
 	border-radius: 1rem;
 
 	@include setGrid(1fr, 3fr 1fr);
+
 	img {
 		justify-self: center;
 		width: 4rem;
@@ -235,15 +266,95 @@ body {
 
 	&:hover {
 		background-color: $grey;
+
 		.dropdown-item {
 			color: #fff;
 		}
 	}
+
 	.dropdown-item {
 		background-color: transparent;
 		color: $black-text;
 	}
 }
+
+//* Carousel
+.main-carousel {
+	.carousel {
+		img {
+			height: 100vh;
+		}
+		img.desktop{
+			display: none;
+		}
+		.carousel-controllers{
+			display: none;
+		}
+	}
+	.carousel-indicators li{
+		background-color: $logo;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+	}
+}
+.carousel-item {
+	h1,
+	h3 {
+		text-align: center;
+		color: $white-text;
+		margin: 0.5rem 0;
+	}
+	p.slide-paragraph,
+	li {
+		text-align: left;
+		color: $white-text;
+	}
+	.first-caption {
+		@include setFlex(column);
+		position: absolute;
+		top: 20%;
+		max-width: 40%;
+
+		.action-btn {
+			text-decoration: none;
+			color: $white-text;
+			background-color: $logo;
+			padding: 0.75rem;
+			margin-top: 1rem;
+			border-radius: 2rem;
+			&:hover {
+				background-color: $logo-hover;
+			}
+		}
+	}
+	.slide-caption {
+		position: absolute;
+		top: calc((100vh - 232px) / 2);
+		right: calc((100vw - 280px) / 2);
+		opacity: 0.75;
+		padding: 1rem;
+		// max-width: 400px;
+		max-width: 280px;
+		.slide-list {
+			margin-top: 1rem;
+			padding-left: 1rem;
+		}
+	}
+	.slide2{
+		background-color: #F10C22;
+	}
+	.slide3{
+		background-color: #183C7A;
+	}
+	.slide4{
+		background-color: #222530;
+	}
+	
+}
+
+//* Carousel (main)
+
 
 
 //* collaboration carousel
@@ -255,12 +366,15 @@ body {
 .navbar {
 	@media (min-width: 992px) {
 		padding: 4px 1.5rem;
+
 		.navbar-toggler {
 			display: none;
 		}
+
 		.navbar-nav {
 			padding: 0 1rem;
 		}
+
 		.fa-plus {
 			display: none;
 		}
@@ -274,10 +388,12 @@ body {
 				transform: rotate(0deg);
 				transition: transform 0.2s;
 			}
+
 			.nav-link:hover .fa-chevron-down {
 				transform: rotate(180deg);
 				transition: transform 0.2s;
 			}
+
 			.dropdown-menu {
 				position: absolute;
 				top: 50px;
@@ -285,8 +401,10 @@ body {
 				background-clip: border-box;
 				transition: all 0.3s;
 			}
+
 			.dropdown-list {
 				@include setGrid(1fr, 3fr);
+
 				img {
 					justify-self: center;
 					width: 5rem;
@@ -294,16 +412,17 @@ body {
 			}
 		}
 	}
+
 	@media (min-width: 1281px) {
 		padding: 4px 4rem;
 	}
+
 	@media (min-width: 1400px) {
 		padding: 4px 5rem;
 	}
 }
 
 //* Main University banner
-
 
 //* About part
 

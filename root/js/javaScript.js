@@ -43,13 +43,12 @@ $(document).ready(function () {
 			$(".scroll-up-btn").removeClass("show");
 		}
 	});
-	var typed=new Typed(".typing",{
-		strings:["Student Life...",],
-		typeSpeed:80,
-		backSpeed:60,
-		loop:true
-  });
-
+	var typed = new Typed(".typing", {
+		strings: ["Student Life..."],
+		typeSpeed: 80,
+		backSpeed: 60,
+		loop: true,
+	});
 
 	$(".scroll-up-btn").click(function () {
 		$("html").animate({ scrollTop: 0 });
@@ -90,4 +89,10 @@ $(".carousel").owlCarousel({
 			nav: false,
 		},
 	},
+});
+
+//* Bootstrap-Carousel (main)
+var myCarousel = document.querySelector("#myCarousel");
+var carousel = new bootstrap.Carousel(myCarousel, {
+	pause: true
 });

@@ -23,13 +23,11 @@ body {
   color: #542585;
   text-align: center;
   font-weight: 600;
-  padding: 1.5rem 0;
   margin-bottom: 0;
 }
 
 .sub-heading {
   text-align: center;
-  padding: 1rem 0;
   margin-bottom: 0;
   font-weight: 600;
 }
@@ -73,7 +71,9 @@ body {
 }
 
 .navbar {
-  background-color: #636b6f;
+  background-color: rgba(99, 107, 111, 0.3);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   padding: 4px 1rem;
 }
 
@@ -266,6 +266,96 @@ body {
 .dropdown-list .dropdown-item {
   background-color: transparent;
   color: #212529;
+}
+
+.main-carousel .carousel img {
+  height: 100vh;
+}
+
+.main-carousel .carousel img.desktop {
+  display: none;
+}
+
+.main-carousel .carousel .carousel-controllers {
+  display: none;
+}
+
+.main-carousel .carousel-indicators li {
+  background-color: #542585;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.carousel-item h1,
+.carousel-item h3 {
+  text-align: center;
+  color: #fff;
+  margin: 0.5rem 0;
+}
+
+.carousel-item p.slide-paragraph,
+.carousel-item li {
+  text-align: left;
+  color: #fff;
+}
+
+.carousel-item .first-caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 20%;
+  max-width: 40%;
+}
+
+.carousel-item .first-caption .action-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #542585;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 2rem;
+}
+
+.carousel-item .first-caption .action-btn:hover {
+  background-color: #46206e;
+}
+
+.carousel-item .slide-caption {
+  position: absolute;
+  top: calc((100vh - 232px) / 2);
+  right: calc((100vw - 280px) / 2);
+  opacity: 0.75;
+  padding: 1rem;
+  max-width: 280px;
+}
+
+.carousel-item .slide-caption .slide-list {
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+.carousel-item .slide2 {
+  background-color: #F10C22;
+}
+
+.carousel-item .slide3 {
+  background-color: #183C7A;
+}
+
+.carousel-item .slide4 {
+  background-color: #222530;
 }
 
 @media (min-width: 992px) {
