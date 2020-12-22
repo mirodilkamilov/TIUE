@@ -278,84 +278,114 @@ body {
 	}
 }
 
-//* Carousel
+//* Carousel (main)
 .main-carousel {
+	height: 100vh;
 	.carousel {
 		img {
-			height: 100vh;
+			height: 80vh;
 		}
-		img.desktop{
-			display: none;
-		}
-		.carousel-controllers{
+		.carousel-controllers {
 			display: none;
 		}
 	}
-	.carousel-indicators li{
-		background-color: $logo;
-		width: 15px;
-		height: 15px;
-		border-radius: 50%;
+	.carousel-indicators {
+		top: calc(80vh + 1rem);
+		li {
+			background-color: $logo;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			margin: 0 0.5rem;
+		}
 	}
 }
+
 .carousel-item {
-	h1,
 	h3 {
 		text-align: center;
+		font-weight: bolder;
 		color: $white-text;
-		margin: 0.5rem 0;
+		margin-bottom: 0.5rem;
 	}
 	p.slide-paragraph,
-	li {
+	li,
+	a {
+		font-weight: bolder;
 		text-align: left;
 		color: $white-text;
 	}
-	.first-caption {
-		@include setFlex(column);
-		position: absolute;
-		top: 20%;
-		max-width: 40%;
+	ol {
+		padding: 0;
+		margin: 0 0 0 0.5rem;
+	}
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
 
-		.action-btn {
-			text-decoration: none;
-			color: $white-text;
-			background-color: $logo;
-			padding: 0.75rem;
-			margin-top: 1rem;
-			border-radius: 2rem;
-			&:hover {
-				background-color: $logo-hover;
-			}
+	.action-btn {
+		display: block;
+		text-align: center;
+		width: 140px;
+		text-decoration: none;
+		color: $logo;
+		background-color: #fff;
+		padding: 0.75rem;
+		border-radius: 2rem;
+		margin: 0.5rem auto 0 auto;
+		transition: transform 0.3s;
+		&:hover {
+			transform: scale(1.03);
 		}
 	}
+
 	.slide-caption {
 		position: absolute;
-		top: calc((100vh - 232px) / 2);
-		right: calc((100vw - 280px) / 2);
-		opacity: 0.75;
+		bottom: 0;
+		opacity: 0.8;
 		padding: 1rem;
-		// max-width: 400px;
-		max-width: 280px;
+		width: calc(100vw);
 		.slide-list {
 			margin-top: 1rem;
 			padding-left: 1rem;
 		}
 	}
-	.slide2{
-		background-color: #F10C22;
+	.slide1 {
+		background-color: #e4e4dc;
+		h3 {
+			color: $black-text;
+			text-align: center;
+		}
+		.action-btn {
+			color: $white-text;
+			background-color: $logo;
+		}
+		p {
+			text-align: center;
+			color: $black-text;
+		}
+		.slide-paragraph-bigger {
+			font-size: larger;
+			font-weight: bolder;
+		}
+		.slide-paragraph {
+			font-weight: lighter;
+		}
 	}
-	.slide3{
-		background-color: #183C7A;
+	.slide2 {
+		// background-color: #f10c22;
+		background-color: #353b49;
 	}
-	.slide4{
+	.slide3 {
+		background-color: #183c7a;
+	}
+	.slide4 {
 		background-color: #222530;
 	}
-	
 }
-
-//* Carousel (main)
-
-
 
 //* collaboration carousel
 
@@ -419,6 +449,95 @@ body {
 
 	@media (min-width: 1400px) {
 		padding: 4px 5rem;
+	}
+}
+
+//* Carousel (main)
+.main-carousel {
+	@media (min-width: 768px) {
+		.carousel-inner {
+			img {
+				height: 100vh;
+			}
+			.mobile {
+				display: none;
+			}
+			.desktop {
+				display: block;
+			}
+		}
+		.slide-caption {
+			max-width: 280px;
+			right: 0;
+			bottom: auto;
+		}
+		.slide1 {
+			top: calc((100vh - 310px) / 2);
+		}
+		.slide2 {
+			top: calc((100vh - 254px) / 2);
+		}
+		.slide3 {
+			top: calc((100vh - 254px) / 2);
+		}
+		.slide4 {
+			top: calc((100vh - 244px) / 2);
+		}
+		.carousel-indicators {
+			top: auto;
+			bottom: 0;
+			width: 150px;
+			margin: 0.5rem auto;
+			border-radius: 1rem;
+			background-color: $background;
+			li {
+				background-color: $logo;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				margin: 0 0.5rem;
+			}
+		}
+	}
+	@media (min-width: 992px) {
+		.slide-caption {
+			max-width: 400px;
+			right: 1.5rem;
+		}
+	}
+	@media (min-width: 1200px) {
+		.slide-caption {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			max-height: 400px;
+			z-index: 1050;
+		}
+		.carousel-controllers {
+			display: block;
+		}
+	}
+	@media (min-width: 1281px) {
+		.slide-caption {
+			right: 4rem;
+		}
+	}
+	@media (min-width: 1400px) {
+		.slide-caption {
+			max-width: 500px;
+			padding: 2rem;
+			p,
+			h3,
+			li {
+				padding: 0.5rem 0;
+			}
+			right: 5rem;
+		}
 	}
 }
 
