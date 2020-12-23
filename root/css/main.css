@@ -286,8 +286,8 @@ body {
 
 .main-carousel .carousel-indicators li {
   background-color: #542585;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   margin: 0 0.5rem;
 }
