@@ -43,12 +43,12 @@ $(document).ready(function () {
 			$(".scroll-up-btn").removeClass("show");
 		}
 	});
-	var typed=new Typed(".typing",{
-		strings:["Student Life...",],
-		typeSpeed:80,
-		backSpeed:60,
-		loop:true
-  });
+	var typed = new Typed(".typing", {
+		strings: ["Student Life...",],
+		typeSpeed: 80,
+		backSpeed: 60,
+		loop: true
+	});
 
 
 	$(".scroll-up-btn").click(function () {
@@ -71,23 +71,3 @@ $(document).ready(function () {
 	});
 });
 $("#year").text(new Date().getFullYear());
-$(".carousel").owlCarousel({
-	margin: 20,
-	loop: true,
-	autoplayTimeOut: 2000,
-	autoplayHoverPause: true,
-	responsive: {
-		0: {
-			items: 1,
-			nav: false,
-		},
-		600: {
-			items: 2,
-			nav: false,
-		},
-		1000: {
-			items: 3,
-			nav: false,
-		},
-	},
-});

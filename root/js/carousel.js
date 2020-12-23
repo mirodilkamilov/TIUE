@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $('.customer-logos').slick({
         slidesToShow: 6,
         slidesToScroll: 1,
@@ -10,7 +10,7 @@ $(document).ready(function(){
         responsive: [{
             breakpoint: 768,
             settings: {
-                slidesToShow: 3
+                slidesToShow: 4
             }
         }, {
             breakpoint: 520,

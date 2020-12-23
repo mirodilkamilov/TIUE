@@ -10,25 +10,102 @@ $black-text: #212529;
 #636b6e		grey
 
 */
-
-/* academics section */
-
-/* student life section */
-.student-life {
-	background-image: url("https://raw.githubusercontent.com/mirodil1999/TIUE/github-pages/root/images/student%20life/student-life.png");
-	object-fit: cover;
-	min-height: 100%;
+.clr{
+	clear: both;
 }
-.student-life .text {
-	width: 100%;
-	height: 95vh;
-	padding-top: 350px;
+.about .heading{
+	font-family: 'Philosopher', sans-serif;
+}
+/* about section */
+.about .image{
+	position:absolute;
+}
+.about .about-content{
+	position: relative;
+	border-left: 5px solid #0A2B6E;
+	margin: 8em 0;
+	padding-left: 10px;
+}
+.about .heading3{
+	color: #5C318D;
+	font-weight: 700;
+	
+}
+.about .rector-message{
+	color: #1644A1;
+	font-weight: 700;
+}
+.about .rector-name{
+	color: #0B204B;
+	font-weight: 700;
+}
+.about .heading4{
+	font-weight: 700;
+}
+.about .values{
+	background-color: #e4e0e0;
+}
+.about .values .card1{
+	display: flex;
+	border-radius: 5px;
+	background-color: #fff;
+	margin: 5px 10px;
+}
+.about .values img{
+	width: 50px;
+	height: 50px;
+	margin: 10px 30px;
+}
+.about .values .content{
+	margin-top: 25px;
+}
+.directors img{
+	border-radius: 30px;
+	height: 300px;
+}
+.directors p{
+	font-weight: 700;
+}
+
+/* program section */
+.programs .program-card{
+	border-radius: 20px; 
+	padding-top: 120px;
+	text-align: center;
 	color: #fff;
-	font-size: 100px;
-	font-weight: 600;
 }
-
-/* news and events */
+.programs p{
+font-weight: 700;
+}
+.programs .program-card p{
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	font-weight: 800;
+	font-size: 18px;
+	padding: 10px 0;
+}
+.programs .linkTo{
+	width: 100%;
+	background-color: #5C318D;
+	text-align: center;
+	border-radius: 20px;
+	border: 3px solid #5C318D;
+	transition: all 0.3s ease;
+	padding: 3px 0;
+}
+.programs a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 700;
+}
+.programs a:hover{
+	text-decoration: none;
+	color: #5C318D;
+}
+.programs a:hover .linkTo{
+	background: #fff;
+}
 
 /* contact section */
 .contact .sub-heading{
@@ -84,30 +161,86 @@ $black-text: #212529;
 .footer a:hover {
 	color: #552588;
 }
-@media (max-width: 1200px) {
-	.student-life .text {
-		font-size: 70px;
+@media(max-width:1199px){
+	.about .about-content{
+		margin: 6em 0;
+	}
+}
+@media(max-width:991px){
+	.about .about-content{
+		margin: 2em 0;
+	}
+	.about .heading3{
+		font-weight: 700;
+		font-size: 20px;
+		
 	}
 }
 @media (max-width: 770px) {
-	.student-life .text {
-		font-size: 40px;
-	}
 	.contact .col-md-5 p {
 		font-size: 22px;
 		font-weight: 570;
 	}
 }
-@media (max-width: 415px) {
-	.student-life .text {
-		padding-top: 270px;
+@media(max-width:767px){
+	.about .about-content{
+		margin: 3em 0;
 	}
-	.student-life {
-		background-image: url("https://raw.githubusercontent.com/mirodil1999/TIUE/github-pages/root/images/student%20life/student-life-mobile.jpg");
+	.programs .col-md-3{
+		width: 250px;
+		margin: 0 auto;
 	}
-	.contact .col-md-5 p {
-		font-size: 20px;
-		font-weight: 570;
+}
+@media(max-width:483px){
+	.about .about-content{
+		margin: 3em 0;
+	}
+	.about .heading3{
+		font-weight: 700;
+		font-size: 18px;
+		
+	}
+	.about .rector-message{
+		font-size: 12px;
+		font-weight: 600;
+	}
+	.about .rector-name{
+    	font-size: 13px;
+	}
+}
+
+@media(max-width:435px){
+	.about .about-content{
+		margin: 2em 0;
+	}
+	.about .heading3{
+		font-size: 15px;
+	}
+	.about .rector-message{
+		font-size: 11px;
+		font-weight: 600;
+	}
+	.about .rector-name{
+    	font-size: 12px;
+	}
+	.about .values img{
+		margin: 30px 20px;
+	}
+}
+
+@media(max-width:357px){
+	.about .about-content{
+		margin: 1em 0;
+	}
+	.about .heading3{
+		font-size: 14px;
+	}
+	.about .rector-message{
+		font-size: 10px;
+		font-weight: 600;
+	}
+	.about .rector-name{
+    	font-size: 11px;
 	}
 }
 
@@ -140,5 +273,323 @@ $black-text: #212529;
 		width: 100px;
 		height: 90px;
 	}
+	.about .about-content{
+		margin: 0em 0;
+	}
+}
+@media(max-width:307px){
+	.about .heading3{
+		font-size: 12px;
+	}
+	.about .rector-message{
+		font-size: 9px;
+		font-weight: 600;
+	}
+	.about .rector-name{
+    	font-size: 10px;
+	}
 }
 
+ /* carpusel */
+.slick-slide {
+	margin: 0px 20px;
+}
+
+.slick-slide img {
+	width: 100%;
+}
+
+.slick-slider
+{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+			user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-ms-touch-action: pan-y;
+		touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.slick-list:focus
+{
+	outline: none;
+}
+.slick-list.dragging
+{
+	cursor: pointer;
+	cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+	-webkit-transform: translate3d(0, 0, 0);
+	   -moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		 -o-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+	display: table;
+	content: '';
+}
+.slick-track:after
+{
+	clear: both;
+}
+.slick-loading .slick-track
+{
+	visibility: hidden;
+}
+
+.slick-slide
+{
+	display: none;
+	float: left;
+	height: 100%;
+	min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+	float: right;
+}
+.slick-slide img
+{
+	display: block;
+}
+.slick-slide.slick-loading img
+{
+	display: none;
+}
+.slick-slide.dragging img
+{
+	pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+	display: block;
+}
+.slick-loading .slick-slide
+{
+	visibility:hidden;
+}
+.slick-vertical .slick-slide
+{
+	display: block;
+	height: auto;
+	border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+	display: none;
+}
+.slick-prev:focus,
+.slick-next:focus{
+	outline: 0!important;
+}
+.slick-prev,
+.slick-next{
+	background: none;
+	border: none; 
+	position: absolute;
+	z-index: 999;
+}
+.slick-prev{
+	position: absolute;
+	z-index: 999;
+}
+.slick-next,
+.slick-prev{
+	visibility: hidden;
+}
+.slick-next{
+	margin-left: 96.5%;
+	margin-top: -20.5%;
+	
+}
+.slick-next:after{
+	visibility: visible;
+	content:'>';
+	color: #552588;
+	font-size:70px;
+	font-weight: 750;
+	border-radius: 50%;
+	padding-left: 10px;
+}
+.slick-prev{
+	margin-top: 50px;
+	margin-left: -103px;
+}
+.slick-prev:after{
+	visibility: visible;
+	content:'<';
+	color: #552588;
+	font-size:70px;
+	font-weight: 750;
+	border-radius: 50%;
+	padding-left: 10px;
+}
+
+.collaboration .box{
+	text-align: center;
+	transition: all 0.3s ease;
+}
+.collaboration .box:hover{
+	transform: scale(1.05);
+}
+.collaboration .box:hover p{
+	color: #552588;
+}
+@media (max-width: 1199px){
+	.slick-next{
+		/* margin-left: 96.5%; */
+		margin-top: -22.5%;
+	}
+}
+@media (max-width: 991px){
+	.slick-next{
+		/* margin-left: 96.5%; */
+		margin-top: -25.7%;
+	}
+}
+@media (max-width: 820px){
+	.slick-next{
+		margin-left: 94%;
+	}
+}
+
+@media (max-width: 767px){
+	.slick-next{
+		margin-left: 92%;
+		margin-top: -38%;
+	}
+}
+@media (max-width: 584px){
+	.slick-next{
+		margin-left: 85%;
+	}
+	.slick-prev{
+		margin-left:-70px;
+	}
+}
+@media (max-width: 519px){
+	.slick-next{
+		/* margin-left: 96.5%; */
+		margin-top: -58.5%;
+	}
+}
+@media (max-width: 513px){
+	.slick-next{
+		/* margin-left: 96.5%; */
+		margin-top: -58.5%;
+	}
+}
+@media(max-width:500px)
+{
+	.slick-next{
+		margin-left: 83.5%;
+	}
+}
+
+@media (max-width: 437px){
+	.slick-next{
+		margin-left: 81%;
+		margin-top: -57.5%;
+	}
+}
+@media (max-width: 414px){
+	.slick-next{
+		margin-left: 80.5%;
+	}
+}
+@media (max-width: 400px){
+	.slick-next{
+		/* margin-left: 96.5%; */
+		margin-top: -61.5%;
+	}
+}
+@media (max-width: 375px){
+	.slick-next{
+		margin-left: 78%;
+	}
+}
+@media (max-width: 360px){
+	.slick-next{
+		margin-left: 77%;
+	}
+}
+@media (max-width: 352px){
+	.slick-next{
+		/* margin-left: 96.5%; */
+		margin-top: -67.5%;
+	}
+}
+@media (max-width: 330px){
+	.slick-next{
+		margin-left: 76.5%;
+	}
+	.slick-next:after{
+		font-size:60px;
+		font-weight: 700;
+	}
+	.slick-prev:after{
+		font-size:60px;
+		font-weight: 700;
+	}
+}
+@media(max-width:320px){
+	.slick-next{
+		margin-left: 75.7%;
+	}
+}
+@media (max-width: 302px){
+	.slick-next{
+		margin-left: 73%;
+		margin-top: -75%;
+	}
+}
+@media (max-width: 280px){
+	.slick-next{
+		margin-left: 71%;
+	}
+}
+@media (max-width: 254px){
+	.slick-next{
+		/* margin-left: 96.5%; */
+		margin-top: -86%;
+	}
+}
+@media (max-width: 240px){
+	.slick-next{
+		/* margin-left: 96.5%; */
+		margin-top: -88%;
+	}
+}
+@media (max-width: 222px){
+	.slick-next{
+		/* margin-left: 96.5%; */
+		margin-top: -100%;
+	}
+}
