@@ -283,14 +283,15 @@ body {
 	height: 100vh;
 	.carousel {
 		img {
-			height: 80vh;
+			height: auto;
 		}
 		.carousel-controllers {
 			display: none;
 		}
 	}
 	.carousel-indicators {
-		top: calc(80vh + 1rem);
+		// top: calc(80vh + 2rem);
+		bottom: -4rem;
 		li {
 			background-color: $logo;
 			width: 20px;
@@ -302,6 +303,7 @@ body {
 }
 
 .carousel-item {
+	height: 85vh;
 	h3 {
 		text-align: center;
 		font-weight: bolder;
@@ -345,7 +347,8 @@ body {
 	.slide-caption {
 		position: absolute;
 		bottom: 0;
-		opacity: 0.8;
+		// opacity: 0.8;
+		opacity: 1;
 		padding: 1rem;
 		width: calc(100vw);
 		.slide-list {
@@ -376,8 +379,9 @@ body {
 		}
 	}
 	.slide2 {
-		// background-color: #f10c22;
-		background-color: #353b49;
+		background-color: #f10c22;
+		opacity: 1;
+		// background-color: #353b49;
 	}
 	.slide3 {
 		background-color: #183c7a;

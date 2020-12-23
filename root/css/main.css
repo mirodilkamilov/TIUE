@@ -273,7 +273,7 @@ body {
 }
 
 .main-carousel .carousel img {
-  height: 80vh;
+  height: auto;
 }
 
 .main-carousel .carousel .carousel-controllers {
@@ -281,7 +281,7 @@ body {
 }
 
 .main-carousel .carousel-indicators {
-  top: calc(80vh + 1rem);
+  bottom: -4rem;
 }
 
 .main-carousel .carousel-indicators li {
@@ -290,6 +290,10 @@ body {
   height: 20px;
   border-radius: 50%;
   margin: 0 0.5rem;
+}
+
+.carousel-item {
+  height: 85vh;
 }
 
 .carousel-item h3 {
@@ -344,7 +348,7 @@ body {
 .carousel-item .slide-caption {
   position: absolute;
   bottom: 0;
-  opacity: 0.8;
+  opacity: 1;
   padding: 1rem;
   width: calc(100vw);
 }
@@ -383,7 +387,8 @@ body {
 }
 
 .carousel-item .slide2 {
-  background-color: #353b49;
+  background-color: #f10c22;
+  opacity: 1;
 }
 
 .carousel-item .slide3 {
