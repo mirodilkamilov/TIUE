@@ -255,6 +255,7 @@ body {
 	padding: 0.5rem;
 	margin: 1rem 0;
 	border-radius: 1rem;
+	text-decoration: none;
 
 	@include setGrid(1fr, 3fr 1fr);
 
@@ -441,6 +442,7 @@ body {
 
 			.dropdown-list {
 				@include setGrid(1fr, 3fr);
+				text-decoration: none;
 
 				img {
 					justify-self: center;
@@ -556,7 +558,7 @@ body {
 				font-weight: 700;
 				font-size: 1.3rem;
 			}
-			p.slide-paragraph{
+			p.slide-paragraph {
 				font-size: 1.1rem;
 			}
 
@@ -578,7 +580,7 @@ body {
 			}
 			right: 6em;
 		}
-		.slide1{
+		.slide1 {
 			max-width: 35%;
 		}
 	}
