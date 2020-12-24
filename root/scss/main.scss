@@ -4,6 +4,7 @@ $logo: #542585;
 $logo-hover: #46206e;
 $black-text: #212529;
 $white-text: #fff;
+$card-color: #f9f9f9;
 
 *,
 *:before,
@@ -19,7 +20,7 @@ p {
 }
 body {
 	font-family: "Roboto", sans-serif;
-	background-color: $background;
+	background-color: $white-text;
 }
 
 @mixin setSectionBack($back-color) {
@@ -40,20 +41,24 @@ body {
 .heading {
 	color: $logo;
 	text-align: center;
-	font-weight: 600;
-	padding: 1.5rem 0;
-	margin-bottom: 0;
+	font-weight: 700;
+	font-size: 2rem;
+	padding: 0;
+	margin: 1rem 0;
 }
 .sub-heading {
 	text-align: center;
-	padding: 1rem 0;
-	margin-bottom: 0;
+	color: $black-text;
+	padding: 0;
+	margin: 1rem 0;
 	font-weight: 600;
+	font-size: 1.5rem;
 }
 .small-heading {
 	text-align: center;
 	color: $black-text;
 	font-weight: 600;
+	font-size: 1.2rem;
 }
 .section-paragraph {
 	text-align: center;
@@ -61,251 +66,115 @@ body {
 	font-size: 1.1rem;
 }
 
-//* Scroll up button
-.scroll-up-btn {
-	position: fixed;
-	height: 45px;
-	width: 42px;
-	background: #542585;
-	right: 30px;
-	bottom: 10px;
-	text-align: center;
-	line-height: 45px;
-	color: #fff;
-	z-index: 9999;
-	font-size: 30px;
-	border-radius: 6px;
-	cursor: pointer;
-	opacity: 0;
-	pointer-events: none;
-	transition: all 0.3s ease;
-}
-.scroll-up-btn.show {
-	opacity: 1;
-	pointer-events: auto;
-	bottom: 30px;
-}
-
-//* Navbar
-.navbar {
-	background-color: $grey;
-	padding: 4px 1rem;
-	.container-fluid {
-		padding: 0;
-	}
-	.menu-button {
-		display: block;
-		position: relative;
-		outline: none;
-	}
-	.dropdown-toggle::after {
-		display: none;
-	}
-}
-//* Logo in navbar
-.logo {
-	display: flex;
-	align-items: center;
-	width: min-content;
-	color: #fff;
-	text-decoration: none;
-	padding: 0;
-	margin: 0;
-	&:hover {
-		color: #fff;
-	}
-}
-.logo p {
-	padding-left: 1rem;
-	font-size: 0.55rem;
-	margin: 0;
-}
-.logo img {
-	width: 64px;
-	height: 48px;
-}
-
-//! hamburger-menu animation
-.navbar-toggler {
-	display: block;
-	padding: 1.5rem 1.5rem !important;
-	border: none !important;
-	&:focus,
-	&:hover {
-		outline: none;
-		box-shadow: none;
-	}
-}
-.menu-button span {
-	position: absolute;
-	display: block;
-	background: #fff;
-	width: 30px;
-	height: 3px;
-	border-radius: 50px;
-	left: -7px;
-	transition: all 0.3s;
-}
-.menu-button span:nth-child(1) {
-	top: -13px;
-}
-.menu-button span:nth-child(2) {
-	top: -1.5px;
-}
-.menu-button span:nth-child(3) {
-	top: 10px;
-}
-.first-line {
-	transform: translateX(0) translateY(13px) rotate(45deg);
-}
-.second-line {
-	opacity: 0;
-	transform: translateX(30px);
-}
-.third-line {
-	transform: translateX(0) translateY(-10px) rotate(135deg);
-}
-
-//* Navbar items
-.navbar-nav {
-	.nav-item {
-		.nav-link {
-			text-align: center;
-			font-weight: 500;
-			color: #fff;
-			&:hover {
-				font-weight: 600;
-				color: $logo;
-			}
-		}
-		.home {
-			font-weight: 600;
-			color: $logo;
-		}
-		.fa-chevron-down {
-			display: none;
-		}
-	}
-}
-.dropdown .fa-plus {
-	position: absolute;
-	right: 0.7rem;
-	transition: transform 0.3s;
-}
-.dropdown > .show .fa-plus {
-	transition: all 0.3s;
-	transform: rotate(45deg);
-}
-
-//* Dropdown menu
-.dropdown > .dropdown-menu {
-	opacity: 0;
-	display: block;
-	max-height: 0;
-	overflow: hidden;
-	visibility: hidden;
-	transition: all 0.5s;
-
-	padding: 0;
-	margin: 0;
-	border: none;
-	background-color: $background;
-	text-align: center;
+//* About section
+.about {
+	margin: 1.5rem 0;
 	padding: 0 1rem;
 }
-.dropdown .dropdown-menu.show {
-	opacity: 1;
-	max-height: 500px;
-	visibility: visible;
-	transition: all 0.7s;
-}
-
-.dropdown-list {
-	background-color: #fff;
-	padding: 0.5rem;
-	margin: 1rem 0;
-	border-radius: 1rem;
-
-	@include setGrid(1fr, 3fr 1fr);
+.rector-container {
+	position: relative;
 	img {
-		justify-self: center;
-		width: 4rem;
-		border-radius: 0.75rem;
+		margin: 1rem 0;
+		width: 100%;
+		height: auto;
 	}
-
-	&:hover {
-		background-color: $grey;
-		.dropdown-item {
-			color: #fff;
+	.rector-content {
+		position: absolute;
+		top: 0;
+		margin: 8% 0;
+		height: 80%;
+		border-left: 5px solid #0a2b6e;
+		padding-left: 0.5rem;
+		max-width: calc(60% - 1rem);
+		h3,
+		h4,
+		p {
+			margin: 0;
+			text-align: left;
 		}
-	}
-	.dropdown-item {
-		background-color: transparent;
-		color: $black-text;
+		h3{
+			margin-top: 0.5rem;
+			color: $logo;
+			font-weight: 700;
+			font-size: 0.8rem;
+		}
+		h4{
+			color: #1644A1;
+			font-size: 0.7rem;
+			font-weight: 600;
+			margin: 0.5rem 0;
+		}
+		p{
+			color: $black-text;
+			font-size: 0.8rem;
+			font-weight: 700;
+		}
 	}
 }
 
+//* Values part
+.values {
+	.cards {
+		background: $card-color;
+		box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.13);
+		border-radius: 1rem;
+		padding: 1rem;
+		margin-top: 1rem;
+		@include setGrid(1fr, 3fr);
+		align-self: stretch;
+		.icon-part {
+			justify-self: center;
+		}
+		p {
+			font-size: 1.1rem;
+		}
+		.text-part {
+			padding-left: 1rem;
+		}
+		.card-icon {
+			width: 4rem;
+		}
+	}
+}
 
-//* collaboration carousel
-
-//? ==============================
+//?=========================
 //! Media queries
+//?=========================
 
-//* Navbar responsiveness in bigger screens
-.navbar {
+//* Values part
+.values {
+	@media (min-width: 768px) {
+		.sub-heading {
+			margin: 0;
+		}
+		.card-container {
+			@include setGrid(1fr, 1fr);
+			column-gap: 1rem;
+		}
+	}
 	@media (min-width: 992px) {
-		padding: 4px 1.5rem;
-		.navbar-toggler {
-			display: none;
+		.last-card {
+			@include setFlex(row);
 		}
-		.navbar-nav {
-			padding: 0 1rem;
+		.last-value {
+			min-width: 35rem;
 		}
-		.fa-plus {
-			display: none;
+	}
+	@media (min-width: 1281px) {
+		.cards {
+			margin-top: 2rem;
 		}
-
-		//* Dropdown menu
-		.dropdown {
-			.fa-chevron-down {
-				display: block;
-				position: absolute;
-				right: 50%;
-				transform: rotate(0deg);
-				transition: transform 0.2s;
-			}
-			.nav-link:hover .fa-chevron-down {
-				transform: rotate(180deg);
-				transition: transform 0.2s;
-			}
-			.dropdown-menu {
-				position: absolute;
-				top: 50px;
-				box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.3);
-				background-clip: border-box;
-				transition: all 0.3s;
-			}
-			.dropdown-list {
-				@include setGrid(1fr, 3fr);
-				img {
-					justify-self: center;
-					width: 5rem;
+		.card-container {
+			column-gap: 2rem;
+			.cards {
+				&:nth-child(1),
+				&:nth-child(2) {
+					margin-top: 1rem;
 				}
 			}
 		}
 	}
-	@media (min-width: 1281px) {
-		padding: 4px 4rem;
-	}
-	@media (min-width: 1400px) {
-		padding: 4px 5rem;
-	}
 }
-
-//* Main University banner
-
-
-//* About part
 
 //? Media queries Stack Overflow
 // @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
