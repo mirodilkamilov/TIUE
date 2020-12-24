@@ -43,14 +43,7 @@ $(document).ready(function () {
 			$(".scroll-up-btn").removeClass("show");
 		}
 	});
-	var typed = new Typed(".typing", {
-		strings: ["Student Life...",],
-		typeSpeed: 80,
-		backSpeed: 60,
-		loop: true
-	});
-
-
+	
 	$(".scroll-up-btn").click(function () {
 		$("html").animate({ scrollTop: 0 });
 	});
