@@ -76,7 +76,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	//Image ratio is 1.583 (width/height), 2rem initial padding 
+	//Image ratio is 1.583 (width/height), 2rem initial padding
 	height: calc((100vw - 2rem) / 1.583);
 	margin: 1rem 0;
 	img {
@@ -148,15 +148,68 @@ body {
 //?=========================
 
 //* About section
+.rector-container {
+	@media (min-width: 360px) {
+		.rector-content {
+			h3 {
+				font-size: 0.9rem;
+			}
+			h4 {
+				font-size: 0.8rem;
+			}
+			p {
+				font-size: 0.8rem;
+				line-height: 1.4;
+			}
+		}
+	}
+	@media (min-width: 425px) {
+		.rector-content {
+			h3 {
+				font-size: 1.1rem;
+			}
+			h4 {
+				font-size: 0.9rem;
+			}
+			p {
+				font-size: 0.9rem;
+				line-height: 1.5;
+			}
+		}
+	}
+	@media (min-width: 600px) {
+		.rector-content {
+			h3 {
+				font-size: 1.5rem;
+			}
+			h4 {
+				font-size: 1.1rem;
+			}
+			p {
+				font-size: 1.1rem;
+				font-weight: 600;
+			}
+			padding-left: 1rem;
+		}
+	}
+}
 .about {
-	//
+	@media (min-width: 768px) {
+		.vision-mission-container {
+			@include setGrid(1fr, 1fr);
+			justify-content: center;
+			align-items: stretch;
+			column-gap: 1rem;
+			margin-bottom: 1.5rem;
+		}
+	}
 }
 
 //* Values part
 .values {
 	@media (min-width: 768px) {
 		.sub-heading {
-			margin: 0;
+			margin: 0.25rem 0;
 		}
 		.card-container {
 			@include setGrid(1fr, 1fr);
