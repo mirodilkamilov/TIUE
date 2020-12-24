@@ -73,38 +73,43 @@ body {
 }
 .rector-container {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	//Image ratio is 1.583 (width/height), 2rem initial padding 
+	height: calc((100vw - 2rem) / 1.583);
+	margin: 1rem 0;
 	img {
-		margin: 1rem 0;
+		position: absolute;
+		top: 0;
+		z-index: -1;
 		width: 100%;
 		height: auto;
 	}
 	.rector-content {
-		position: absolute;
-		top: 0;
-		margin: 7% 0;
-		height: 80%;
 		border-left: 5px solid #0a2b6e;
 		padding-left: 0.5rem;
-		max-width: calc(60% - 1rem);
+		max-width: 60%;
+
 		h3,
 		h4,
 		p {
 			margin: 0;
 			text-align: left;
 		}
-		h3{
+		h3 {
 			margin-top: 0.5rem;
 			color: $logo;
 			font-weight: 700;
 			font-size: 0.8rem;
 		}
-		h4{
-			color: #1644A1;
+		h4 {
+			color: #1644a1;
 			font-size: 0.7rem;
 			font-weight: 600;
 			margin: 0.5rem 0;
 		}
-		p{
+		p {
 			color: $black-text;
 			font-size: 0.8rem;
 			font-weight: 700;
@@ -141,6 +146,11 @@ body {
 //?=========================
 //! Media queries
 //?=========================
+
+//* About section
+.about {
+	//
+}
 
 //* Values part
 .values {
