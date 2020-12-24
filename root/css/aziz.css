@@ -10,6 +10,9 @@ $black-text: #212529;
 #636b6e		grey
 
 */
+body{
+	background-color: #fff !important;
+}
 .clr{
 	clear: both;
 }
@@ -42,14 +45,14 @@ $black-text: #212529;
 .about .heading4{
 	font-weight: 700;
 }
-.about .values{
-	background-color: #e4e0e0;
-}
+
 .about .values .card1{
 	display: flex;
 	border-radius: 5px;
-	background-color: #fff;
+	background-color: #FDFFFC;
 	margin: 5px 10px;
+	box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
 }
 .about .values img{
 	width: 50px;
