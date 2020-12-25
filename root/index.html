@@ -30,9 +30,10 @@
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"
-		integrity="sha512-4GsgvzFFry8SXj8c/VcCjjEZ+du9RZp/627AEQRVLatx6d60AUnUYXg0lGn538p44cgRs5E2GXq+8IOetJ+6ow=="
-		crossorigin="anonymous"></script>
+	<!-- Swiper (carousel) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css"
+		integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA=="
+		crossorigin="anonymous" />
 
 	<!-- Aziz's stylesheet -->
 	<!-- <link rel="stylesheet" href="css/aziz.css"> -->
@@ -40,6 +41,47 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<link rel="icon" href="browser-tab-icon.png" type="image/x-icon">
+	<style>
+		html,
+		body {
+			position: relative;
+			height: 100%;
+		}
+
+		body {
+			background: #eee;
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color: #000;
+			margin: 0;
+			padding: 0;
+		}
+
+		.swiper-container {
+			width: 800px;
+			height: 500px;
+		}
+
+		.swiper-slide {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+	</style>
 </head>
 
 <body>
@@ -216,13 +258,46 @@
 	</section>
 
 
-	<script src="js/carousel.js"></script>
-	<script src="js/javaScript.js"></script>
+	<!-- Swiper -->
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">Slide 1</div>
+			<div class="swiper-slide">Slide 2</div>
+			<div class="swiper-slide">Slide 3</div>
+			<div class="swiper-slide">Slide 4</div>
+			<div class="swiper-slide">
+				<img data-src="images/main/b1.jpg" data-srcset="images/main/b1.jpg" class="swiper-lazy" style="width: 90px;">
+				<div class="swiper-lazy-preloader"></div>
+			</div>
+			<div class="swiper-slide">Slide 5</div>
+			<div class="swiper-slide">Slide 6</div>
+			<div class="swiper-slide">Slide 7</div>
+			<div class="swiper-slide">Slide 8</div>
+			<div class="swiper-slide">Slide 9</div>
+			<div class="swiper-slide">Slide 10</div>
+
+		</div>
+		<!-- Add Arrows -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination"></div>
+	</div>
+
 	<!-- Bootstrap5 Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+	<!-- Swiper (carousel) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"
+		integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA=="
+		crossorigin="anonymous"></script>
+	<!-- Jquery 3.0.0 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"
+		integrity="sha512-4GsgvzFFry8SXj8c/VcCjjEZ+du9RZp/627AEQRVLatx6d60AUnUYXg0lGn538p44cgRs5E2GXq+8IOetJ+6ow=="
+		crossorigin="anonymous"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/javaScript.js"></script>
 </body>
 
 </html>
