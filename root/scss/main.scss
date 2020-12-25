@@ -34,8 +34,9 @@ body {
 }
 @mixin setGrid($col1, $col2) {
 	display: grid;
-	align-items: center;
 	grid-template-columns: $col1 $col2;
+	align-items: center;
+	justify-content: center;
 }
 
 .heading {
@@ -68,8 +69,8 @@ body {
 
 //* About section
 .about {
-	margin: 1.5rem 0;
-	padding: 0 1rem;
+	margin: 1.5rem 1rem;
+	padding: 0;
 }
 .rector-container {
 	position: relative;
@@ -143,6 +144,34 @@ body {
 	}
 }
 
+//* Core Team
+.core-team {
+	margin: 1.5rem 1rem;
+	padding: 0;
+	.team-card-container {
+		@include setFlex(column);
+	}
+}
+.team-card {
+	text-align: center;
+	margin-bottom: 1rem;
+	max-width: 100%;
+
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: 2rem;
+	}
+	h4 {
+		margin: 0.5rem 0;
+		font-size: 1.3rem;
+	}
+	p {
+		line-height: 1.3;
+		font-weight: 600;
+	}
+}
+
 //?=========================
 //! Media queries
 //?=========================
@@ -203,6 +232,11 @@ body {
 			margin-bottom: 1.5rem;
 		}
 	}
+	@media (min-width: 992px) {
+		.vision-mission-container {
+			column-gap: 2rem;
+		}
+	}
 }
 
 //* Values part
@@ -217,24 +251,78 @@ body {
 		}
 	}
 	@media (min-width: 992px) {
+		.card-container {
+			column-gap: 2rem;
+			row-gap: 1rem;
+		}
 		.last-card {
 			@include setFlex(row);
 		}
 		.last-value {
 			min-width: 35rem;
+			margin-top: 2rem;
 		}
 	}
 	@media (min-width: 1281px) {
-		.cards {
-			margin-top: 2rem;
-		}
 		.card-container {
-			column-gap: 2rem;
 			.cards {
 				&:nth-child(1),
 				&:nth-child(2) {
 					margin-top: 1rem;
 				}
+			}
+		}
+	}
+}
+
+//* Core Team
+.core-team {
+	@media (min-width: 360px) {
+		.team-card {
+			max-width: 80%;
+		}
+	}
+	@media (min-width: 425px) {
+		.team-card {
+			max-width: 65%;
+		}
+	}
+	@media (min-width: 768px) {
+		.team-card-container {
+			@include setGrid(1fr, 1fr);
+			align-items: stretch;
+			justify-items: center;
+			row-gap: 2rem;
+		}
+		.team-card {
+			width: 35vw;
+			max-width: 320px;
+			margin-bottom: 0;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	@media (min-width: 992px) {
+		.team-card-container {
+			column-gap: 2rem;
+		}
+		.team-card:nth-child(odd) {
+			justify-self: end;
+		}
+		.team-card:nth-child(even) {
+			justify-self: start;
+		}
+	}
+	@media (min-width: 1281px) {
+		.team-card-container {
+			@include setGrid(1fr 1fr, 1fr 1fr);
+			align-items: stretch;
+			column-gap: 1rem;
+			row-gap: 0;
+			.team-card {
+				max-width: 260px;
+				justify-self: center;
 			}
 		}
 	}
