@@ -41,47 +41,6 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<link rel="icon" href="browser-tab-icon.png" type="image/x-icon">
-	<style>
-		html,
-		body {
-			position: relative;
-			height: 100%;
-		}
-
-		body {
-			background: #eee;
-			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-			font-size: 14px;
-			color: #000;
-			margin: 0;
-			padding: 0;
-		}
-
-		.swiper-container {
-			width: 800px;
-			height: 500px;
-		}
-
-		.swiper-slide {
-			text-align: center;
-			font-size: 18px;
-			background: #fff;
-
-			/* Center slide text vertically */
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			-webkit-justify-content: center;
-			justify-content: center;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			-webkit-align-items: center;
-			align-items: center;
-		}
-	</style>
 </head>
 
 <body>
@@ -259,30 +218,55 @@
 
 
 	<!-- Swiper -->
-	<div class="swiper-container">
+	<h1 class="heading">Collaboration</h1>
+	<section class="collaboration swiper-container">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide">Slide 1</div>
-			<div class="swiper-slide">Slide 2</div>
-			<div class="swiper-slide">Slide 3</div>
-			<div class="swiper-slide">Slide 4</div>
-			<div class="swiper-slide">
-				<img data-src="images/main/b1.jpg" data-srcset="images/main/b1.jpg" class="swiper-lazy" style="width: 90px;">
+			<div class="collab-card swiper-slide">
+				<img data-src="images/collaboration/xalq-ta'lim-vazirligi.png" alt="xalq-ta'lim-vazirligi logo"
+					class="collab-img swiper-lazy">
 				<div class="swiper-lazy-preloader"></div>
+				<p>The Ministry of Public Education of the Republic of Uzbekistan</p>
 			</div>
-			<div class="swiper-slide">Slide 5</div>
-			<div class="swiper-slide">Slide 6</div>
-			<div class="swiper-slide">Slide 7</div>
-			<div class="swiper-slide">Slide 8</div>
-			<div class="swiper-slide">Slide 9</div>
-			<div class="swiper-slide">Slide 10</div>
-
+			<div class="collab-card swiper-slide">
+				<img data-src="images/collaboration/economics-university.png"
+					alt="Tashkent State University of Economics logo" class="collab-img swiper-lazy">
+				<div class="swiper-lazy-preloader"></div>
+				<p>Tashkent State University of Economics</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img data-src="images/collaboration/oep.png" alt="Omnia Education Partnerships logo"
+					class="collab-img swiper-lazy">
+				<div class="swiper-lazy-preloader"></div>
+				<p>Omnia Education Partnerships (OEP)</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img data-src="images/collaboration/isass.png" alt="isass logo" class="collab-img swiper-lazy">
+				<div class="swiper-lazy-preloader"></div>
+				<p>International school of applied and social Sciences (Spain)</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img data-src="images/collaboration/monash.png" alt="Monash University logo" class="collab-img swiper-lazy">
+				<div class="swiper-lazy-preloader"></div>
+				<p>Monash University (Australia)</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img data-src="images/collaboration/code-craft.png" alt="Code Craft logo" class="collab-img swiper-lazy">
+				<div class="swiper-lazy-preloader"></div>
+				<p>Codecraft art of coding</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img data-src="images/collaboration/it-park.png" alt="IT Park logo" class="collab-img swiper-lazy">
+				<div class="swiper-lazy-preloader"></div>
+				<p>IT Park start local & GO global</p>
+			</div>
 		</div>
 		<!-- Add Arrows -->
 		<div class="swiper-button-next"></div>
 		<div class="swiper-button-prev"></div>
 		<!-- Add Pagination -->
 		<div class="swiper-pagination"></div>
-	</div>
+	</section>
+
 
 	<!-- Bootstrap5 Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
