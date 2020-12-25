@@ -326,6 +326,9 @@ body {
 	.desktop {
 		display: none;
 	}
+	.laptop {
+		display: none;
+	}
 	.tablet {
 		display: none;
 	}
@@ -523,6 +526,14 @@ body {
 		}
 	}
 	@media (min-width: 1200px) {
+		.c2 {
+			.desktop {
+				display: none;
+			}
+			.laptop {
+				display: block;
+			}
+		}
 		.slide-caption {
 			position: absolute;
 			top: 0;
@@ -570,6 +581,14 @@ body {
 		}
 	}
 	@media (min-width: 1400px) {
+		.c2 {
+			.desktop {
+				display: block;
+			}
+			.laptop {
+				display: none;
+			}
+		}
 		.slide-caption {
 			max-width: 400px;
 			padding: 2rem;

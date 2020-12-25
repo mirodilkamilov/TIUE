@@ -326,6 +326,10 @@ body {
   display: none;
 }
 
+.carousel-item .laptop {
+  display: none;
+}
+
 .carousel-item .tablet {
   display: none;
 }
@@ -549,6 +553,12 @@ body {
 }
 
 @media (min-width: 1200px) {
+  .main-carousel .c2 .desktop {
+    display: none;
+  }
+  .main-carousel .c2 .laptop {
+    display: block;
+  }
   .main-carousel .slide-caption {
     position: absolute;
     top: 0;
@@ -607,6 +617,12 @@ body {
 }
 
 @media (min-width: 1400px) {
+  .main-carousel .c2 .desktop {
+    display: block;
+  }
+  .main-carousel .c2 .laptop {
+    display: none;
+  }
   .main-carousel .slide-caption {
     max-width: 400px;
     padding: 2rem;
