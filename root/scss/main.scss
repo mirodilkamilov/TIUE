@@ -1037,7 +1037,7 @@ body {
 		}
 		.program-card-container {
 			margin: 1.5rem;
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: 1fr, 1fr, 1fr, 1fr;
 			justify-items: center;
 		}
 		.program-card {
