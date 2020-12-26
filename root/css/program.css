@@ -118,6 +118,9 @@ section{
     font-weight: 500;
 }
 /* program section  */
+.col-md-7{
+    margin-bottom: 1rem;
+}
 .programs img{
    
     margin-bottom: 30px;
