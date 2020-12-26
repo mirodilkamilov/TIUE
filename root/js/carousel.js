@@ -40,17 +40,19 @@ var swiper = new Swiper(".swiper-container", {
 		"@0.85": {
 			slidesPerView: 4,
 			spaceBetween: 20,
-			slidesPerGroup: 3,
+			slidesPerGroup: 1,
 		},
 		"@1": {
 			slidesPerView: 5,
 			spaceBetween: 20,
-			slidesPerGroup: 4,
+			slidesPerGroup: 1,
+			loop: true,
 		},
 		"@1.2": {
 			slidesPerView: 6,
 			spaceBetween: 30,
-			slidesPerGroup: 6,
+			slidesPerGroup: 1,
+			loop: true,
 		},
 	},
 });
