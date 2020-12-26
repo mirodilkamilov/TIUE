@@ -337,6 +337,10 @@ body {
           transform: scale(1.03);
 }
 
+.collaboration .collab-card p {
+  font-weight: 600;
+}
+
 .collaboration .collab-img {
   width: 100%;
 }

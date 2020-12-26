@@ -28,24 +28,29 @@ var swiper = new Swiper(".swiper-container", {
 			slidesPerGroup: 2,
 		},
 		"@0.45": {
-			slidesPerView: 3,
+			slidesPerView: 2,
 			spaceBetween: 32,
 			slidesPerGroup: 3,
 		},
 		"@0.75": {
+			slidesPerView: 3,
+			spaceBetween: 20,
+			slidesPerGroup: 3,
+		},
+		"@0.85": {
 			slidesPerView: 4,
 			spaceBetween: 20,
 			slidesPerGroup: 3,
 		},
 		"@1": {
-			slidesPerView: 6,
+			slidesPerView: 5,
 			spaceBetween: 20,
-			slidesPerGroup: 3,
+			slidesPerGroup: 4,
 		},
 		"@1.2": {
 			slidesPerView: 6,
 			spaceBetween: 30,
-			slidesPerGroup: 3,
+			slidesPerGroup: 6,
 		},
 	},
 });
