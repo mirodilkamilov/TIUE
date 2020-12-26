@@ -8,7 +8,7 @@
 	<meta name="title" content="TIUE - Tashkent International University of Education">
 	<meta name="description"
 		content="The only pedagogical university with an educational program from universities included in the top-1000 of the World ranking">
-	<meta name="robots" content="nosnippet">
+	<meta name="robots" content="index, follow">
 	<meta name="google" content="nositelinkssearchbox" />
 
 	<!-- Open Graph / Facebook -->
@@ -17,7 +17,7 @@
 	<meta property="og:title" content="TIUE - Tashkent International University of Education">
 	<meta property="og:description"
 		content="The only pedagogical university with an educational program from universities included in the top-1000 of the World ranking">
-	<meta property="og:image" content="https://tiue.uz/assets/meta-tags.png">
+	<meta property="og:image" content="images/main/TIUE-building.webp">
 
 
 	<!-- Google Fonts (Roboto) -->
@@ -30,20 +30,13 @@
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+	<!-- Swiper (carousel) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css"
+		integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA=="
+		crossorigin="anonymous" />
+
+	<!-- Main stylesheet -->
 	<link rel="stylesheet" href="css/main.css">
-	<!-- Aziz's stylesheet -->
-	<link rel="stylesheet" href="css/aziz.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
-
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-
-	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="icon" href="browser-tab-icon.png" type="image/x-icon">
 </head>
 
@@ -51,6 +44,7 @@
 	<div class="scroll-up-btn">
 		<i class="fas fa-angle-up"></i>
 	</div>
+	<!--? Navbar -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 		<div class="container-fluid">
 			<a class="logo" href="/">
@@ -78,9 +72,6 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#team">Our Team</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#academics">Academics</a>
-					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#programs" id="navbarDropdownMenuLink" role="button"
 							data-bs-toggle="dropdown" aria-expanded="false">
@@ -88,18 +79,15 @@
 							<i class="fas fa-chevron-down"></i>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<li class="dropdown-list">
-								<img src="images/programs/thub-small.jpg" alt="transformation hub logo small one">
-								<a class="dropdown-item" href="T-hub.html">Transformation Hub</a>
-							</li>
-							<li class="dropdown-list">
-								<img src="images/programs/leadership-small.png" alt="leadership academy logo small one">
-								<a class="dropdown-item" href="T-hub.html">Leadership Academy</a>
-							</li>
+							<a href="T-hub.html" class="dropdown-list">
+								<img src="images/programs/thub-small.webp" alt="transformation hub logo small one">
+								<p class="dropdown-item">Transformation Hub</p>
+							</a>
+							<a href="T-hub.html" class="dropdown-list">
+								<img src="images/programs/leadership-small.webp" alt="leadership academy logo small one">
+								<p class="dropdown-item">Leadership Academy</p>
+							</a>
 						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#student">Student Life</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#news">News & Events</a>
@@ -109,296 +97,349 @@
 		</div>
 	</nav>
 
+	<!--? Carousel -->
+	<section class="main-carousel">
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<picture>
+						<img srcset="images/main/TIUE-building.webp" class="w-100 desktop" alt="TIUE university building"
+							media="(min-width: 992px)" loading="lazy">
+						<img srcset="images/main/TIUE-building-tablet.webp" class="w-100 tablet"
+							alt="TIUE university building (for tablet)" media="(min-width: 768px)" loading="lazy">
+						<img srcset="images/main/TIUE-building-mob.webp" class="w-100 mobile"
+							alt="TIUE university building (for mobile)" media="(max-width: 767px)" loading="lazy">
+					</picture>
+					<div class="slide-caption slide1">
+						<p class="slide-paragraph-bigger">Welcome to</p>
+						<h3 class="sub-heading">Tashkent International University of Education</h3>
+						<p class="slide-paragraph">Learn, discover, create, make the world a better place</p>
+						<a class="action-btn" href="#about">Learn more</a>
+					</div>
+				</div>
+				<div class="carousel-item c2">
+					<picture>
+						<img srcset="images/main/graduate-girl.webp" class="w-100 desktop" alt="graduate girl picture"
+							media="(min-width: 1400px)" loading="lazy">
+						<img srcset="images/main/graduate-girl-laptop.webp" class="w-100 laptop" alt="graduate girl picture"
+							media="(min-width: 992px)" loading="lazy">
+						<img srcset="images/main/graduate-girl-tablet.webp" class="w-100 tablet"
+							alt="graduate girl picture (for tablet)" media="(min-width: 768px)" loading="lazy">
+						<img srcset="images/main/graduate-girl-mob.webp" class="w-100 mobile"
+							alt="graduate girl picture (for mobile)" media="(max-width: 767px)" loading="lazy">
+					</picture>
+					<div class="slide-caption slide2">
+						<h3 class="sub-heading">Bachelor's degree</h3>
+						<p class="slide-paragraph">TIUE offers three faculties in the bachelor's degree:</p>
+						<ol class="slide-list">
+							<li>Pedagogical subjects</li>
+							<li>Information and communication subjects</li>
+							<li>Business management</li>
+						</ol>
+						<a class="action-btn" href="#programs">Learn more</a>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<picture>
+						<img srcset="images/main/teacher-photo.webp" class="w-100 desktop" alt="teacher and students in class"
+							media="(min-width: 992px)" loading="lazy">
+						<img srcset="images/main/teacher-photo-tablet.webp" class="w-100 tablet"
+							alt="teacher and students in class (for tablet)" media="(min-width: 768px)" loading="lazy">
+						<img srcset="images/main/teacher-photo-mob.webp" class="w-100 mobile"
+							alt="teacher and students in class (for mobile)" media="(max-width: 767px)" loading="lazy">
+					</picture>
+					<div class="slide-caption slide3">
+						<h3 class="sub-heading">Transformation Hub</h3>
+						<p class="slide-paragraph">Transformation hub is one of the essential part of our university which
+							currently offers 2 programs:</p>
+						<ol class="slide-list">
+							<li>English language courses</li>
+							<li>Pre-University courses</li>
+						</ol>
+						<a class="action-btn" href="#programs">Learn more</a>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<picture>
+						<img srcset="images/main/leader-photo.webp" class="w-100 desktop" alt="leader picture"
+							media="(min-width: 992px)" loading="lazy">
+						<img srcset="images/main/leader-photo-tablet.webp" class="w-100 tablet"
+							alt="leader picture (for tablet)" loading="lazy" media="(min-width: 768px)">
+						<img srcset="images/main/leader-photo-mob.webp" class="w-100 mobile" alt="leader picture (for mobile)"
+							media="(max-width: 767px)" loading="lazy">
+					</picture>
+					<div class="slide-caption slide4">
+						<h3 class="sub-heading">Uzbekistan Leadership Academy</h3>
+						<p class="slide-paragraph">Leadership academy offers a huge range of management courses, and at the
+							moment the program for retraining school principals is working hard</p>
+						<a class="action-btn" href="#programs">Learn more</a>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-controllers">
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!--? About section -->
 	<section class="about" id="about">
-		<h1 class="heading">About Us</h1>
-		<div class="container">
-			<p class="text-center">Our University has been the eighth university that takes place in the higher
-				education life of Uzbekistan
-				and was established in accordance with the Decree of the Cabinet of Ministers of the Republic of
-				Uzbekistan "On the establishment of the international University "Tashkent International University of
-				Education" No. 404 dated June 23, 2020.
-				Our primary purpose is creating an innovative ecosystem in the country by facilitating of cultivation of
-				modern leaders in Education, Science, Government and Public services. Our target is to provide an
-				applied learning environment that allows all participants to discover, examine critically, preserve and
+		<div class="about-top-content">
+			<h1 class="heading">About Us</h1>
+			<p class="about-paragraph">Our University has been the eighth university that takes place in the higher
+				education
+				life of Uzbekistan
+				and
+				was established in accordance with the Decree of the Cabinet of Ministers of the Republic of Uzbekistan "On
+				the
+				establishment of the international University "Tashkent International University of Education" No. 404 dated
+				June 23, 2020. Our primary purpose is creating an innovative ecosystem in the country by facilitating of
+				cultivation of modern leaders in Education, Science, Government and Public services. Our target is to
+				provide
+				an applied learning environment that allows all participants to discover, examine critically, preserve and
 				transmit the knowledge, wisdom and values that will help to promote innovation, creativity, research and
 				entrepreneurship.</p>
-			<div class="row mt-4">
-				<div class="col-md-2"></div>
-				<div class="col-md-8">
-					<div class="image"><img src="images/rektor01.jpg" class="img-fluid" alt=""></div>
-					<div class="about-content">
-						<h3 class="heading3">BE A PARTOF OF<br>PROGRESSIVE <br>EDUCATION COMMUNITY</h3>
-						<div class="rector-message">
-							<p>&nbsp; &nbsp; "TIUE is the tremendous place where <br>
-								you can not merely learn, but also <br> discover, explore, and, ultimately <br>
-								transform
-								the world in collaboration with <br>highly qualified educators"
-							</p>
-						</div>
-						<div class="rector-name">
-							Ulugbek Kasimkhodjaev <br>TIUE Rector
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-2"></div>
+		</div>
+		<div class="rector-container">
+			<div class="rector-content">
+				<h3 class="sub-heading">BE A PART OF PROGRESSIVE EDUCATION COMMUNITY</h3>
+				<h4 class="small-heading">"TIUE is the tremendous place where you can not merely learn, but also
+					discover,
+					explore, and, ultimately transform the world in collaboration with highly qualified educators"</h4>
+				<p>Ulugbek Kasimkhodjaev</p>
+				<p>TIUE Rector</p>
+			</div>
+			<img src="images/rector-image.webp" alt="TIUE university rector image">
+		</div>
+		<div class="vision-mission-container">
+			<div class="vision">
+				<h3 class="sub-heading">Our Vision</h3>
+				<p>Tashkent International University of Education will become a purposeful education hub/corporation that
+					will disrupt education and have a transformative impact on nations through promoting innovations,
+					research, creativity, and entrepreneurship.</p>
+			</div>
+			<div class="mission">
+				<h3 class="sub-heading">Our Mission</h3>
+				<p>Our mission is to provide an applied learning environment that allows all participants of the
+					educational
+					process to discover, examine critically, preserve and transmit the knowledge, wisdom and values that
+					will
+					help ensure the existence of this and future generations and improve the quality of life for all.</p>
 			</div>
 		</div>
-		<div class="container mt-4">
-			<div class="row">
-				<div class="col-md-5 text-center">
-					<h4 class="heading4">Our Vision</h4>
-					<p>Tashkent International University of Education will become a purposeful education hub/corporation
-						that will disrupt education and have a transformative impact on nations through promoting
-						innovations, research, creativity, and entrepreneurship.</p>
+		<div class="values">
+			<h3 class="sub-heading">Our Values</h3>
+			<div class="card-container">
+				<div class="cards">
+					<div class="icon-part">
+						<img class="card-icon" src="images/values/affordable.svg" alt="affordable icon">
+					</div>
+					<div class="text-part">
+						<p>Affordable education</p>
+					</div>
 				</div>
-				<div class="col-md-2"></div>
-				<div class="col-md-5 text-center">
-					<h4 class="heading4">Our Mission</h4>
-					<p>Our mission is to provide an applied learning environment that allows all participants of the
-						educational process to discover, examine critically, preserve and transmit the knowledge, wisdom
-						and values that will help ensure the existence of this and future generations and improve the
-						quality of life for all. </p>
+				<div class="cards">
+					<div class="icon-part">
+						<img src="images/values/high-quality.svg" alt="high quality icon" class="card-icon">
+					</div>
+					<div class="text-part">
+						<p>High-quality and effective educational programs, training and
+							consultations that meet the needs of students and the educational community</p>
+					</div>
+				</div>
+				<div class="cards">
+					<div class="icon-part">
+						<img src="images/values/support.svg" alt="support icon" class="card-icon">
+					</div>
+					<div class="text-part">
+						<p>Supportive and collaborative relationships between faculty,
+							students, staff, and educational programs at the University</p>
+					</div>
+				</div>
+				<div class="cards">
+					<div class="icon-part">
+						<img src="images/values/recognition.svg" alt="recognition icon with certificate" class="card-icon">
+					</div>
+					<div class="text-part">
+						<p>Recognition at the local and national level as a model
+							institution
+							for teacher training and professional development</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container">
-			<div class="values">
-				<h3 class="heading3 text-center text-dark pt-4">Our Values</h3>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="card1">
-							<div class="img"><img src="images/values/affordable.svg" alt=""></div>
-							<div class="content">
-								<p>affordable education</p>
-							</div>
-						</div>
-
-						<div class="card1 my-4">
-							<div class="img"><img src="images/values/support.svg" alt=""></div>
-							<div class="content mt-4">
-								<p>Supportive and collaborative relationships between faculty,
-									students, staff and educational programs at the University
-								</p>
-							</div>
-						</div>
+			<div class="last-card">
+				<div class="cards last-value">
+					<div class="icon-part">
+						<img src="images/values/international.svg" alt="international icon" class="card-icon">
 					</div>
-					<div class="col-md-6">
-						<div class="card1">
-							<div class="img"><img src="images/values/high-quality.svg" alt=""></div>
-							<div class="content mt-1">
-								<p>high-quality and effective educational programs, training and
-									consultations that meet the needs of students and the educational community
-								</p>
-							</div>
-						</div>
-
-						<div class="card1 my-4">
-							<div class="img"><img src="images/values/international.svg" alt=""></div>
-							<div class="content mt-4">
-								<p>Recognition at the local and national level as a model institution for teacher
-									training and professional development
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3"></div>
-					<div class="col-md-6">
-						<div class="card1 my-1 mb-4">
-							<div class="img"><img src="images/values/recognition.svg" alt=""></div>
-							<div class="content">
-								<p>Gaining an international profile</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3"></div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<div class="clr"></div>
-	<section class="directors" id="directors">
-		<h1 class="heading">Directors</h1>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="col-md-4 text-center my-4">
-					<img src="images/directors/temurbek.jpg" class="img-fluid" alt="">
-					<p>Temurbek Anvarbekov <br> Director <br> Leadership Academy</p>
-				</div>
-				<div class="col-md-2"></div>
-				<div class="col-md-4 text-center my-4">
-					<img src="images/directors/viktoriya.jpg" class="img-fluid" alt="">
-					<p>Victoriya Babakhadjayeva <br> Director <br> Transformation Hub</p>
-				</div>
-				<div class="col-md-1"></div>
-			</div>
-		</div>
-	</section>
-
-	<section class="programs" id="programs">
-		<h1 class="heading my-5">Programs</h1>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 px-5 my-5">
-					<div class="program-content">
-						<div class="program-card"
-							style="background-image: url(images/programs-images/undergraduate.jpg);">
-							<p style="background-color: rgba(55,63, 133, 0.8);">Undergraduate</p>
-						</div>
-						<p>Our University has been the eighth university that takes place in the higher education life
-							of
-							Uzbekistan and was established in accordance with the Decree of the Cabinet of Ministers of
-							the
-							Republic of Uzbekistan "On the establishment of the international University "Tashkent
-							International University of Education" No. 404 dated June 23, 2020.</p>
-					</div>
-					<a href="#">
-						<div class="linkTo">Read more</div>
-					</a>
-				</div>
-				<div class="col-md-3 px-5 my-5">
-					<div class="program-content">
-						<div class="program-card" style="background-image: url(images/programs-images/pre-uni.jpg);">
-							<p style="background-color: rgba(28,49, 78, 0.8);">Pre-University</p>
-						</div>
-						<p>Our University has been the eighth university that takes place in the higher education life
-							of Uzbekistan and was established in accordance with the Decree of the Cabinet of Ministers
-							of the Republic of Uzbekistan "On the establishment of the international University
-							"Tashkent International University of Education" No. 404 dated June 23, 2020.</p>
-					</div>
-					<a href="#">
-						<div class="linkTo">Read more</div>
-					</a>
-				</div>
-				<div class="col-md-3 px-5 my-5">
-					<div class="program-content">
-						<div class="program-card" style="background-image: url(images/programs-images/ELP.jpg);">
-							<p style="font-size: 17px; padding: 0; background-color: rgba(9,9, 18, 0.8);">English
-								Language Program
-							</p>
-						</div>
-						<p>Our University has been the eighth university that takes place in the higher education life
-							of Uzbekistan and was established in accordance with the Decree of the Cabinet of Ministers
-							of the Republic of Uzbekistan "On the establishment of the international University
-							"Tashkent International University of Education" No. 404 dated June 23, 2020.</p>
-					</div>
-					<a href="#">
-						<div class="linkTo">Read more</div>
-					</a>
-				</div>
-				<div class="col-md-3 px-5 my-5">
-					<div class="program-content">
-						<div class="program-card"
-							style="background-image: url(images/programs-images/h6fjyguwjb0.jpg);">
-							<p style="background-color: rgba(88,165, 255, 0.5);">Leadership Academy</p>
-						</div>
-						<p>Our University has been the eighth university that takes place in the higher education life
-							of Uzbekistan and was established in accordance with the Decree of the Cabinet of Ministers
-							of the Republic of Uzbekistan "On the establishment of the international University
-							"Tashkent International University of Education" No. 404 dated June 23, 2020.</p>
-					</div>
-					<a href="#">
-						<div class="linkTo">Read more</div>
-					</a>
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-	<!-- Collaboration section -->
-	<section class="collaboration" id="collaboration">
-		<div class="container">
-			<h1 class="heading">Collaboration</h1>
-			<section class="customer-logos slider">
-				<div class="slide">
-					<div class="box"><img src="images/collaboration/c1.png" loading="lazy">
-						<p>The Ministry of Public Education of the <br> Republic of Uzbekistan</p>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="box"><img src="images/collaboration/c2.png" loading="lazy">
-						<p>Tashkent state University of <br> Economics</p>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="box"><img src="images/collaboration/c3.png" loading="lazy">
-						<p>International school of applied and <br> social Sciences (Spain)</p>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="box"><img src="images/collaboration/c4.png" loading="lazy">
-						<p>Monash University <br> (Australia)</p>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="box"><img src="images/collaboration/c5.png" loading="lazy">
-						<p>Omnia Education Partnerships <br> (OEP)</p>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="box"><img src="images/collaboration/c6.png" loading="lazy">
-						<p>Codecraft art of <br> coding</p>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="box"><img src="images/collaboration/c7.png" loading="lazy">
-						<p>IT Park start local & <br> GO global</p>
-					</div>
-				</div>
-
-			</section>
-		</div>
-	</section>
-
-	<section id="contact" class="contact background my-0 py-3">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5 text-white pl-4"><img src="images/logo.png" loading="lazy" alt="">
-					<p>TASHKENT <br> INTERNATIONAL <br> UNIVERSITY OF <br> EDUCATION</p>
-				</div>
-				<div class="col-md-1"></div>
-				<div class="col-md-6 text-white">
-					<h3 class="sub-heading">Contact Us</h3>
-
-					<div class="contact1"> <i class="fas fa-phone mr-3"></i>
-						<p>Phone: +998956502020</p>
-					</div>
-					<div class="contact1"> <i class="fas fa-envelope mr-3"></i>
-						<p>E mail: info@tiue.uz</p>
-					</div>
-					<div class="contact1"> <i class="fas fa-map-marker-alt mr-3"></i>
-						<p>Address: 100017, Tashkent, Yashnabod, Navoiy st, 2a</p>
+					<div class="text-part">
+						<p>Gaining an international profile</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<footer id="footer" class="background-footer text-white pb-1">
-		<div class="container">
-			<div class="footer pt-3">
-				<div class="row">
-					<div class="col-md-9">
-						<p>Copyright &copy; All Right Reserved <span id="year"></span>, TIUE</p>
-					</div>
-					<div class="col-md-3"><a href="https://t.me/TIUEuz" target="blank"> <i
-								class="fab fa-telegram-plane"></i></a> <a href="https://instagram.com/t.i.u.e.uz"
-							target="blank"> <i class="fab fa-instagram"></i></a> <a
-							href="https://www.facebook.com/TIUE2020.uz/" target="blank"><i
-								class="fab fa-facebook"></i></a>
-					</div>
-				</div>
+
+	<!--? Core team section -->
+	<section class="core-team">
+		<h1 class="heading">Core Team</h1>
+		<div class="team-card-container">
+			<div class="team-card leadership">
+				<img src="images/team/temurbek.jpg" alt="Leadership Academy director">
+				<h4 class="small-heading">Temurbek Anvarbekov</h4>
+				<p>Director</p>
+				<p>Leadership Academy</p>
+			</div>
+			<div class="team-card t-hub">
+				<img src="images/team/victoriya.jpg" alt="Transformation Hub director">
+				<h4 class="small-heading">Victoriya Babakhadjayeva</h4>
+				<p>Director</p>
+				<p>Transformation Hub</p>
+			</div>
+			<div class="team-card elp-team">
+				<img src="images/team/ELP-program developer.jpg" alt="course developer for General English and IELTS">
+				<h4 class="small-heading">Dr Jothy Narayanan</h4>
+				<p>Course developer for General English and IELTS</p>
+			</div>
+			<div class="team-card physics">
+				<img src="images/team/course-developer-physics.jpg" alt="course developer for Physics">
+				<h4 class="small-heading">Ismailov Shukurullah</h4>
+				<p>Course developer for Physics</p>
 			</div>
 		</div>
-	</footer>
-	<script src="js/carousel.js"></script>
-	<script src="js/javaScript.js"></script>
+	</section>
+
+
+	<!--? Programs section -->
+	<section class="programs">
+		<h1 class="heading">Programs</h1>
+		<div class="program-card-container">
+			<div class="program-card undergraduate">
+				<div class="img-container">
+					<img src="images/programs/undergraduate.webp" alt="TIUE undergraduate programs">
+					<div class="img-footer">
+						<h4 class="small-heading">Undergraduate</h4>
+					</div>
+				</div>
+				<p>The only pedagogical UNIVERSITY with an educational program from universities included in the top
+					1000 of the world ranking which provides full-time, part-time, evening, special correspondence and
+					distance learning in Uzbek, English and other languages.
+					There are three main faculties of Undergraduate program (Bachelor’s degree)</p>
+				<a class="read-more-btn" href="">Read more</a>
+			</div>
+			<div class="program-card pre-university">
+				<div class="img-container">
+					<img src="images/programs/pre-university.webp" alt="TIUE Pre-University courses">
+					<div class="img-footer">
+						<h4 class="small-heading">Pre-University Courses</h4>
+					</div>
+				</div>
+				<p>Pre-University courses are the preliminary courses on English, Math and Physics for the students
+					who want to enter both local and foreign universities in the Near and Far abroad</p>
+				<a class="read-more-btn" href="">Read more</a>
+			</div>
+			<div class="program-card elp">
+				<div class="img-container">
+					<img src="images/programs/ELP.webp" alt="TIUE English Language Programs">
+					<div class="img-footer">
+						<h4 class="small-heading">English Language Program</h4>
+					</div>
+				</div>
+				<p>The three-level English language program (ELP) helps those who want to start learning English from
+					scratch or strengthen the basic knowledge of students and move on to the next stage of improving
+					their language skills using the international English language testing system (IELTS).</p>
+				<a class="read-more-btn" href="">Read more</a>
+			</div>
+			<div class="program-card leadership">
+				<div class="img-container">
+					<img src="images/programs/leadership-academy.webp" alt="TIUE Leadership Academy Programs">
+					<div class="img-footer">
+						<h4 class="small-heading">Retraining of School Principals</h4>
+					</div>
+				</div>
+				<p>One of the main goals of the University is to improve leaders’ professional skills in various
+					sectors of the economy, applying the methodology of project activities, which includes passing 6
+					stages of project management:</p>
+				<a class="read-more-btn" href="">Read more</a>
+			</div>
+		</div>
+	</section>
+
+
+	<!--? Collaboration -->
+	<h1 class="heading collab-heading">Collaboration</h1>
+	<section class="collaboration swiper-container">
+		<div class="swiper-wrapper">
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/xalq-ta'lim-vazirligi.png" alt="xalq-ta'lim-vazirligi logo"
+					class="collab-img">
+				<p>The Ministry of Public Education of the Republic of Uzbekistan</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/economics-university.png" alt="Tashkent State University of Economics logo"
+					class="collab-img">
+				<p>Tashkent State University of Economics</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/oep.png" alt="Omnia Education Partnerships logo" class="collab-img">
+				<p>Omnia Education Partnerships (OEP)</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/isass.png" alt="isass logo" class="collab-img">
+				<p>International school of applied and social Sciences (Spain)</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/monash.png" alt="Monash University logo" class="collab-img">
+				<p>Monash University (Australia)</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/code-craft.png" alt="Code Craft logo" class="collab-img">
+				<p>Codecraft art of coding</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/it-park.png" alt="IT Park logo" class="collab-img">
+				<p>IT Park start local & GO global</p>
+			</div>
+		</div>
+		<!-- Add Arrows -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination"></div>
+	</section>
+
+
+
 	<!-- Bootstrap5 Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 		crossorigin="anonymous"></script>
+	<!-- GSAP ScrollTrigger 3.5.1 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+	<!-- Swiper (carousel) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"
+		integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA=="
+		crossorigin="anonymous"></script>
+	<!-- Jquery 3.0.0 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"
+		integrity="sha512-4GsgvzFFry8SXj8c/VcCjjEZ+du9RZp/627AEQRVLatx6d60AUnUYXg0lGn538p44cgRs5E2GXq+8IOetJ+6ow=="
+		crossorigin="anonymous"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/javaScript.js"></script>
 </body>
+
 </html>
