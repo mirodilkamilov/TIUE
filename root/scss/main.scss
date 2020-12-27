@@ -24,6 +24,10 @@ p {
 body {
 	font-family: "Roboto", sans-serif;
 	background-color: $background;
+	overflow-x: hidden;
+}
+html{
+	overflow-x: hidden;
 }
 
 @mixin setSectionBack($back-color) {
@@ -120,6 +124,7 @@ body {
 }
 //* Navbar
 .navbar {
+	// width: 100vw; //? otherwise on animation some part out of the screen
 	background-color: rgba(99, 107, 111, 0.3);
 	backdrop-filter: blur(15px);
 	padding: 4px 1rem;
