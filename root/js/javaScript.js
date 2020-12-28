@@ -71,7 +71,7 @@ $(document).ready(function () {
 //? ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.matchMedia({
-	"(max-width: 768px)": function () {
+	"(max-width: 1199px)": function () {
 		let carousel = gsap.timeline({
 			scrollTrigger: {
 				trigger: ".main-carousel",
@@ -83,31 +83,6 @@ ScrollTrigger.matchMedia({
 			opacity: 0,
 			duration: 0.7,
 		});
-
-		let about_first = gsap.timeline({
-			scrollTrigger: {
-				trigger: ".about",
-				start: "-=150px center",
-			},
-		});
-		about_first.from(".about-top-content", {
-			x: -100,
-			opacity: 0,
-			duration: 0.7,
-		});
-
-		let rector = gsap.timeline({
-			scrollTrigger: {
-				trigger: ".rector-container",
-				start: "-=150px center",
-			},
-		});
-		rector.from(".rector-container", {
-			x: 100,
-			opacity: 0,
-			duration: 0.7,
-		});
-
 		let vision = gsap.timeline({
 			scrollTrigger: {
 				trigger: ".vision",
@@ -119,7 +94,6 @@ ScrollTrigger.matchMedia({
 			opacity: 0,
 			duration: 0.7,
 		});
-
 		let mission = gsap.timeline({
 			scrollTrigger: {
 				trigger: ".mission",
@@ -284,160 +258,175 @@ ScrollTrigger.matchMedia({
 			);
 	},
 
-	// "(min-width: 1200px)": function () {
-	// 	let carousel = gsap.timeline({
-	// 		scrollTrigger: {
-	// 			trigger: ".main-carousel",
-	// 			start: "top center",
-	// 		},
-	// 	});
-	// 	carousel.from(".slide1", {
-	// 		x: -100,
-	// 		opacity: 0,
-	// 		duration: 0.7,
-	// 	});
+	"(min-width: 1200px)": function () {
+		let carousel = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".main-carousel",
+				start: "top center",
+			},
+		});
+		carousel.from(".slide1", {
+			x: -100,
+			opacity: 0,
+			duration: 0.7,
+		});
 
-	// 	let about_first = gsap.timeline({
-	// 		scrollTrigger: {
-	// 			trigger: ".about",
-	// 			start: "-=150px center",
-	// 		},
-	// 	});
-	// 	about_first.from(".about-top-content", {
-	// 		x: -100,
-	// 		opacity: 0,
-	// 		duration: 0.7,
-	// 	});
+		let vision = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".vision",
+				start: "-=150px center",
+			},
+		});
+		vision.from(".vision", {
+			y: -100,
+			opacity: 0,
+			duration: 0.7,
+		});
+		let mission = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".mission",
+				start: "-=150px center",
+			},
+		});
+		mission.from(
+			".mission",
+			{
+				y: -100,
+				opacity: 0,
+				duration: 0.7,
+			},
+			"-=0.5"
+		);
 
-	// 	let rector = gsap.timeline({
-	// 		scrollTrigger: {
-	// 			trigger: ".rector-container",
-	// 			start: "-=150px center",
-	// 		},
-	// 	});
-	// 	rector.from(".rector-container", {
-	// 		x: -100,
-	// 		opacity: 0,
-	// 		duration: 0.7,
-	// 	});
+		let values = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".values",
+				start: "-=150px center",
+			},
+		});
+		values
+			.from(".values .sub-heading", {
+				y: -100,
+				opacity: 0,
+				duration: 0.7,
+			})
+			.from(
+				".card-container .cards:nth-child(odd)",
+				{
+					y: -100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.3"
+			)
+			.from(
+				".card-container .cards:nth-child(even)",
+				{
+					y: -100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.3"
+			)
+			.from(".last-card", {
+				y: -100,
+				opacity: 0,
+				duration: 0.7,
+			});
 
-	// 	let vision = gsap.timeline({
-	// 		scrollTrigger: {
-	// 			trigger: ".vision-mission-container",
-	// 			start: "-=150px center",
-	// 		},
-	// 	});
-	// 	vision
-	// 		.from(".vision", {
-	// 			x: -100,
-	// 			opacity: 0,
-	// 			duration: 0.7,
-	// 		})
-	// 		.from(
-	// 			".mission",
-	// 			{
-	// 				x: 100,
-	// 				opacity: 0,
-	// 				duration: 0.7,
-	// 			},
-	// 			"-=0.5"
-	// 		);
+		let team = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".core-team",
+				start: "-=150px center",
+			},
+		});
+		team.from(".core-team .heading", {
+			x: -100,
+			opacity: 0,
+			duration: 0.7,
+		})
+			.from(
+				".core-team .leadership",
+				{
+					y: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			)
+			.from(
+				".core-team .t-hub",
+				{
+					y: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			)
+			.from(
+				".core-team .elp-team",
+				{
+					y: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			)
+			.from(
+				".core-team .physics",
+				{
+					y: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			);
 
-	// 	let values = gsap.timeline({
-	// 		scrollTrigger: {
-	// 			trigger: ".values",
-	// 			start: "-=150px center",
-	// 		},
-	// 	});
-	// 	values
-	// 		.from(".values .sub-heading", {
-	// 			y: -100,
-	// 			opacity: 0,
-	// 			duration: 0.7,
-	// 		})
-	// 		.from(
-	// 			".card-container",
-	// 			{
-	// 				y: -100,
-	// 				opacity: 0,
-	// 				duration: 0.7,
-	// 			},
-	// 			"-=0.3"
-	// 		)
-	// 		.from(".last-card", {
-	// 			y: -100,
-	// 			opacity: 0,
-	// 			duration: 0.7,
-	// 		});
+		let programs = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".programs",
+				start: "-=130px center",
+			},
+		});
+		programs
+			.from(".programs .heading", {
+				x: -100,
+				opacity: 0,
+				duration: 0.7,
+			})
+			.from(
+				".program-card-container",
+				{
+					y: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			);
+	},
+	all: function () {
+		let about_first = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".about",
+				start: "-=150px center",
+			},
+		});
+		about_first.from(".about-top-content", {
+			x: -100,
+			opacity: 0,
+			duration: 0.7,
+		});
 
-	// 	let team = gsap.timeline({
-	// 		scrollTrigger: {
-	// 			trigger: ".core-team",
-	// 			start: "-=150px center",
-	// 		},
-	// 	});
-	// 	team.from(".core-team .heading", {
-	// 		x: -100,
-	// 		opacity: 0,
-	// 		duration: 0.7,
-	// 	})
-	// 		.from(
-	// 			".leadership",
-	// 			{
-	// 				y: 100,
-	// 				opacity: 0,
-	// 				duration: 0.7,
-	// 			},
-	// 			"-=0.5"
-	// 		)
-	// 		.from(
-	// 			".t-hub",
-	// 			{
-	// 				y: 100,
-	// 				opacity: 0,
-	// 				duration: 0.7,
-	// 			},
-	// 			"-=0.5"
-	// 		)
-	// 		.from(
-	// 			".elp-team",
-	// 			{
-	// 				y: 100,
-	// 				opacity: 0,
-	// 				duration: 0.7,
-	// 			},
-	// 			"-=0.5"
-	// 		)
-	// 		.from(
-	// 			".physics",
-	// 			{
-	// 				y: 100,
-	// 				opacity: 0,
-	// 				duration: 0.7,
-	// 			},
-	// 			"-=0.5"
-	// 		);
-
-	// 	let programs = gsap.timeline({
-	// 		scrollTrigger: {
-	// 			trigger: ".programs",
-	// 			start: "-=150px center",
-	// 		},
-	// 	});
-	// 	programs
-	// 		.from(".programs .heading", {
-	// 			x: -100,
-	// 			opacity: 0,
-	// 			duration: 0.7,
-	// 		})
-	// 		.from(
-	// 			".program-card-container",
-	// 			{
-	// 				y: 100,
-	// 				opacity: 0,
-	// 				duration: 0.7,
-	// 			},
-	// 			"-=0.5"
-	// 		);
-	// },
+		let rector = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".rector-container",
+				start: "-=150px center",
+			},
+		});
+		rector.from(".rector-container", {
+			x: 100,
+			opacity: 0,
+			duration: 0.7,
+		});
+	},
 });
