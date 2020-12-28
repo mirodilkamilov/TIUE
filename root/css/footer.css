@@ -1,0 +1,16 @@
+
+@media(max-width:450px){
+    iframe{
+        width: 350px;
+    }
+}
+@media(max-width:369px){
+    iframe{
+        width: 300px;
+    }
+}
+@media(max-width:318px){
+    iframe{
+        width: 260px;
+    }
+}
