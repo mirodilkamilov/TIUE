@@ -1,4 +1,4 @@
-$background: #f3f3f3;
+$background: #f5f5f5;
 $grey: #636b6f;
 $logo: #542585;
 $logo-hover: #46206e;
@@ -95,6 +95,12 @@ html{
 		background-color: $white-text;
 		color: $logo;
 	}
+}
+
+.secondary-paragraph{
+	color: #a1a1a1;
+	text-align: center;
+	font-size: 1rem;
 }
 
 //* Scroll up button
@@ -599,6 +605,41 @@ html{
 		}
 	}
 }
+
+//* Bachelor model
+.bachelor-modal{
+	.modal-header{
+		flex-direction: column;
+	}
+	.bachelor-container{
+		img{
+			width: 60%;
+			max-width: 280px;
+		}
+	}
+	ul.bachelor-container{
+		list-style-type: none;
+		margin-bottom: 0;
+	}
+	.bachelor-list{
+		padding-bottom: 1rem;
+		border-bottom: 1px solid #c7c7c7;
+		margin-bottom: 1rem;
+	}
+	.bachelor-list:last-child{
+		border-bottom: none;
+	}
+	.modal-footer{
+		justify-content: flex-start;
+	}
+
+	@media (min-width: 1200px) {
+		.modal-dialog{
+			min-width: 70vw;
+		}
+	}
+}
+
 
 //* Collaboration
 .collab-heading {
