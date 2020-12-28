@@ -1,199 +1,207 @@
-body{
-    background: rgba(238,238,238,1);
+body {
+	background: rgba(238, 238, 238, 1);
 }
-.navbar{
-    background-color:rgba(140, 149, 153, 0.5);
-    backdrop-filter: blur(5px);
+.navbar {
+	background-color: rgba(140, 149, 153, 0.5);
+	backdrop-filter: blur(5px);
 }
-section{
-    margin-bottom: 20px;
+section {
+	margin-bottom: 20px;
 }
 .heading3,
 .heading5,
-.sub-title{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 600;
+.sub-title {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: 600;
 }
-.small-heading{
-    font-weight: 700;
+.small-heading {
+	font-weight: 700;
 }
-.sub-title{
-    text-align: center;
-    margin: 30px 0;
+.sub-title {
+	text-align: center;
+	margin: 30px 0;
 }
-.navbar{
-    padding: 0;
+.navbar {
+	padding: 0;
 }
-.navbar img{
-    width: 50px;
-    height: 50px;
-    margin-left: 30px;
-    margin-right: 10px;
+.navbar img {
+	width: 50px;
+	height: 50px;
+	margin-left: 30px;
+	margin-right: 10px;
 }
-.navbar a{
-    text-decoration: none;
-    font-size: 18px;
-    color:#165DAE!important;
+.navbar a {
+	text-decoration: none;
+	font-size: 18px;
+	color: #165dae !important;
 }
-@media(max-width:991px){
-    .img-position{
-       display: none;
-    }
-    .navbar a{
-        color:#fff!important;
-    }
-    .home{
-        margin-top: 20px;
-    }
+@media (max-width: 991px) {
+	.img-position {
+		display: none;
+	}
+	.navbar a {
+		color: #fff !important;
+	}
+	.home {
+		margin-top: 20px;
+	}
 }
-.navbar li{
-    font-size: 18px;
-    padding:0 25px;
+.navbar li {
+	font-size: 18px;
+	padding: 0 25px;
 }
 
-.max-width{
-    width: 700px;
-    margin: auto;
+.max-width {
+	width: 700px;
+	margin: auto;
 }
-.flex{
-    display: flex;
-    justify-content: space-between;
+.flex {
+	display: flex;
+	justify-content: space-between;
 }
-.title{
-    text-align: center;
-    font-size: 40px;
-    font-weight: 400;
-    padding-top: 30px;
-    color: #741060;
-    font-family: 'Times New Roman', Times, serif;
+.title {
+	text-align: center;
+	font-size: 40px;
+	font-weight: 400;
+	padding-top: 30px;
+	color: #741060;
+	font-family: "Times New Roman", Times, serif;
 }
 /* home content */
 
-.home{
-    margin-top: 80px;
+.home {
+	margin-top: 80px;
 }
-.home .col-md-5{
-    background-color: #191E61;
-    color: #fff;
-    min-height: 215px;
+.home .col-md-5 {
+	background-color: #191e61;
+	color: #fff;
+	min-height: 215px;
 }
-.home .col-md-5 p{
-    font-size: 40px;
-    font-weight: 500;
-    font-family: 'Times New Roman', Times, serif;
-    padding-left: 40px;
-    padding-top: 40px;
-    border-right: 30px solid #741060;
-    margin-right: 50px;
+.home .col-md-5 p {
+	font-size: 40px;
+	font-weight: 500;
+	font-family: "Times New Roman", Times, serif;
+	padding-left: 40px;
+	padding-top: 40px;
+	border-right: 30px solid #741060;
+	margin-right: 50px;
 }
-.home .heading{
-    font-family: 'Times New Roman', Times, serif;
-    color:  #741060;
-    text-align: center;
-    padding-top: 25px;
+.home .heading {
+	font-family: "Times New Roman", Times, serif;
+	color: #741060;
+	text-align: center;
+	padding-top: 25px;
 }
-.home .content{
-    width: 70%;
-    margin: auto;
-    text-align: center;
+.home .content {
+	width: 70%;
+	margin: auto;
+	text-align: center;
 }
-.home .content span{
-    font-weight: 700;
+.home .content span {
+	font-weight: 700;
 }
-@media(max-width:991px){
-    .navbar a{
-        color:#fff!important;
-    }
-    .home{
-        margin-top: 40px;
-    }
+@media (max-width: 991px) {
+	.navbar a {
+		color: #fff !important;
+	}
+	.home {
+		margin-top: 40px;
+	}
 }
-.partners p{
-    font-weight: 600;
+.partners p {
+	font-weight: 600;
 }
-.partners .link-to{
-    text-align: left;
-    transition: all 0.3s ease;
+.partners .link-to {
+	text-align: left;
+	transition: all 0.3s ease;
 }
-.partners a{
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
+.partners a {
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 500;
 }
 /* program section  */
-.col-md-7{
-    margin-bottom: 1rem;
+.col-md-7 {
+	margin-bottom: 1rem;
 }
-.program-text-part{
+.program-text-part {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.programs img {
+	margin-bottom: 30px;
+	box-shadow: 3px 3px rgb(175, 170, 171);
+}
+.programs p {
+	font-weight: 600;
+	padding-top: 5px;
+}
+.programs .btn {
+	font-weight: 600;
+	font-size: 20px;
+	padding-left: 30px;
+}
+.programs .collapse {
+	padding-top: -50px;
+}
+.modal-dialog-centered {
+	min-width: 80%;
+}
+.btn1 {
+	background-color: #fff;
+	border: none;
+	padding-left: 30px;
+	font-size: 20px;
+	font-weight: 400;
+	max-width: 350px;
+	transition: all 0.2s ease;
+}
+.btn1:focus,
+.btn1:hover {
+	outline: 0 !important;
+	border: none !important;
+}
+.btn1:hover {
+	color: crimson !important;
+}
+.btn2 {
+	background-color: #fff;
+	border: none;
+	font-size: 22px;
+	font-weight: 600;
+	max-width: 350px;
+	transition: all 0.2s ease;
+	text-align: left;
+}
+.btn2:focus,
+.btn2:hover {
+	outline: 0 !important;
+	border: none !important;
+}
+.btn2:hover {
+	color: crimson !important;
+}
+
+@media (min-width: 992px) {
+	.physics-course .modal-body {
+		display: grid;
+		grid-template-columns: auto 200px;
+		column-gap: 1rem;
+		justify-items: center;
+		align-items: center;
+    }
+    .physics-course .modal-image img{
+        margin-top: 0;
+    }
+}
+.physics-course .modal-image{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.programs img{
-   
-    margin-bottom: 30px;
-    box-shadow: 3px 3px rgb(175, 170, 171);
-}
-.programs p{
-    font-weight: 600;
-    padding-top: 5px;
-}
-.programs .btn{
-    font-weight: 600;
-    font-size: 20px;
-    padding-left: 30px;
-}
-.programs .collapse{
-   padding-top: -50px;
-}
-.modal-dialog-centered{
-    min-width: 80%;
-}
-.btn1{
-    background-color: #fff;
-    border: none;
-    padding-left: 30px;
-    font-size: 20px;
-    font-weight: 400;
-    max-width: 350px;
-    transition: all 0.2s ease;
-
-}
- .btn1:focus,
- .btn1:hover{
-outline: 0!important;
-border: none!important;
-}
-.btn1:hover{
-    color:crimson!important;
-}
-.btn2{
-    background-color: #fff;
-    border: none;
-    font-size: 22px;
-    font-weight: 600;
-    max-width: 350px;
-    transition: all 0.2s ease;  
-    text-align: left;
-}
-.btn2:focus,
- .btn2:hover{
-outline: 0!important;
-border: none!important;
-}
-.btn2:hover{
-    color:crimson!important;
-}
-
-
-.physics-course .modal-body{
-    display:grid;
-    grid-template-columns: auto 200px;
-    column-gap: 1rem;
-    justify-items: center;
-    align-items: center;
-}
-.physics-course .modal-image img{
+.physics-course .modal-image img {
+    margin-top: 1rem;
     width: 200px;
 }
