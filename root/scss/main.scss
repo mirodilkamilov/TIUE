@@ -637,6 +637,18 @@ html{
 		.modal-dialog{
 			min-width: 70vw;
 		}
+		.bachelor-container{
+			img{
+				max-width: 220px;
+			}
+		}
+		.bachelor-list{
+			display: grid;
+			grid-template-columns: 220px auto;
+			justify-items: center;
+			align-items: stretch;
+			text-align: left;
+		}
 	}
 }
 
