@@ -393,6 +393,7 @@ html{
 		opacity: 0.85;
 		padding: 1rem;
 		width: calc(100vw);
+		z-index: 1040;
 		.slide-list {
 			margin-top: 1rem;
 			padding-left: 1rem;
@@ -400,6 +401,7 @@ html{
 	}
 	.slide1 {
 		background-color: #e4e4dc;
+		z-index: 1;
 		h3 {
 			color: $black-text;
 			text-align: center;
