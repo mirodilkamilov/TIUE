@@ -461,6 +461,28 @@ section {
 }
 
 @media (min-width: 1500px) {
+	.footer .logo {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		width: -webkit-min-content;
+		width: -moz-min-content;
+		width: min-content;
+		color: #fff;
+		text-decoration: none;
+		padding: 0;
+		margin: 0;
+	}
+	.logo:hover {
+		color: #fff;
+	}
+	.logo p {
+		padding-left: 1rem;
+		margin: 0;
+	}
 	.footer .footer-logo {
 		display: block;
 		position: relative;
