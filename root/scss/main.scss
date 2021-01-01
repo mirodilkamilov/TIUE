@@ -97,6 +97,9 @@ html {
 		background-color: $white-text;
 		color: $logo;
 	}
+	&:focus{
+		outline: none;
+	}
 }
 
 .secondary-paragraph {
@@ -684,7 +687,7 @@ html {
 	background-color: $footer-color;
 	color: #fff;
 	padding: 1rem;
-	.footer-logo{
+	.footer-logo {
 		display: none;
 	}
 	.social-media-icons {
@@ -1264,12 +1267,12 @@ html {
 		}
 	}
 }
-.bachelor-modal{
+.bachelor-modal {
 	@media (min-width: 1200px) {
 		.modal-dialog {
 			min-width: 70vw;
 		}
-		.modal-content{
+		.modal-content {
 			padding: 0 1.5rem;
 		}
 		.bachelor-container {
@@ -1284,16 +1287,16 @@ html {
 			justify-content: space-between;
 			align-items: stretch;
 		}
-		.bachelor-content{
+		.bachelor-content {
 			max-width: calc(100% - 180px - 24px);
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			h3{
+			h3 {
 				margin-top: 0;
 			}
 		}
-		.bachelor-list:nth-child(even){
+		.bachelor-list:nth-child(even) {
 			flex-direction: row-reverse;
 		}
 	}
@@ -1397,48 +1400,47 @@ html {
 			display: inline-block;
 			margin-right: 1.5rem;
 		}
-		.map-info-container{
+		.map-info-container {
 			margin-top: 1rem;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 		}
-		.info-container{
+		.info-container {
 			justify-content: space-evenly;
 		}
-		.contacts-footer{
+		.contacts-footer {
 			max-width: 340px;
 		}
-		.bachelor-footer{
+		.bachelor-footer {
 			margin-right: 1.5rem;
 		}
-		.programs-footer{
+		.programs-footer {
 			margin-right: 1.5rem;
 		}
 	}
-	@media (min-width: 1400px){
+	@media (min-width: 1400px) {
 		padding: 1rem 5rem 0 5rem;
 	}
-	@media (min-width: 1500px){
-		.footer-logo{
+	@media (min-width: 1500px) {
+		.footer-logo {
 			display: block;
 			position: relative;
-			img{
+			img {
 				width: 100%;
 				height: auto;
 			}
-			.logo{
+			.logo {
 				position: absolute;
 				bottom: 2rem;
 				right: 5rem;
 			}
-			p{
+			p {
 				font-size: 0.7rem !important;
 			}
 		}
 	}
 }
-
 
 //! All bigger content
 @media (min-width: 1440px) {
@@ -1493,3 +1495,18 @@ html {
 //! @media (min-width: 992px)
 // @media (min-width: 768px)
 // @media (min-width: 576px)
+
+.news-section {
+	padding: 1rem;
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: none;
+	}
+	.swiper-slide {
+		width: 100% !important;
+		img {
+			width: 200px;
+		}
+		@include setFlex(column);
+	}
+}
