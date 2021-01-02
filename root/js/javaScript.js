@@ -428,5 +428,17 @@ ScrollTrigger.matchMedia({
 			opacity: 0,
 			duration: 0.7,
 		});
+
+		let news_section = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".news-section",
+				start: "-=150px center",
+			},
+		});
+		news_section.from(".news-section", {
+			y: -100,
+			opacity: 0,
+			duration: 0.7,
+		});
 	},
 });
