@@ -74,6 +74,7 @@ var collabSwiper = new Swiper(".news-container", {
 	loop: true,
 	autoplay: {
 		delay: 7000,
+		disableOnInteraction: true,
 	},
 	spaceBetween: 16,
 	disableOnInteraction: false,
@@ -85,5 +86,18 @@ var collabSwiper = new Swiper(".news-container", {
 		"@0.00": {
 			slidesPerView: 1,
 		},
-	}
+	},
+});
+
+$(document).ready(function () {
+	var mySwiper = document.querySelector(".news-section .swiper-container")
+		.swiper;
+
+	$(".news-section .swiper-container").mouseenter(function () {
+		mySwiper.autoplay.stop();
+	});
+
+	$(".news-section .swiper-container").mouseleave(function () {
+		mySwiper.autoplay.start();
+	});
 });
