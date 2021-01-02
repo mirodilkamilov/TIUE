@@ -102,7 +102,7 @@ html {
 	}
 }
 .read-more-btn2 {
-	display: block;
+	max-width: max-content;
 	text-decoration: none;
 	background-color: transparent;
 	color: $logo;
@@ -187,7 +187,6 @@ html {
 }
 //* Navbar
 .navbar {
-	// width: 100vw; //? otherwise on animation some part out of the screen
 	background-color: rgba(99, 107, 111, 0.3);
 	backdrop-filter: blur(15px);
 	padding: 4px 1rem;
@@ -1534,6 +1533,9 @@ html {
 // @media (min-width:1281px) { /* hi-res laptops and desktops */ }
 
 //? Media queries Bootstrap
+//TODO All content made bigger
+//TODO @media (min-width: 1440px)
+
 //! @media (min-width: 1400px)
 //! @media (min-width: 1200px)
 //! @media (min-width: 992px)
@@ -1549,13 +1551,20 @@ html {
 	.swiper-slide {
 		background-color: $white-text;
 		border: 1px solid #d4d4d4;
-		width: 100% !important;
-		img {
-			width: 100%;
-			max-width: 300px;
-		}
+		border-radius: 0.5rem;
+		width: 100%;
 		@include setFlex(column);
 		justify-content: space-between;
+	}
+	img {
+		width: 100%;
+		max-width: 300px;
+		border-top-left-radius: 0.5rem;
+		border-top-right-radius: 0.5rem;
+	}
+	//decided some img be full width in 360px viewport
+	.bigger-img {
+		max-width: 326px;
 	}
 	.swiper-wrapper {
 		margin-bottom: 3rem;
@@ -1585,4 +1594,45 @@ html {
 		font-weight: 600;
 		@include setFlex(column);
 	}
+	@media (min-width: 768px) {
+		.news-container {
+			max-width: unset;
+		}
+		.swiper-slide {
+			width: 352px !important;
+			height: 585px;
+			img {
+				max-width: 350px;
+				height: auto;
+			}
+		}
+		.news-content{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+	@media (min-width: 992px) {
+		padding: 1rem 1.5rem;
+		.news-container{
+			max-width: 736px;
+		}
+	}
+	@media (min-width: 1200px){
+		padding: 1rem 4rem;
+	}
+	@media (min-width: 1281px){
+		.news-container{
+			max-width: 1120px;
+		}
+	}
+	@media (min-width: 1400px){
+		padding: 1rem 5rem;
+	}
+	@media (min-width: 1440px){
+		.swiper-slide {
+			height: 610px;
+		}
+	}
+
 }

@@ -81,10 +81,19 @@ var collabSwiper = new Swiper(".news-container", {
 	waitForTransition: false,
 	preloadImages: false,
 	lazy: true,
-	slidesPerView: 2,
+	slidesPerView: 1,
 	breakpoints: {
-		"@0.00": {
-			slidesPerView: 1,
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 32,
+		},
+		992: {
+			slidesPerView: 2,
+			spaceBetween: 32,
+		},
+		1281: {
+			slidesPerView: 3,
+			spaceBetween: 32,
 		},
 	},
 });
