@@ -73,9 +73,8 @@ var collabSwiper = new Swiper(".news-container", {
 	updateOnWindowResize: true,
 	loop: true,
 	autoplay: {
-		delay: 5000,
+		delay: 7000,
 	},
-	// autoHeight: false,
 	spaceBetween: 16,
 	disableOnInteraction: false,
 	waitForTransition: false,
