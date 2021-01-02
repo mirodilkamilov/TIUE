@@ -1631,7 +1631,10 @@ html {
 	}
 	@media (min-width: 1440px){
 		.swiper-slide {
-			height: 610px;
+			height: 630px;
+		}
+		.news-content{
+			padding: 0.5rem 1rem;
 		}
 	}
 
