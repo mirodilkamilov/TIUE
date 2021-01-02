@@ -432,7 +432,7 @@ ScrollTrigger.matchMedia({
 		let news_section = gsap.timeline({
 			scrollTrigger: {
 				trigger: ".news-section",
-				start: "-=150px center",
+				start: "-=50px center",
 			},
 		});
 		news_section.from(".news-section", {
