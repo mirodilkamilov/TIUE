@@ -1,5 +1,5 @@
-// <!-- Initialize Swiper -->
-var swiper = new Swiper(".swiper-container", {
+//! Collaboration Swiper
+var collabSwiper = new Swiper(".collaboration", {
 	cssMode: true,
 	pagination: {
 		el: ".swiper-pagination",
@@ -55,4 +55,36 @@ var swiper = new Swiper(".swiper-container", {
 			loop: true,
 		},
 	},
+});
+
+//! News & Events Swiper
+var collabSwiper = new Swiper(".news-container", {
+	cssMode: true,
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	mousewheel: true,
+	keyboard: true,
+	updateOnWindowResize: true,
+	loop: true,
+	autoplay: {
+		delay: 5000,
+	},
+	// autoHeight: false,
+	spaceBetween: 16,
+	disableOnInteraction: false,
+	waitForTransition: false,
+	preloadImages: false,
+	lazy: true,
+	slidesPerView: 2,
+	breakpoints: {
+		"@0.00": {
+			slidesPerView: 1,
+		},
+	}
 });

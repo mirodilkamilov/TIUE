@@ -97,8 +97,42 @@ html {
 		background-color: $white-text;
 		color: $logo;
 	}
-	&:focus{
+	&:focus {
 		outline: none;
+	}
+}
+.read-more-btn2 {
+	display: block;
+	text-decoration: none;
+	background-color: transparent;
+	color: $logo;
+	border: none;
+	text-align: left;
+	font-weight: 600;
+	padding: 0.25rem;
+	border-radius: 1.5rem;
+	display: flex;
+	align-items: center;
+	transition: all 0.3s ease;
+	&:hover {
+		background-color: transparent;
+		color: $logo;
+	}
+	&:focus {
+		outline: none;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		.fa-angle-right {
+			transform: translateX(0.5rem);
+		}
+	}
+	.fa-angle-right {
+		color: $logo;
+		margin-left: 0.75rem;
+		transform: translateX(0);
+		transition: all 0.3s ease;
 	}
 }
 
@@ -1503,10 +1537,42 @@ html {
 		display: none;
 	}
 	.swiper-slide {
+		background-color: $white-text;
+		border: 1px solid #d4d4d4;
 		width: 100% !important;
 		img {
-			width: 200px;
+			width: 100%;
+			max-width: 300px;
 		}
+		@include setFlex(column);
+		justify-content: space-between;
+	}
+	.swiper-wrapper {
+		margin-bottom: 3rem;
+	}
+	.news-container {
+		max-width: 390px;
+	}
+	.news-content {
+		margin-top: 0.5rem;
+		padding: 0.5rem;
+		height: 100%;
+		h4 {
+			text-align: left;
+		}
+	}
+	.date-container {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		width: 3rem;
+		height: 3rem;
+		padding: 0.5rem;
+		background-color: $logo;
+		color: $white-text;
+		border-radius: 50%;
+		font-size: 0.8rem;
+		font-weight: 600;
 		@include setFlex(column);
 	}
 }
