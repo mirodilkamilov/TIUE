@@ -1,0 +1,287 @@
+//* Navbar
+.navbar {
+	background-color: rgba(99, 107, 111, 0.3);
+	backdrop-filter: blur(15px);
+	padding: 4px 1rem;
+
+	.container-fluid {
+		padding: 0;
+	}
+
+	.menu-button {
+		display: block;
+		position: relative;
+		outline: none;
+	}
+
+	.dropdown-toggle::after {
+		display: none;
+	}
+}
+
+//* Logo in navbar
+.logo {
+	display: flex;
+	align-items: center;
+	width: min-content;
+	color: #fff;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+
+	&:hover {
+		color: #fff;
+	}
+}
+
+.logo p {
+	padding-left: 1rem;
+	font-size: 0.55rem;
+	margin: 0;
+}
+
+.logo img {
+	width: 64px;
+	height: 48px;
+}
+
+//! hamburger-menu animation
+.navbar-toggler {
+	display: block;
+	padding: 1.5rem 1.5rem !important;
+	border: none !important;
+
+	&:focus,
+	&:hover {
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+.menu-button span {
+	position: absolute;
+	display: block;
+	background: #fff;
+	width: 30px;
+	height: 3px;
+	border-radius: 50px;
+	left: -7px;
+	transition: all 0.3s;
+}
+
+.menu-button span:nth-child(1) {
+	top: -13px;
+}
+
+.menu-button span:nth-child(2) {
+	top: -1.5px;
+}
+
+.menu-button span:nth-child(3) {
+	top: 10px;
+}
+
+.first-line {
+	transform: translateX(0) translateY(13px) rotate(45deg);
+}
+
+.second-line {
+	opacity: 0;
+	transform: translateX(30px);
+}
+
+.third-line {
+	transform: translateX(0) translateY(-10px) rotate(135deg);
+}
+
+//* Navbar items
+.navbar-nav {
+	.nav-item {
+		.nav-link {
+			text-align: center;
+			font-weight: 500;
+			color: $white-text;
+			&:hover {
+				font-weight: 600;
+				color: $logo;
+			}
+		}
+
+		.active-link {
+			font-weight: 600;
+			color: $logo;
+		}
+
+		.fa-chevron-down {
+			display: none;
+		}
+	}
+}
+
+.dropdown .fa-plus {
+	position: absolute;
+	right: 0.7rem;
+	transition: transform 0.3s;
+}
+
+.dropdown > .show .fa-plus {
+	transition: all 0.3s;
+	transform: rotate(45deg);
+}
+
+//* Dropdown menu
+.dropdown > .dropdown-menu {
+	opacity: 0;
+	display: block;
+	max-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	transition: all 0.5s;
+
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: $background;
+	text-align: center;
+	padding: 0 1rem;
+}
+
+.dropdown .dropdown-menu.show {
+	opacity: 1;
+	max-height: 500px;
+	visibility: visible;
+	transition: all 0.7s;
+}
+
+.dropdown-list {
+	background-color: #fff;
+	padding: 0.5rem;
+	margin: 1rem 0;
+	border-radius: 1rem;
+	text-decoration: none;
+
+	@include setGrid(1fr, 3fr 1fr);
+
+	img {
+		justify-self: center;
+		width: 4rem;
+		border-radius: 0.75rem;
+	}
+
+	&:hover {
+		background-color: $grey;
+
+		.dropdown-item {
+			color: #fff;
+		}
+	}
+
+	.dropdown-item {
+		background-color: transparent;
+		color: $black-text;
+	}
+}
+
+//?=========================
+//! Media queries
+//?=========================
+
+//* Navbar responsiveness in bigger screens
+.navbar {
+	@media (min-width: 992px) {
+		padding: 4px 1.5rem;
+
+		.navbar-toggler {
+			display: none;
+		}
+
+		.navbar-nav {
+			padding: 0 1rem;
+		}
+
+		.fa-plus {
+			display: none;
+		}
+
+		//* Dropdown menu
+		.dropdown {
+			.fa-chevron-down {
+				display: block;
+				position: absolute;
+				right: 50%;
+				transform: rotate(0deg);
+				transition: transform 0.2s;
+			}
+
+			.nav-link:hover .fa-chevron-down {
+				transform: rotate(180deg);
+				transition: transform 0.2s;
+			}
+
+			.dropdown-menu {
+				position: absolute;
+				top: 50px;
+				box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.3);
+				background-clip: border-box;
+				transition: all 0.3s;
+			}
+
+			.dropdown-list {
+				@include setGrid(1fr, 3fr);
+				text-decoration: none;
+
+				img {
+					justify-self: center;
+					width: 5rem;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1200px) {
+		padding: 4px 4rem;
+	}
+
+	@media (min-width: 1400px) {
+		padding: 4px 5rem;
+	}
+}
+
+//! All bigger content
+@media (min-width: 1440px) {
+	h1.heading {
+		font-size: 2.1rem;
+	}
+	h3.sub-heading {
+		font-size: 1.6rem;
+	}
+	h4 {
+		font-size: 1.4rem;
+	}
+	p {
+		font-size: 1.03rem !important;
+	}
+	.logo {
+		p {
+			font-size: 0.55rem !important;
+		}
+	}
+	.values .cards p {
+		font-size: 1.05rem !important;
+	}
+	.main-carousel .slide-caption p,
+	.main-carousel .slide-caption li {
+		font-size: 1.4rem !important;
+		font-weight: 500;
+	}
+	.main-carousel .slide-caption h3 {
+		font-size: 2rem;
+		font-weight: 800;
+	}
+	.main-carousel .slide1 p.slide-paragraph-bigger {
+		font-size: 2rem !important;
+		font-weight: 800;
+		margin: 0;
+		padding: 0;
+	}
+}
