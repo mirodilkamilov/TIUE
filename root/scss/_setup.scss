@@ -141,6 +141,23 @@ html {
 	text-align: center;
 	font-size: 1rem;
 }
+//* Swiper pagination
+.swiper-pagination-bullet {
+	background-color: $logo;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+.swiper-pagination {
+	outline: none;
+	bottom: 0;
+}
+.swiper-pagination-bullet-active {
+	background: $logo;
+	outline: none;
+	transform: scale(1.4);
+}
 //* Scroll up button
 .scroll-up-btn {
 	position: fixed;
