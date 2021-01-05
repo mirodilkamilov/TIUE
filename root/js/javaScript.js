@@ -25,6 +25,13 @@ function resize() {
 resize();
 $(window).resize(resize);
 
+//? Bootstrap Carousel
+var myCarousel = document.querySelector("#carouselExampleIndicators");
+var carousel = new bootstrap.Carousel(myCarousel, {
+	pause: false,
+	interval: 3000,
+});
+
 //? Adding animating classes on hamburger menu click
 $(document).ready(function () {
 	$("#menu-button").click(function () {
