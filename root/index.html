@@ -8,7 +8,7 @@
 	<meta name="title" content="TIUE - Tashkent International University of Education">
 	<meta name="description"
 		content="The only pedagogical university with an educational program from universities included in the top-1000 of the World ranking">
-	<meta name="robots" content="nosnippet">
+	<meta name="robots" content="index, follow">
 	<meta name="google" content="nositelinkssearchbox" />
 
 	<!-- Open Graph / Facebook -->
@@ -17,7 +17,7 @@
 	<meta property="og:title" content="TIUE - Tashkent International University of Education">
 	<meta property="og:description"
 		content="The only pedagogical university with an educational program from universities included in the top-1000 of the World ranking">
-	<meta property="og:image" content="https://tiue.uz/assets/meta-tags.png">
+	<meta property="og:image" content="images/main/TIUE-building.webp">
 
 
 	<!-- Google Fonts (Roboto) -->
@@ -30,18 +30,13 @@
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+	<!-- Swiper (carousel) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css"
+		integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA=="
+		crossorigin="anonymous" />
+
+	<!-- Main stylesheet -->
 	<link rel="stylesheet" href="css/main.css">
-	<!-- Aziz's stylesheet -->
-	<link rel="stylesheet" href="css/aziz.css">
-
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
 	<link rel="icon" href="browser-tab-icon.png" type="image/x-icon">
 </head>
 
@@ -49,6 +44,7 @@
 	<div class="scroll-up-btn">
 		<i class="fas fa-angle-up"></i>
 	</div>
+	<!--? Navbar -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 		<div class="container-fluid">
 			<a class="logo" href="/">
@@ -68,16 +64,13 @@
 			<div class="collapse navbar-collapse" id="navbarText">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link home" aria-current="page" href="/">Home</a>
+						<a class="nav-link active-link" aria-current="page" href="/">Home</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#about">About TIUE</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#team">Our Team</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#academics">Academics</a>
+						<a class="nav-link" href="#core-team">Our Team</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#programs" id="navbarDropdownMenuLink" role="button"
@@ -86,18 +79,15 @@
 							<i class="fas fa-chevron-down"></i>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<li class="dropdown-list">
-								<img src="images/programs/thub-small.jpg" alt="transformation hub logo small one">
-								<a class="dropdown-item" href="T-hub.html">Transformation Hub</a>
-							</li>
-							<li class="dropdown-list">
-								<img src="images/programs/leadership-small.png" alt="leadership academy logo small one">
-								<a class="dropdown-item" href="T-hub.html">Leadership Academy</a>
-							</li>
+							<a href="T-hub.html" class="dropdown-list">
+								<img src="images/programs/thub-small.webp" alt="transformation hub logo small one">
+								<p class="dropdown-item">Transformation Hub</p>
+							</a>
+							<a href="leadership-academy.html" target="_blank" class="dropdown-list">
+								<img src="images/programs/leadership-small.webp" alt="leadership academy logo small one">
+								<p class="dropdown-item">Leadership Academy</p>
+							</a>
 						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#student">Student Life</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#news">News & Events</a>
@@ -107,535 +97,546 @@
 		</div>
 	</nav>
 
-	<section class="home" id="home">
-		<div class="home-content">
-			<h3 class="sub-heading">Welcome to</h3>
-			<h1 class="heading">Tashkent International University of Education</h1>
-			<p>Learn, discover, create, make the world a better place</p>
-			<a class="action-btn" href="#about">Learn more</a>
+	<!--? Carousel -->
+	<section class="main-carousel">
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<picture>
+						<img srcset="images/main/TIUE-building.webp" class="w-100 desktop" alt="TIUE university building"
+							media="(min-width: 992px)" loading="lazy">
+						<img srcset="images/main/TIUE-building-tablet.webp" class="w-100 tablet"
+							alt="TIUE university building (for tablet)" media="(min-width: 768px)" loading="lazy">
+						<img srcset="images/main/TIUE-building-mob.webp" class="w-100 mobile"
+							alt="TIUE university building (for mobile)" media="(max-width: 767px)" loading="lazy">
+					</picture>
+					<div class="slide-caption slide1">
+						<p class="slide-paragraph-bigger">Welcome to</p>
+						<h3 class="sub-heading">Tashkent International University of Education</h3>
+						<p class="slide-paragraph">Learn, discover, create, make the world a better place</p>
+						<a class="read-more-btn" href="#about">Learn more</a>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<picture>
+						<img srcset="images/main/teacher-photo.webp" class="w-100 desktop" alt="teacher and students in class"
+							media="(min-width: 992px)" loading="lazy">
+						<img srcset="images/main/teacher-photo-tablet.webp" class="w-100 tablet"
+							alt="teacher and students in class (for tablet)" media="(min-width: 768px)" loading="lazy">
+						<img srcset="images/main/teacher-photo-mob.webp" class="w-100 mobile"
+							alt="teacher and students in class (for mobile)" media="(max-width: 767px)" loading="lazy">
+					</picture>
+					<div class="slide-caption slide3">
+						<h3 class="sub-heading">Transformation Hub</h3>
+						<p class="slide-paragraph">Transformation hub is one of the essential part of our university
+							which
+							currently offers 2 programs:</p>
+						<ol class="slide-list">
+							<li>English language courses</li>
+							<li>Pre-University courses</li>
+						</ol>
+						<a class="action-btn" href="#programs">Learn more</a>
+					</div>
+				</div>
+				<div class="carousel-item c3">
+					<picture>
+						<img srcset="images/main/graduate-girl.webp" class="w-100 desktop" alt="graduate girl picture"
+							media="(min-width: 1400px)" loading="lazy">
+						<img srcset="images/main/graduate-girl-laptop.webp" class="w-100 laptop" alt="graduate girl picture"
+							media="(min-width: 992px)" loading="lazy">
+						<img srcset="images/main/graduate-girl-tablet.webp" class="w-100 tablet"
+							alt="graduate girl picture (for tablet)" media="(min-width: 768px)" loading="lazy">
+						<img srcset="images/main/graduate-girl-mob.webp" class="w-100 mobile"
+							alt="graduate girl picture (for mobile)" media="(max-width: 767px)" loading="lazy">
+					</picture>
+					<div class="slide-caption slide2">
+						<h3 class="sub-heading">Bachelor's degree</h3>
+						<p class="slide-paragraph">TIUE offers three faculties in the bachelor's degree:</p>
+						<ol class="slide-list">
+							<li>Pedagogical subjects</li>
+							<li>Information and communication subjects</li>
+							<li>Business management</li>
+						</ol>
+						<a class="action-btn" href="#programs">Learn more</a>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<picture>
+						<img srcset="images/main/leader-photo.webp" class="w-100 desktop" alt="leader picture"
+							media="(min-width: 992px)" loading="lazy">
+						<img srcset="images/main/leader-photo-tablet.webp" class="w-100 tablet"
+							alt="leader picture (for tablet)" loading="lazy" media="(min-width: 768px)">
+						<img srcset="images/main/leader-photo-mob.webp" class="w-100 mobile" alt="leader picture (for mobile)"
+							media="(max-width: 767px)" loading="lazy">
+					</picture>
+					<div class="slide-caption slide4">
+						<h3 class="sub-heading">Uzbekistan Leadership Academy</h3>
+						<p class="slide-paragraph">Leadership academy offers a huge range of management courses, and at
+							the
+							moment the program for retraining school principals is working hard</p>
+						<a class="action-btn" href="#programs">Learn more</a>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-controllers">
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</a>
+			</div>
 		</div>
 	</section>
 
-
+	<!--? About section -->
 	<section class="about" id="about">
-		<div class="container">
-			<h1 class="heading">About TIUE</h1>
-			<div class="row">
-				<div class="col-md-6 mb-4">
-					<p class="about-paragraph">
-						The Tashkent International University of Education (TIUE) is a private educational institution
-						founded in
-						2020 and licensed by the Government of the Republic of Uzbekistan thereof. The creation of the
-						TIUE was based on
-						a guiding principle and a belief that greater access to a more diversified education will
-						contribute to a greater
-						social justice. <br> The goal of providing greater access to education will be realized through
-						a four-pillar system
-						based on both private and public-private partnership models.
-					</p>
-					<div class="col-md-12"><img src="images/about/about1.JPG" class="img-fluid" alt=""></div>
-					<h3 class="sub-heading">Our Vision</h3>
-					<p class="about-paragraph">Tashkent International University of Education will become a purposeful
-						education hub/corporation
-						that will disrupt
-						education and have a transformative impact on nations through promoting innovations, research,
-						creativity, and
-						entrepreneurship.</p>
-					<div class="col-md-12"> <img src="images/about/about2.JPG" class="img-fluid" alt=""></div>
-				</div>
-				<div class="col-md-6">
-					<div class="col-md-12 "> <img src="images/about/about3.JPG" class="img-fluid" alt=""></div>
-					<h3 class="sub-heading">
-						About the establishment
-					</h3>
-					<p class="about-paragraph">TIUE was established in accordance with the Decree of the Cabinet of Ministers
-						of the Republic of
-						Uzbekistan "On the
-						establishment of the international University "Tashkent International University of Education"
-						No. 404 dated June 23,
-						2020.</p>
-					<div class="col-md-12"> <img src="images/about/about4.JPG" class="img-fluid" alt=""></div>
-					<h3 class="sub-heading">
-						Our Mission
-					</h3>
-					<p class="about-paragraph">Our mission is to provide an applied learning environment that allows all
-						participants of the
-						educational process
-						to discover, examine critically, preserve and transmit the knowledge, wisdom and values that
-						will help ensure the
-						existence of this and future generations and improve the quality of life for all.</p>
-				</div>
-				<div class="values">
-					<h3 class="sub-heading">Our Values</h3>
-					<div class="card-container">
-						<div class="cards">
-							<div class="icon-part">
-								<img class="card-icon" src="images/values/affordable.svg" alt="affordable icon">
-							</div>
-							<div class="text-part">
-								<p>Affordable education</p>
-							</div>
-						</div>
-						<div class="cards">
-							<div class="icon-part">
-								<img src="images/values/high-quality.svg" alt="high quality icon" class="card-icon">
-							</div>
-							<div class="text-part">
-								<p>High-quality and effective educational programs, training and
-									consultations that meet the needs of students and the educational community</p>
-							</div>
-						</div>
-						<div class="cards">
-							<div class="icon-part">
-								<img src="images/values/support.svg" alt="support icon" class="card-icon">
-							</div>
-							<div class="text-part">
-								<p>Supportive and collaborative relationships between faculty,
-									students, staff, and educational programs at the University</p>
-							</div>
-						</div>
-						<div class="cards">
-							<div class="icon-part">
-								<img src="images/values/recognition.svg" alt="recognition icon with certificate"
-									class="card-icon">
-							</div>
-							<div class="text-part">
-								<p>Recognition at the local and national level as a model
-									institution
-									for teacher training and professional development</p>
-							</div>
-						</div>
-					</div>
-					<div class="last-card">
-						<div class="cards last-value">
-							<div class="icon-part">
-								<img src="images/values/international.svg" alt="international icon" class="card-icon">
-							</div>
-							<div class="text-part">
-								<p>Gaining an international profile</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="about-top-content">
+			<h1 class="heading">About Us</h1>
+			<p class="about-paragraph">Our target is to
+				provide
+				an applied learning environment that allows all participants to discover, examine critically, preserve
+				and
+				transmit the knowledge, wisdom and values that will help to promote innovation, creativity, research and
+				entrepreneurship.</p>
 		</div>
-	</section>
-
-	<section class="team" id="team">
-		<h1 class="heading">TIUE TEAM</h1>
 		<div class="rector-container">
-			<h3 class="sub-heading">TIUE RECTOR</h3>
-			<img class="rector-image" src="images/team/rektor01.jpg" loading="lazy" alt="TIUE RECTOR image">
-			<h4 class="small-heading">Ulugbek Kasimkhadjayev</h4>
-			<p class="section-paragraph">rector@tiue.uz</p>
-			<div class="quote">
-				<blockquote>
-					<p class="section-paragraph">
-						TIUE is the tremendous place where you can not merely learn, but also discover, explore, and,
-						ultimately, transform the world in collaboration with highly qualified educators
-					</p>
-				</blockquote>
-				<p class="small-paragraph">TIUE RECTOR from welcome speech</p>
+			<div class="rector-content">
+				<h3 class="sub-heading">BE A PART OF PROGRESSIVE EDUCATION COMMUNITY</h3>
+				<h4 class="small-heading">"TIUE is the tremendous place where you can not merely learn, but also
+					discover,
+					explore, and, ultimately transform the world in collaboration with highly qualified educators"</h4>
+				<p>Ulugbek Kasimkhodjaev</p>
+				<p>TIUE Rector</p>
 			</div>
-			<div class="message-container">
-				<h4 class="small-heading">Continue reading RECTOR's welcome speech</h4>
-				<p>by clicking down arrow</p>
-				<p>
-				<div class="message-btn" type="button" data-bs-toggle="collapse" data-bs-target="#rector-message"
-					aria-expanded="false" aria-controls="rector-message">
-					<svg class="down-svg" enable-background="new 0 0 26 26" height="26px" id="Layer_1" version="1.1"
-						viewBox="0 0 26 26" width="26px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink">
-						<g>
-							<polygon fill="#212529"
-								points="0.046,2.582 2.13,0.498 12.967,11.334 23.803,0.498 25.887,2.582 12.967,15.502  " />
-							<polygon fill="#212529"
-								points="0.046,13.582 2.13,11.498 12.967,22.334 23.803,11.498 25.887,13.582 12.967,26.502  " />
-						</g>
-					</svg>
-				</div>
+			<img src="images/rector-image.webp" alt="TIUE university rector image">
+		</div>
+		<div class="vision-mission-container">
+			<div class="vision">
+				<h3 class="sub-heading">Our Vision</h3>
+				<p>Tashkent International University of Education will become a purposeful education hub/corporation
+					that
+					will disrupt education and have a transformative impact on nations through promoting innovations,
+					research, creativity, and entrepreneurship.</p>
+			</div>
+			<div class="mission">
+				<h3 class="sub-heading">Our Mission</h3>
+				<p>Our mission is to provide an applied learning environment that allows all participants of the
+					educational
+					process to discover, examine critically, preserve and transmit the knowledge, wisdom and values that
+					will
+					help ensure the existence of this and future generations and improve the quality of life for all.
 				</p>
-				<div class="collapse" id="rector-message">
-					<div class="card-body">
-						<p class="section-paragraph">
-							Dear educators, students and Families
-							<br>
-							<br>
-							With a great enthusiasm I am proud to welcome you to one of the most inspirational placesnot only
-							of learning, but also discovering, exploring, and in collaboration with highly qualified educators
-							transforming the world- Tashkent International University of Education (TIUE).
-							<br>
-							<br>
-							Our University has been the eighth university that takes place in the higher education life of
-							Uzbekistan and was established in accordance with the Decree of the Cabinet of Ministers of the
-							Republic of Uzbekistan "On the establishment of the international University "Tashkent
-							International University of Education" No. 404 dated June 23, 2020.
-							<br>
-							<br>
-							The whole world has long recognized the enormous contribution of great Central Asian philosophers
-							to the development of world science and culture, such as Muhamad Musa al-Khwarizmi, Ahmad
-							al-Ferghani, Abunasra al-Farabi , Abu Ali Ibn Sina , Abu RayhanBeruni. To this day, the main idea
-							of Eastern thinkers lies at the heart of the educational process of modern Uzbekistan, which is
-							that scientific knowledge and work contribute to the development of the best moral qualities that
-							lead to spiritual development, improvement of the mind, consciousness, intelligence, and critical
-							thinking.
-							<br>
-							<br>
-							Our primary purpose is creating an innovative ecosystem in the country by facilitating of
-							cultivation of modern leaders in Education, Science, Government and Public services. Our mission is
-							to provide an applied learning environment that allows all participants to discover, examine
-							critically, preserve and transmit the knowledge, wisdom and values that will help to promote
-							innovation, creativity, research and entrepreneurship.
-							<br>
-							<br>
-							TIUE was created to solve significant tasks for the present and future generations and, vertically
-							integrating, in 2020-2023, the University will work hard in the following areas:
-							<br>
-							<br>
-							Higher education- Bachelor's degree in three programs- pedagogical subjects, including the STEAM
-							education, in information and communication subjects and in business management.
-							We provide our students full-time, part-time, evening, special correspondence and distance learning
-							in Uzbek, English and other languages.
-							<br>
-							<br>
-							The amount of knowledge that our youth received during school does not meet the requirements of
-							universities. We want to raise their educational level and further enroll not only in our
-							University, but also in the universities of our Uzbekistan, where there are about 15 different
-							branches of foreign universities, as well as 8 private universities.
-							<br>
-							<br>
-							We decided to prepare our young people for admission to Universities and created The Transformation
-							hub for developing the mind-set and fundamental concepts underlying the four core competencies:
-							critical thinking, creative thinking, effective communication, effective interaction.The
-							Transformation hub provide successful admission of applicants To higher education institutions of
-							Uzbekistan, international Universities of Near and Far Abroad, using educational programs in
-							cooperation with established international schools and guaranteed admission of students to
-							undergraduate programs from the 2nd year in foreign Universities of the Near and Far Abroad.
-							<br>
-							<br>
-							Management training-Leadership Academy is the actual solution for improving the quality of
-							theoretical and practical knowledge and skills of administrative staff in the field of management.
-							<br>
-							<br>
-							Today, most of the teachers working in the secondary education system have low qualifications.
-							During last year's certification for 2019, which was attended by almost 57 thousand teachers and
-							mentors, 43% of those certified received low grades, and the average for the Republic was 64 points
-							on the 100-point system. This is a clear sign of an imperfect system of professional development of
-							teachers, which requires updating the methodological support.
-							<br>
-							<br>
-							Our university offers program on Professional development of teachers of secondary schools to
-							improve the professional skills of teachers and the quality of their teaching in secondary schools.
-							<br>
-							<br>
-							A fresh start is always the harbinger of novelty for the institutions as well as it is for the life
-							of people. The fast-paced and changing business world and social needs have made it necessary for
-							our students to develop themselves individually apart from their learning areas. In this respect,
-							it is our primary goal to build education and training programs that will enable our students in
-							all programs to gain the competencies described as the necessities of 21st century, to make it
-							possible for them to grow up as democratic, free-thinking, broad-minded individuals, and to create
-							a campus environment for this purpose.
-							<br>
-							<br>
-							As TIUE Chancellor, I view myself as a servant leader. That is, I believe my job is to work on
-							behalf of the entire TIUE community.
-							<br>
-							<br>
-							Hereby, TIUE invites students, academics and educators who believe that they can transform and
-							bring a new breath to the development of the educational environment, learn more about our
-							University and join our creative community.
-							<br>
-							<br>
-							I consider it is a great honor to serve this new, but with far-reaching goalsinstitution and its
-							community as TIUE’s first chancellor!
-							<br>
-							<br>
-							With best wishes,
-							<br>
-							<br>
-							Ulugbek Kasimkhadjayev
-							<br>
-							TIUE Chancellor
-						</p>
-					</div>
-				</div>
 			</div>
 		</div>
-		<hr class="content-separator">
-		<h3 class="sub-heading directors-heading">TIUE Directors</h3>
-		<div class="directors-container">
-			<div class="first-director">
-				<h4 class="sub-heading">Transformation hub</h4>
-				<img src="images/team/director1-mob.jpg" loading="lazy" alt="Director Victoriya photo">
-				<h4 class="small-heading">Babakhadjayeva Viktoriya</h4>
-				<p class="section-paragraph">v.babakhodjaeva@tiue.uz</p>
+		<div class="values">
+			<h3 class="sub-heading">Our Values</h3>
+			<div class="card-container">
+				<div class="cards">
+					<div class="icon-part">
+						<img class="card-icon" src="images/values/affordable.svg" alt="affordable icon">
+					</div>
+					<div class="text-part">
+						<p>Affordable education</p>
+					</div>
+				</div>
+				<div class="cards">
+					<div class="icon-part">
+						<img src="images/values/high-quality.svg" alt="high quality icon" class="card-icon">
+					</div>
+					<div class="text-part">
+						<p>High-quality and effective educational programs, training and
+							consultations that meet the needs of students and the educational community</p>
+					</div>
+				</div>
+				<div class="cards">
+					<div class="icon-part">
+						<img src="images/values/support.svg" alt="support icon" class="card-icon">
+					</div>
+					<div class="text-part">
+						<p>Supportive and collaborative relationships between faculty,
+							students, staff, and educational programs at the University</p>
+					</div>
+				</div>
+				<div class="cards">
+					<div class="icon-part">
+						<img src="images/values/recognition.svg" alt="recognition icon with certificate" class="card-icon">
+					</div>
+					<div class="text-part">
+						<p>Recognition at the local and national level as a model
+							institution
+							for teacher training and professional development</p>
+					</div>
+				</div>
 			</div>
-			<div class="second-director">
-				<h4 class="sub-heading">Leadership Academy</h4>
-				<img src="images/team/director2-mob.png" loading="lazy" alt="Director Temurbek photo">
-				<h4 class="small-heading">Anvarbekov Temurbek</h4>
-				<p class="section-paragraph">academy@tiue.uz</p>
-			</div>
-		</div>
-	</section>
-
-	<!-- Collaboration section -->
-	<section class="collaboration" id="collaboration">
-		<div class="container">
-			<h1 class="heading">Collaboration</h1>
-			<div class="carousel owl-carousel">
-				<div class="card">
-					<div class="box">
-						<img src="images/collaboration/c1.png" loading="lazy" alt="">
-						<p>The Ministry of Public Education of the <br> Republic of Uzbekistan</p>
+			<div class="last-card">
+				<div class="cards last-value">
+					<div class="icon-part">
+						<img src="images/values/international.svg" alt="international icon" class="card-icon">
 					</div>
-				</div>
-				<div class="card">
-					<div class="box">
-						<img src="images/collaboration/c2.png" loading="lazy" alt="">
-						<p>Tashkent state University of <br> Economics</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="box">
-						<img src="images/collaboration/c3.png" loading="lazy" alt="">
-						<p>International school of applied and <br> social Sciences (Spain)</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="box">
-						<img src="images/collaboration/c4.png" loading="lazy" alt="">
-						<p>Monash University <br> (Australia)</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="box">
-						<img src="images/collaboration/c5.png" loading="lazy" alt="">
-						<p>Omnia Education Partnerships <br> (OEP)</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="box">
-						<img src="images/collaboration/c6.png" loading="lazy" alt="">
-						<p>Codecraft art of <br> coding</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="box">
-						<img src="images/collaboration/c7.png" loading="lazy" alt="">
-						<p>IT Park start local & <br> GO global</p>
+					<div class="text-part">
+						<p>Gaining an international profile</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Academics section -->
-	<section class="academic" id="academics">
-		<div class="container">
-			<h1 class="heading">Academics</h1>
-			<h4>The University provides full-time, part-time, evening, special correspondence and distance learning in
-				Uzbek, English and other languages. Main faculties of Bachelor’s degree:</h4>
-			<div class="row">
-				<div class="col-md-2 my-3"><img src="images/faculty/faculty1.png" loading="lazy" alt=""></div>
-				<div class="col-md-10 my-3">
-					<h4>Bachelor's degree in pedagogical subjects, including the STEAM education too</h4>
-				</div>
-				<div class="col-md-10 my-3">
-					<h4>Bachelor's degree in information and communication subjects</h4>
-				</div>
-				<div class="col-md-2 my-3"><img src="images/faculty/faculty2.jpg" loading="lazy" alt=""></div>
-				<div class="col-md-2 my-3"><img src="images/faculty/faculty3.jpg" loading="lazy" alt=""></div>
-				<div class="col-md-10 my-3">
-					<h4>Bachelor's degree in business management</h4>
-				</div>
+	<!--? Core team section -->
+	<section class="core-team" id="core-team">
+		<h1 class="heading">Core Team</h1>
+		<div class="team-card-container">
+			<div class="team-card leadership">
+				<img src="images/team/leadership-acedemy-director.webp" alt="Leadership Academy director" loading="lazy">
+				<h4 class="small-heading">Temurbek Anvarbekov</h4>
+				<p>Director</p>
+				<p>Leadership Academy</p>
+			</div>
+			<div class="team-card t-hub">
+				<img src="images/team/t-hub-director.webp" alt="Transformation Hub director" loading="lazy">
+				<h4 class="small-heading">Victoriya Babakhadjayeva</h4>
+				<p>Director</p>
+				<p>Transformation Hub</p>
+			</div>
+			<div class="team-card elp-team">
+				<img src="images/team/ELP-program developer.webp" alt="course developer for General English and IELTS"
+					loading="lazy">
+				<h4 class="small-heading">Dr Jothy Narayanan</h4>
+				<p>Course developer for General English and IELTS</p>
+			</div>
+			<div class="team-card physics">
+				<img src="images/team/course-developer-physics.webp" alt="course developer for Physics" loading="lazy">
+				<h4 class="small-heading">Ismailov Shukurullah</h4>
+				<p>Course developer for Physics</p>
 			</div>
 		</div>
 	</section>
 
-	<!-- Programs -->
-	<section class="program" id="programs">
-		<div class="container">
-			<h1 class="heading">
-				TIUE Programs
-			</h1>
-			<div class="row">
-
-				<div class="col-md-4 my-3 pr-3"><img src="images/programs/thub.jpg" class="img-fluid" loading="lazy" alt="">
+	<!--? Programs section -->
+	<section class="programs" id="programs">
+		<h1 class="heading">Programs</h1>
+		<div class="program-card-container">
+			<div class="program-card undergraduate">
+				<div class="img-container">
+					<img src="images/programs/undergraduate.webp" alt="TIUE undergraduate programs" loading="lazy">
+					<div class="img-footer">
+						<h4 class="small-heading">Undergraduate</h4>
+					</div>
 				</div>
-				<div class="col-md-8 my-3 ">
-					<h3 class="sub-heading">Transformation hub</h3>
-					<p>The Transformation hub creates opportunities for affordable higher education, improves the learning
-						process and encourages
-						mass personalized learning, engages students in the learning process, which is conducted both online
-						and face-to-face, creates
-						opportunities for students to choose what they need.
-						The Transformation center focuses on developing the mind-set (practical, artistic, humanitarian,
-						mathematical) and fundamental
-						concepts underlying the four core competencies:
-					</p>
-					<ul class="pl-3">
-						<li>critical thinking</li>
-						<li>creative thinking</li>
-						<li>effective communication</li>
-						<li>effective interaction</li>
+				<p>The only pedagogical UNIVERSITY with an educational program from universities included in the top
+					1000 of the world ranking which provides full-time, part-time, evening, special correspondence and
+					distance learning in Uzbek, English and other languages.
+					There are three main faculties of Undergraduate program (Bachelor’s degree)</p>
+				<a class="read-more-btn" href="#undergraduate-read-more" data-bs-toggle="modal" role="button"
+					aria-expanded="false">Read more</a>
+			</div>
+			<div class="program-card pre-university">
+				<div class="img-container">
+					<img src="images/programs/pre-university.webp" alt="TIUE Pre-University courses" loading="lazy">
+					<div class="img-footer">
+						<h4 class="small-heading">Pre-University Courses</h4>
+					</div>
+				</div>
+				<p>Pre-University courses are the preliminary courses on English, Math and Physics for the students
+					who want to enter both local and foreign universities in the Near and Far abroad</p>
+				<a class="read-more-btn" href="T-hub.html#pre-university">Read more</a>
+			</div>
+			<div class="program-card elp">
+				<div class="img-container">
+					<img src="images/programs/ELP.webp" alt="TIUE English Language Programs" loading="lazy">
+					<div class="img-footer">
+						<h4 class="small-heading">English Language Program</h4>
+					</div>
+				</div>
+				<p>The three-level English language program (ELP) helps those who want to start learning English from
+					scratch or strengthen the basic knowledge of students and move on to the next stage of improving
+					their language skills using the international English language testing system (IELTS).</p>
+				<a class="read-more-btn" href="T-hub.html#programs">Read more</a>
+			</div>
+			<div class="program-card leadership">
+				<div class="img-container">
+					<img src="images/programs/leadership-academy.webp" alt="TIUE Leadership Academy Programs" loading="lazy">
+					<div class="img-footer">
+						<h4 class="small-heading">Retraining of School Principals</h4>
+					</div>
+				</div>
+				<p>One of the main goals of the University is to improve leaders’ professional skills in various
+					sectors of the economy, applying the methodology of project activities, which includes passing 6
+					stages of project management:</p>
+				<a class="read-more-btn" href="leadership-academy.html">Read more</a>
+			</div>
+		</div>
+		<!--* Undergraduate read more -->
+		<div class="modal fade bachelor-modal" tabindex="-1" id="undergraduate-read-more" tabindex="-1"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="sub-heading">Bachelor's degree</h3>
+						<p class="secondary-paragraph">TIUE offers three faculties in the bachelor's degree:</p>
+					</div>
+					<ul class="modal-body bachelor-container">
+						<li class="bachelor-list">
+							<img src="images/programs/MBA.png" alt="" class="bachelor-img" loading="lazy">
+							<div class="bachelor-content">
+								<h3 class="sub-heading"><strong>Business Management</strong></h3>
+								<p>Business management program provide a broad knowledge of the various business
+									disciplines,
+									such
+									as accounting, marketing, insurance, finance, administration, management science and
+									human
+									resource management.</p>
+							</div>
+						</li>
+						<li class="bachelor-list">
+							<img src="images/programs/ICT.jpg" alt="" class="bachelor-img" loading="lazy">
+							<div class="bachelor-content">
+								<h3 class="sub-heading"><strong>Information and Communication
+										Subjects</strong></h3>
+								<p>Information Communication Technology students gain knowledge and skills needed to
+									effectively
+									apply, use and manage technology when solving problems specifically related to
+									information
+									and
+									communication.</p>
+							</div>
+						</li>
+						<li class="bachelor-list">
+							<img src="images/programs/steam.jpg" alt="" class="bachelor-img" loading="lazy">
+							<div class="bachelor-content">
+								<h3 class="sub-heading"><strong>Pedagogical Disciplines</strong>
+									(including the <strong>STEAM Education</strong>)</h3>
+								<p>STEAM is an educational approach to learning that uses Science, Technology,
+									Engineering,
+									the
+									Arts and Mathematics as access points for guiding student inquiry, dialogue, and
+									critical
+									thinking</p>
+							</div>
+						</li>
 					</ul>
-					<a href="T-hub.html">Read more</a>
-				</div>
-				<div class="line"></div>
-				<div class="col-md-8 my-3">
-					<h3 class="sub-heading">Uzbekistan Leadership Academy</h3>
-					<p>One of the main goals of the University is to improve the professional skills of leaders’ professional
-						skills in various
-						sectors of the economy, applying the methodology of project activities, which includes passing 6
-						stages of project management:
-					</p>
-					<ol class="pl-3">
-						<li>Developing a conceptual leadership model</li>
-						<li>Defining a normative leadership model</li>
-						<li>Identifying and establishing a diagnostic leadership model</li>
-						<li>Creating a platform for innovative solutions</li>
-						<li>Developing a practical leadership model</li>
-						<li>Developing and implementing an effective leadership model</li>
-					</ol>
-					<a href="">Read more</a>
-				</div>
-				<div class="col-md-4 my-3"><img src="images/programs/leadership.png" loading="lazy" class="img-fluid"
-						alt="">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
 				</div>
 			</div>
-		</div>
 	</section>
 
-	<section class="mb-0" id="student">
-		<div class="student-life mx-3">
-			<div class="container">
-				<div class="text"><span class="typing"></span></div>
-			</div>
-		</div>
-	</section>
-
-	<section class="news" id="news">
-		<div class="container">
-			<h1 class="heading">News & Events</h1>
-			<div class="row">
-				<div class="col-md-4 text-center"><img src="images/news/Shorelight_US_Higher_Education.jpg"
-						class="img-fluid" loading="lazy" alt=""></div>
-				<div class="col-md-8 mt-2">
-					<h3 class="sub-heading">Establishment</h3>
-					<p>A new educational institution was established in accordance with the Decree of the Cabinet of
-						Ministers of the Republic of Uzbekistan "About the establishment of the international university
-						"Tashkent International University of Education" No. 404 dated June 23, 2020.
-						<br>
-						<br>
-						TIUE is granted the right to determine foreign higher education institutions ranked in TOP 1000
-						ranking of the Times Higher Education World University Rankings as international partners and
-						establishing their branches on its base.
-						<br>
-						<br>
-						Graduates of the University are awarded a diploma of international level or a standard sample of
-						foreign partner universities, which is recognized as a document of higher education in Uzbekistan.
-						University graduates are issued a diploma of international level or the established sample of foreign
-						partner universities, which is recognized as a document of higher education in Uzbekistan as well.
-					</p>
-				</div>
-
-
-				<div class="col-md-8 mt-5">
-					<h3 class="sub-heading">TIUE collaborates with International School of Applied Social Sciences (ISASS)
-					</h3>
-					<p>TIUE signs MOU with International School of Applied Social Sciences (ISASS), registered in Barcelona,
-						Spain. ISASS provides diploma and degree courses in partnership with various educational institutions
-						in Europe and Asia, including the Swiss school of management.
-						The agreement aims to develop mutual scientific and technical cooperation in the provision of
-						innovative educational programs and business development between two universities.
-					</p>
-				</div>
-				<div class="col-md-4 text-center mb-5"><img src="images/news/isass_logo_icon-642x1024.png" class="img-fluid"
-						loading="lazy" alt=""></div>
-
-
-				<div class="col-md-4 text-center"><img src="images/news/Toshkent davlat iqtisodiyot universiteti.png"
-						class="img-fluid" loading="lazy" alt=""></div>
-				<div class="col-md-8 mt-5">
-					<h3 class="sub-heading">Tashkent State University of Economics (TSEU)</h3>
-					<p>Tashkent International University of Education and Tashkent State University of Economics signed
-						the Agreement to develop the interaction between these two educational institutions with the aim of
-						implementing projects in areas of mutual interest, such as developing educational programs in the
-						field of
-						business management, international relations, teaching language and other preparatory courses,
-						developing the business ecosystem as well.
-					</p>
-				</div>
-
-
-				<div class="col-md-8 mt-5">
-					<h3 class="sub-heading">International webinar on " Opportunities for British universities in Central
-						Asia"
-					</h3>
-					<p>Tashkent International University of Education took an active part in the webinar which was organized
-						on November 30, 2020 by the Department of International Trade of the British Embassy.
-						The main purpose of the webinar was to introduce British universities to the opportunities for
-						cooperation in Higher education and to establish international relations in Central Asian countries,
-						in particular with Uzbekistan and Kazakhstan.
-					</p>
-				</div>
-				<div class="col-md-4 text-center"><img src="images/news/british-council-1-logo-png-transparent.png"
-						class="img-fluid" loading="lazy" alt=""></div>
-			</div>
-		</div>
-	</section>
-
-	<section id="contact" class="contact background my-0 py-3">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5 text-white pl-4"><img src="images/logo.png" loading="lazy" alt="">
-					<p>TASHKENT <br> INTERNATIONAL <br> UNIVERSITY OF <br> EDUCATION</p>
-				</div>
-				<div class="col-md-1"></div>
-				<div class="col-md-6 text-white">
-					<h3 class="sub-heading">Contact Us</h3>
-
-					<div class="contact1"> <i class="fas fa-phone mr-3"></i>
-						<p>Phone: +998956502020</p>
+	<!--? News & Events -->
+	<section class="news-section" id="news">
+		<h1 class="heading">News and Events</h1>
+		<div class="news-container swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img class="bigger-img" src="images/news/establishment.webp" alt="establishment photo">
+					<div class="news-content">
+						<h4 class="small-heading">Establishment of TIUE</h4>
+						<p>A new educational institution was established in accordance with the Decree of the Cabinet of
+							Ministers of the Republic of Uzbekistan "About the establishment of the international university
+							"Tashkent International University of Education" No. 404 dated June 23, 2020.</p>
+						<a href="news.html#news1" class="read-more-btn2">Read more<span class="fas fa-angle-right"></span></a>
 					</div>
-					<div class="contact1"> <i class="fas fa-envelope mr-3"></i>
-						<p>E mail: info@tiue.uz</p>
+					<div class="date-container">
+						<span>23</span>
+						<span>June</span>
 					</div>
-					<div class="contact1"> <i class="fas fa-map-marker-alt mr-3"></i>
-						<p>Address: 100017, Tashkent, Yashnabod, Navoiy st, 2a</p>
+				</div>
+				<div class="swiper-slide">
+					<img src="images/collaboration/isass.png" alt="International School of Applied Social Sciences logo">
+					<div class="news-content">
+						<h4 class="small-heading">New collaboration with ISASS</h4>
+						<p>TIUE signs MOU with International School of Applied Social Sciences (ISASS), registered in
+							Barcelona, Spain. ISASS provides diploma and degree courses in partnership with various educational
+							institutions in Europe and Asia, including the Swiss school of management.</p>
+						<a href="news.html#news2" class="read-more-btn2">Read more<span class="fas fa-angle-right"></span></a>
 					</div>
-
-
+					<div class="date-container">
+						<span>23</span>
+						<span>June</span>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<img src="images/collaboration/economics-university.png"
+						alt="Tashkent State University of Economics logo">
+					<div class="news-content">
+						<h4 class="small-heading">TSEU agreed to collaborate</h4>
+						<p>Tashkent International University of Education and Tashkent State University of Economics signed
+							the Agreement to develop the interaction between these two educational institutions with the aim of
+							implementing projects in areas of mutual interest</p>
+						<a href="news.html#news3" class="read-more-btn2">Read more<span class="fas fa-angle-right"></span></a>
+					</div>
+					<div class="date-container">
+						<span>23</span>
+						<span>June</span>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<img src="images/news/british-council.png" alt="British Council logo">
+					<div class="news-content">
+						<h4 class="small-heading">TIEU took part on International webinar</h4>
+						<p>Tashkent International University of Education took an active part in the webinar which was
+							organized on November 30, 2020 by the Department of International Trade of the British Embassy.</p>
+						<a href="news.html#news4" class="read-more-btn2">Read more<span class="fas fa-angle-right"></span></a>
+					</div>
+					<div class="date-container">
+						<span>30</span>
+						<span>Nov</span>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<img class="bigger-img" src="images/collaboration/oep.png"
+						alt="Rectors of OEP and TIUE signing to collaborate">
+					<div class="news-content">
+						<h4 class="small-heading">OEP continues collaboration with TIUE</h4>
+						<p>International commercial arm of four Finnish organizations with outstanding expertise in education,
+							training and development cooperation - Omnia Education Partnerships Ltd, and TIUE signed MOU to
+							further develop education system in Uzbekistan</p>
+						<a href="news.html#news5" class="read-more-btn2">Read more<span class="fas fa-angle-right"></span></a>
+					</div>
+					<div class="date-container">
+						<span>18</span>
+						<span>Dec</span>
+					</div>
 				</div>
 			</div>
+
+			<!-- pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
 		</div>
 	</section>
-	<footer id="footer" class="background-footer text-white pb-1">
-		<div class="container">
-			<div class="footer pt-3">
-				<div class="row">
-					<div class="col-md-9">
-						<p>Copyright &copy; All Right Reserved <span id="year"></span>, TIUE</p>
-					</div>
-					<div class="col-md-3"><a href="https://t.me/TIUEuz" target="blank"> <i
-								class="fab fa-telegram-plane"></i></a> <a href="https://instagram.com/t.i.u.e.uz"
-							target="blank"> <i class="fab fa-instagram"></i></a> <a
-							href="https://www.facebook.com/TIUE2020.uz/" target="blank"><i class="fab fa-facebook"></i></a>
-					</div>
+	<script>
+
+	</script>
+
+	<!--? Collaboration -->
+	<h1 class="heading collab-heading">Collaboration</h1>
+	<section class="collaboration swiper-container">
+		<div class="swiper-wrapper">
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/xalq-ta'lim-vazirligi.png" alt="xalq-ta'lim-vazirligi logo"
+					class="collab-img">
+				<p>The Ministry of Public Education of the Republic of Uzbekistan</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/economics-university.png" alt="Tashkent State University of Economics logo"
+					class="collab-img">
+				<p>Tashkent State University of Economics</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/oep.png" alt="Omnia Education Partnerships logo" class="collab-img">
+				<p>Omnia Education Partnerships (OEP)</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/isass.png" alt="isass logo" class="collab-img">
+				<p>International school of applied and social Sciences (Spain)</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/monash.png" alt="Monash University logo" class="collab-img">
+				<p>Monash University (Australia)</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/code-craft.png" alt="Code Craft logo" class="collab-img">
+				<p>Codecraft art of coding</p>
+			</div>
+			<div class="collab-card swiper-slide">
+				<img src="images/collaboration/it-park.png" alt="IT Park logo" class="collab-img">
+				<p>IT Park start local & GO global</p>
+			</div>
+		</div>
+		<!-- Add Arrows -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination"></div>
+	</section>
+
+	<!--? Footer -->
+	<footer class="footer" id="contacts">
+		<div class="social-media-icons">
+			<a href="https://t.me/TIUEuz" class="telegram-link" target="_blank">
+				<span class="fab fa-telegram"></span>
+			</a>
+			<a href="https://instagram.com/t.i.u.e.uz" class="instagram-link" target="_blank">
+				<span class="fab fa-instagram"></span>
+			</a>
+			<a href="https://www.facebook.com/TIUE2020.uz/" class="facebook-link" target="_blank">
+				<span class="fab fa-facebook-f"></span>
+			</a>
+		</div>
+		<div class="map-info-container">
+			<div class="map-container">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.814334177084!2d69.36156209058457!3d41.29114510613656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE3JzI4LjEiTiA2OcKwMjEnNDkuNSJF!5e0!3m2!1sen!2s!4v1609140180599!5m2!1sen!2s"
+					frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy">
+				</iframe>
+			</div>
+			<div class="info-container">
+				<div class="bachelor-footer">
+					<h4 class="small-heading">Bachelor's degree</h4>
+					<ul>
+						<li><a href="#programs">Business Management</a></li>
+						<li><a href="#programs">Information and Communication Subjects</a></li>
+						<li><a href="#programs">Pedagogical Disciplines (STEAM)</a></li>
+					</ul>
 				</div>
+				<div class="programs-footer">
+					<h4 class="small-heading">Programs</h4>
+					<ul>
+						<li><a href="#programs">Pre-University</a></li>
+						<li><a href="#programs">English Language Program</a></li>
+						<li><a href="#programs">Leadership Academy</a></li>
+					</ul>
+				</div>
+				<div class="contacts-footer">
+					<h4 class="small-heading">Contact</h4>
+					<ul>
+						<li>Phone: +998 95 650 20 20</li>
+						<li>E mail: info@tiue.uz</li>
+						<li>Address: 100017, Tashkent city, Yashnabad dist, Navoiy str, 2a</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-logo">
+				<a class="logo" href="/">
+					<img src="images/logo.png" alt="logo" loading="lazy">
+					<p>TASHKENT INTERNATIONAL UNIVERSITY OF EDUCATION</p>
+				</a>
 			</div>
 		</div>
 	</footer>
+	<div class="copyright-content">
+		<p>Copyright &copy; All Right Reserved <span id="year"></span>, TIUE</p>
+	</div>
 
-
-
-
-	<script src="js/javaScript.js"></script>
 	<!-- Bootstrap5 Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+		</script>
+	<!-- GSAP ScrollTrigger 3.5.1 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+	<!-- Swiper (carousel) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"
+		integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA=="
 		crossorigin="anonymous"></script>
+	<!-- Jquery 3.0.0 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"
+		integrity="sha512-4GsgvzFFry8SXj8c/VcCjjEZ+du9RZp/627AEQRVLatx6d60AUnUYXg0lGn538p44cgRs5E2GXq+8IOetJ+6ow=="
+		crossorigin="anonymous"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/javaScript.js"></script>
 </body>
+<script>$("#year").text(new Date().getFullYear());</script>
 
 </html>

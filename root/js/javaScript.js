@@ -1,4 +1,4 @@
-// Navbar dropdown displayed on hover
+//? Navbar dropdown displayed on hover
 function resize() {
 	if (window.innerWidth >= 992) {
 		function toggleDropdown(e) {
@@ -25,7 +25,14 @@ function resize() {
 resize();
 $(window).resize(resize);
 
-// Adding animating classes on hamburger menu click
+//? Bootstrap Carousel
+var myCarousel = document.querySelector("#carouselExampleIndicators");
+var carousel = new bootstrap.Carousel(myCarousel, {
+	pause: false,
+	interval: 3000,
+});
+
+//? Adding animating classes on hamburger menu click
 $(document).ready(function () {
 	$("#menu-button").click(function () {
 		$("#first-line").toggleClass("first-line");
@@ -34,7 +41,7 @@ $(document).ready(function () {
 	});
 });
 
-// Take Home button
+//? Take Home button
 $(document).ready(function () {
 	$(window).scroll(function () {
 		if (this.scrollY > 500) {
@@ -43,16 +50,11 @@ $(document).ready(function () {
 			$(".scroll-up-btn").removeClass("show");
 		}
 	});
-	var typed=new Typed(".typing",{
-		strings:["Student Life...",],
-		typeSpeed:80,
-		backSpeed:60,
-		loop:true
-  });
-
 
 	$(".scroll-up-btn").click(function () {
-		$("html").animate({ scrollTop: 0 });
+		$("html").animate({
+			scrollTop: 0,
+		});
 	});
 
 	$(".menu-btn").click(function () {
@@ -60,7 +62,9 @@ $(document).ready(function () {
 		$(".menu-btn i").toggleClass("active");
 	});
 	$(".scroll-up-btn").click(function () {
-		$("html").animate({ scrollTop: 0 });
+		$("html").animate({
+			scrollTop: 0,
+		});
 		// removing smooth scroll on slide-up button click
 		$("html").css("scrollBehavior", "auto");
 	});
@@ -70,24 +74,378 @@ $(document).ready(function () {
 		$("html").css("scrollBehavior", "smooth");
 	});
 });
-$("#year").text(new Date().getFullYear());
-$(".carousel").owlCarousel({
-	margin: 20,
-	loop: true,
-	autoplayTimeOut: 2000,
-	autoplayHoverPause: true,
-	responsive: {
-		0: {
-			items: 1,
-			nav: false,
-		},
-		600: {
-			items: 2,
-			nav: false,
-		},
-		1000: {
-			items: 3,
-			nav: false,
-		},
+
+//? ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.matchMedia({
+	"(max-width: 1199px)": function () {
+		let carousel = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".main-carousel",
+				start: "top center",
+			},
+		});
+		carousel.from(".slide1 p, .slide1 h3, .slide1 .read-more-btn", {
+			x: -100,
+			opacity: 0,
+			duration: 0.7,
+		});
+		let vision = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".vision",
+				start: "-=150px center",
+			},
+		});
+		vision.from(".vision", {
+			x: -100,
+			opacity: 0,
+			duration: 0.7,
+		});
+		let mission = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".mission",
+				start: "-=150px center",
+			},
+		});
+		mission.from(
+			".mission",
+			{
+				x: 100,
+				opacity: 0,
+				duration: 0.7,
+			},
+			"-=0.5"
+		);
+
+		let values = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".values",
+				start: "-=150px center",
+			},
+		});
+		values
+			.from(".values .sub-heading", {
+				x: -100,
+				opacity: 0,
+				duration: 0.7,
+			})
+			.from(
+				".card-container .cards:nth-child(odd)",
+				{
+					x: -100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.3"
+			)
+			.from(
+				".card-container .cards:nth-child(even)",
+				{
+					x: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.3"
+			)
+			.from(".last-card", {
+				x: -100,
+				opacity: 0,
+				duration: 0.7,
+				delay: 0.5,
+			});
+
+		let team = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".core-team",
+				start: "top center",
+			},
+		});
+		team.from(".core-team .heading", {
+			x: -100,
+			opacity: 0,
+			duration: 0.7,
+		})
+			.from(
+				".core-team .leadership",
+				{
+					x: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			)
+			.from(
+				".core-team .t-hub",
+				{
+					x: -100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			);
+
+		let team_last = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".core-team .elp-team",
+				start: "top center",
+			},
+		});
+		team_last
+			.from(
+				".core-team .elp-team",
+				{
+					x: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			)
+			.from(
+				".core-team .physics",
+				{
+					x: -100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			);
+
+		let programs = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".programs",
+				start: "top center",
+			},
+		});
+		programs
+			.from(".programs .heading", {
+				x: -100,
+				opacity: 0,
+				duration: 0.7,
+			})
+			.from(
+				".programs .undergraduate",
+				{
+					x: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			)
+			.from(
+				".programs .pre-university",
+				{
+					x: -100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			);
+
+		let programs_last = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".programs .elp",
+				start: "top center",
+			},
+		});
+		programs_last
+			.from(".programs .elp", {
+				x: 100,
+				opacity: 0,
+				duration: 0.7,
+				markers: true,
+			})
+			.from(
+				".programs .leadership",
+				{
+					x: -100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			);
+	},
+
+	"(min-width: 1200px)": function () {
+		let carousel = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".main-carousel",
+				start: "top center",
+			},
+		});
+		carousel.from(".slide1", {
+			x: -100,
+			opacity: 0,
+			duration: 0.7,
+		});
+
+		let vision = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".vision",
+				start: "-=150px center",
+			},
+		});
+		vision.from(".vision", {
+			y: -100,
+			opacity: 0,
+			duration: 0.7,
+		});
+		let mission = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".mission",
+				start: "-=150px center",
+			},
+		});
+		mission.from(
+			".mission",
+			{
+				y: -100,
+				opacity: 0,
+				duration: 0.7,
+			},
+			"-=0.5"
+		);
+
+		let values = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".values",
+				start: "-=150px center",
+			},
+		});
+		values
+			.from(".values .sub-heading", {
+				y: -100,
+				opacity: 0,
+				duration: 0.7,
+			})
+			.from(
+				".card-container .cards:nth-child(odd)",
+				{
+					y: -100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.3"
+			)
+			.from(
+				".card-container .cards:nth-child(even)",
+				{
+					y: -100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.3"
+			)
+			.from(".last-card", {
+				y: -100,
+				opacity: 0,
+				duration: 0.7,
+			});
+
+		let team = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".core-team",
+				start: "-=150px center",
+			},
+		});
+		team.from(".core-team .heading", {
+			x: -100,
+			opacity: 0,
+			duration: 0.7,
+		})
+			.from(
+				".core-team .leadership",
+				{
+					y: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			)
+			.from(
+				".core-team .t-hub",
+				{
+					y: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			)
+			.from(
+				".core-team .elp-team",
+				{
+					y: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			)
+			.from(
+				".core-team .physics",
+				{
+					y: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			);
+
+		let programs = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".programs",
+				start: "-=130px center",
+			},
+		});
+		programs
+			.from(".programs .heading", {
+				x: -100,
+				opacity: 0,
+				duration: 0.7,
+			})
+			.from(
+				".program-card-container",
+				{
+					y: 100,
+					opacity: 0,
+					duration: 0.7,
+				},
+				"-=0.5"
+			);
+	},
+	all: function () {
+		let about_first = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".about",
+				start: "-=150px center",
+			},
+		});
+		about_first.from(".about-top-content", {
+			x: -100,
+			opacity: 0,
+			duration: 0.7,
+		});
+
+		let rector = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".rector-container",
+				start: "-=150px center",
+			},
+		});
+		rector.from(".rector-container", {
+			x: 100,
+			opacity: 0,
+			duration: 0.7,
+		});
+
+		let news_section = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".news-section",
+				start: "-=50px center",
+			},
+		});
+		news_section.from(".news-section", {
+			y: -100,
+			opacity: 0,
+			duration: 0.7,
+		});
 	},
 });
