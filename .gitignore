@@ -1,4 +1,2 @@
 *.log
-.idea/modules.xml
-.idea/TIUE.iml
-.idea/vcs.xml
+.idea
