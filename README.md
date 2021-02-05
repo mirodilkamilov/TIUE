@@ -6,7 +6,7 @@
 <p>Currently, we are studying at Inha University in Tashkent in the <strong>third year</strong>. Here is the list of references to know us better:</p>
 <ul>
     <li><a href="https://azizgofirov.github.io/portfolio/">Aziz's portfolio website</a></li>
-    <li><a href="https://www.pinterest.com/amirtemur4701">Saidazimkhan's pinters profile</a></li>
+    <li><a href="https://www.pinterest.com/amirtemur4701">Saidazimkhan's pinterest profile</a></li>
     <li><a href="https://github.com/mirodil1999">Mirodil's GitHub page</a></li>
 </ul>
 
