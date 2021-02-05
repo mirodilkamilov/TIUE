@@ -10,6 +10,7 @@
     <li><a href="https://github.com/mirodil1999">Mirodil's GitHub page</a></li>
 </ul>
 
+---
 
 ### Website overview
 **This repo is hosted [here](https://tiue-frontend.netlify.app/)** or alternatively on [GitHub pages](https://mirodil1999.github.io/TIUE/root/)
@@ -26,8 +27,9 @@
 
 [See full version of the report](SEO-report.pdf)
 
+---
 
-<h3 align="center">Programming language, tools and technologies we used</h3>
+### Programming language, tools and technologies we used
 <table>
     <tbody>
         <tr>
