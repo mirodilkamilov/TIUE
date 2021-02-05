@@ -1,7 +1,7 @@
 <h1 align="center">TIUE (static website)</h1>
 
 ### Quick overview about our team
-<img align="center" width="800" height="400" src="/root/images/markdown/team.svg" alt="our team part">
+<img src="/root/images/markdown/team.png">
 
 ### Website overview
 **This repo is hosted [here](https://tiue-frontend.netlify.app/)** or alternatively in [GitHub pages](https://mirodil1999.github.io/TIUE/root/)
