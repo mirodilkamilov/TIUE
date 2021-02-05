@@ -1,5 +1,5 @@
 <h1 align="center">TIUE (static website)</h1>
-<style>
+<!-- <style>
    .member-container{
       display: flex; 
       justify-content: space-evenly;
@@ -28,11 +28,11 @@
       color: #000;
       /* margin: 0; */
    }
-</style>
+</style> -->
 
 
 ### Quick overview about our team
-<div class="member-container">
+<!-- <div class="member-container">
    <a class="each-member aziz" href="https://azizgofirov.github.io/portfolio/">
       <img src="/root/images/markdown/Azizjon.jpg" alt="Azizjon">
       <h4>Gofirov Azizjon</h4>
@@ -49,7 +49,8 @@
       <p>Developer</p>
    </a>
 </div>
-<p align="center">Currently, we all study at Inha University in Tashkent in the <strong>third-year</strong></p>
+<p align="center">Currently, we all study at Inha University in Tashkent in the <strong>third-year</strong></p> -->
+<img width="800" height="400" src="/root/images/markdown/team.svg" alt="our team part">
 
 ### Website overview
 **This repo is hosted [here](https://tiue-frontend.netlify.app/)** or alternatively in [GitHub pages](https://mirodil1999.github.io/TIUE/root/)
