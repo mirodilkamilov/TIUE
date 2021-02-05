@@ -38,21 +38,21 @@
             }
          </style>
          <div class="member-container">
-            <a class="each-member aziz" href="https://azizgofirov.github.io/portfolio/">
-               <img src="/root/images/markdown/Azizjon.jpg" alt="Azizjon">
+            <div class="each-member aziz">
+               <img src="https://raw.githubusercontent.com/mirodil1999/TIUE/main/root/images/markdown/Azizjon.jpg" alt="Azizjon"></img>
                <h4>Gofirov Azizjon</h4>
                <p>Developer</p>
-            </a>
-            <a class="each-member saidazim" href="https://www.pinterest.com/amirtemur4701">
-               <img src="/root/images/markdown/Saidazimkhan.jpg" alt="Saidazimkhan">
+            </div>
+            <div class="each-member saidazim">
+               <img src="https://raw.githubusercontent.com/mirodil1999/TIUE/main/root/images/markdown/Saidazimkhan.jpg" alt="Saidazimkhan"></img>
                <h4>Kosimkhojaev Saidazimkhan</h4>
                <p>UI designer</p>
-            </a>
-            <a class="each-member mirodil" href="https://github.com/mirodil1999">
-               <img src="/root/images/markdown/Mirodil.jpg" alt="Mirodil">
+            </div>
+            <div class="each-member mirodil">
+               <img src="https://raw.githubusercontent.com/mirodil1999/TIUE/main/root/images/markdown/Mirodil.jpg" alt="Mirodil"></img>
                <h4>Mirodil Kamilov</h4>
                <p>Developer</p>
-            </a>
+            </div>
          </div>
          <p align="center">Currently, we all study at Inha University in Tashkent in the <strong>third-year</strong></p>
       </div>

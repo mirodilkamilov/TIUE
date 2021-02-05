@@ -50,8 +50,14 @@
    </a>
 </div>
 <p align="center">Currently, we all study at Inha University in Tashkent in the <strong>third-year</strong></p> -->
-<img width="800" height="400" src="/root/images/markdown/team.svg" alt="our team part">
-
+<div align="center">
+	<br>
+	<a href="https://raw.githubusercontent.com/sindresorhus/css-in-readme-like-wat/main/readme.md">
+   <img width="800" height="400" src="/root/images/markdown/team.svg" alt="our team part">
+		<!-- <img src="https://raw.githubusercontent.com/sindresorhus/css-in-readme-like-wat/main/header.svg" width="800" height="400" alt="Click to see the source"> -->
+	</a>
+	<br>
+</div>
 ### Website overview
 **This repo is hosted [here](https://tiue-frontend.netlify.app/)** or alternatively in [GitHub pages](https://mirodil1999.github.io/TIUE/root/)
 
