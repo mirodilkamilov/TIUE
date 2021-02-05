@@ -10,11 +10,11 @@
 
 **Important to note:**
 >**Search Engine Optimization (SEO)** is the process of optimizing your online content so that a search engine likes to show it as a top result for searches of a certain keyword ([learn more](https://developers.google.com/search/docs/beginner/seo-starter-guide#getting-started))
-<p>
-   <img src="/root/images/markdown/stack.png" alt="SEO results">
+<a href="SEO-report.pdf">
+   <img src="/root/images/markdown/SEO-report-results.png" alt="SEO results">
    <em>SEO report results</em>
-</p>
-<!-- TODO: [Full version of report](some link) -->
+</a>
+[Full version of the report](SEO-report.pdf)
 
 
 <h5 align="center">Programming language, tools and technologies we used</h5>
