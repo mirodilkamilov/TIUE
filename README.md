@@ -9,15 +9,16 @@
 **TIUE is newly established university in Tashkent.** TIUE stands for Tashkent International University of Education. This repo contains early version of its website with only the frontend part (static website).
 
 **Important to note:**
->**Search Engine Optimization (SEO)** is the process of optimizing your online content so that a search engine likes to show it as a top result for searches of a certain keyword ([learn more](https://developers.google.com/search/docs/beginner/seo-starter-guide#getting-started))
+>**Search Engine Optimization (SEO)** is the process of optimizing your online content so that a search engine likes to show it as a top result for searches of a certain keyword ([learn more](https://developers.google.com/search/docs/beginner/seo-starter-guide#getting-started)
+
 <a href="SEO-report.pdf">
    <img src="/root/images/markdown/SEO-report-results.png" alt="SEO results">
-   <em>SEO report results</em>
 </a>
+
 [Full version of the report](SEO-report.pdf)
 
 
-<h5 align="center">Programming language, tools and technologies we used</h5>
+<h4 align="center">Programming language, tools and technologies we used</h4>
 <table>
     <tbody>
         <tr>
