@@ -3,6 +3,14 @@
 ### Quick overview about our team
 <img src="/root/images/markdown/team.png">
 
+<p>Currently, we are studying at Inha University in Tashkent in the <strong>third year</strong>. Here is the list of references to know us better:</p>
+<ul>
+    <li><a href="https://azizgofirov.github.io/portfolio/">Aziz's portfolio website</a></li>
+    <li><a href="https://www.pinterest.com/amirtemur4701">Saidazimkhan's pinters profile</a></li>
+    <li><a href="https://github.com/mirodil1999">Mirodil's GitHub page</a></li>
+</ul>
+
+
 ### Website overview
 **This repo is hosted [here](https://tiue-frontend.netlify.app/)** or alternatively on [GitHub pages](https://mirodil1999.github.io/TIUE/root/)
 
@@ -12,13 +20,14 @@
 >**Search Engine Optimization (SEO)** is the process of optimizing your online content so that a search engine likes to show it as a top result for searches of a certain keyword ([learn more](https://developers.google.com/search/docs/beginner/seo-starter-guide#getting-started))
 
 <a href="SEO-report.pdf">
-   <img src="/root/images/markdown/SEO-report-results.png" alt="SEO results">
+    <h4 align="center">SEO report summary</h4>
+    <img src="/root/images/markdown/SEO-report-results.png" alt="SEO results">
 </a>
 
-[Full version of the report](SEO-report.pdf)
+[See full version of the report](SEO-report.pdf)
 
 
-<h4 align="center">Programming language, tools and technologies we used</h4>
+<h3 align="center">Programming language, tools and technologies we used</h3>
 <table>
     <tbody>
         <tr>
