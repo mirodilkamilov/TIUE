@@ -7,13 +7,13 @@
 <ul>
     <li><a href="https://azizgofirov.github.io/portfolio/">Aziz's portfolio website</a></li>
     <li><a href="https://www.pinterest.com/amirtemur4701">Saidazimkhan's pinterest profile</a></li>
-    <li><a href="https://github.com/mirodil1999">Mirodil's GitHub page</a></li>
+    <li><a href="https://github.com/mirodilkamilov">Mirodil's GitHub page</a></li>
 </ul>
 
 ---
 
 ### Website overview
-**This repo is hosted [here](https://tiue-frontend.netlify.app/)** or alternatively on [GitHub pages](https://mirodil1999.github.io/TIUE/root/)
+**This repo is hosted [here](https://tiue-frontend.netlify.app/)** or alternatively on [GitHub pages](https://mirodilkamilov.github.io/TIUE/root/)
 
 **TIUE is a newly established university in Tashkent.** TIUE stands for Tashkent International University of Education. This repo contains an early version of its website with only the frontend part (static website).
 
